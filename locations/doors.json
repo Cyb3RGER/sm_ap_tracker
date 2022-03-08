@@ -1,0 +1,2219 @@
+[
+    {
+        "name": "Crateria, Landing Site, top right",
+        "sections": [
+            {
+                "name": "",
+                "hosted_item": "door_cr_ls_tr",
+                "access_rules": [
+                    [
+                        "{$has_access_to|Landing Site}"
+                    ]
+                ],
+                "visibility_rules": [
+                    "$is_door_rando"
+                ]
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "fullmap",
+                "x": 1045,
+                "y": 112
+            },
+            {
+                "map": "crateriamap",
+                "x": 919,
+                "y": 112
+            }
+        ]
+    },
+    {
+        "name": "Crateria, Landing Site, right",
+        "sections": [
+            {
+                "name": "",
+                "hosted_item": "door_cr_ls_br",
+                "access_rules": [
+                    [
+                        "{$has_access_to|Landing Site}"
+                    ]
+                ],
+                "visibility_rules": [
+                    "$is_door_rando"
+                ]
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "fullmap",
+                "x": 1045,
+                "y": 208
+            },
+            {
+                "map": "crateriamap",
+                "x": 919,
+                "y": 208
+            }
+        ]
+    },
+    {
+        "name": "Crateria, Flyway, right",
+        "sections": [
+            {
+                "name": "",
+                "hosted_item": "door_cr_bomb",
+                "access_rules": [
+                    [
+                        "{$has_access_to|Landing Site}",
+                        "{$morph}"
+                    ]
+                ],
+                "visibility_rules": [
+                    "$is_door_rando"
+                ]
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "fullmap",
+                "x": 808,
+                "y": 276
+            },
+            {
+                "map": "crateriamap",
+                "x": 680,
+                "y": 276
+            }
+        ]
+    },
+    {
+        "name": "Doors / Transitions",
+        "sections": [
+            {
+                "name": "Door: Crateria, Green Pirates Shaft, bottom right",
+                "hosted_item": "door_cr_tourian",
+                "access_rules": [
+                    [
+                        "{$has_access_to|Green Pirates Shaft Bottom Right}"
+                    ]
+                ],
+                "visibility_rules": [
+                    "$is_area_rando"
+                ]
+            },
+            {
+                "name": "Transition: Green Pirates Shaft Bottom Right",
+                "hosted_item": "trans_GreenPiratesShaftBottomRight",
+                "access_rules": [
+                    [
+                        "{$has_access_to|Green Pirates Shaft Bottom Right}"
+                    ]
+                ],
+                "visibility_rules": [
+                    "$is_area_rando"
+                ]
+            },
+            {
+                "name": "Transition: Golden Four",
+                "hosted_item": "trans_GoldenFour",
+                "access_rules": [
+                    [
+                        "{$has_access_to|Golden Four}"
+                    ]
+                ],
+                "visibility_rules": [
+                    "$is_area_rando"
+                ]
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "fullmap",
+                "x": 408,
+                "y": 338
+            },
+            {
+                "map": "crateriamap",
+                "x": 280,
+                "y": 338
+            }
+        ]
+    },
+    {
+        "name": "Crateria <-> Green Brinstar",
+        "sections": [            
+            {
+                "name": "Lower Mushrooms Left",
+                "hosted_item": "trans_LowerMushroomsLeft",
+                "access_rules": [
+                    [
+                        "{$has_access_to|Lower Mushrooms Left}"
+                    ]
+                ],
+                "visibility_rules": [
+                    "$is_area_rando"
+                ]
+            },
+            {
+                "name": "Green Brinstar Elevator",
+                "hosted_item": "trans_GreenBrinstarElevator",
+                "access_rules": [
+                    [
+                        "{$has_access_to|Green Brinstar Elevator}"
+                    ]
+                ],
+                "visibility_rules": [
+                    "$is_area_rando"
+                ]
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "fullmap",
+                "x": 248,
+                "y": 338
+            },
+            {
+                "map": "crateriamap",
+                "x": 120,
+                "y": 338
+            }
+        ]
+    },
+    {
+        "name": "Crateria, Keyhunter Room, right",
+        "sections": [
+            {
+                "name": "",
+                "hosted_item": "door_cr_moat",
+                "access_rules": [
+                    [
+                        "{$has_access_to|Keyhunter Room Bottom}"
+                    ]
+                ],
+                "visibility_rules": [
+                    "$is_door_rando"
+                ]
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "fullmap",
+                "x": 1160,
+                "y": 208
+            },
+            {
+                "map": "crateriamap",
+                "x": 1032,
+                "y": 208
+            }
+        ]
+    },
+    {
+        "name": "Crateria <-> Wrecked Ship",
+        "sections": [
+            {
+                "name": "Moat Right",
+                "hosted_item": "trans_MoatRight",
+                "access_rules": [
+                    [
+                        "{$has_access_to|Moat Right}"
+                    ]
+                ],
+                "visibility_rules": [
+                    "$is_area_rando"
+                ]
+            },
+            {
+                "name": "West Ocean Left",
+                "hosted_item": "trans_WestOceanLeft",
+                "access_rules": [
+                    [
+                        "{$has_access_to|West Ocean Left}"
+                    ]
+                ],
+                "visibility_rules": [
+                    "$is_area_rando"
+                ]
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "fullmap",
+                "x": 1240,
+                "y": 208
+            },
+            {
+                "map": "crateriamap",
+                "x": 1112,
+                "y": 208
+            }
+        ]
+    },
+    {
+        "name": "Crateria <-> Red Brinstar",
+        "sections": [
+            {
+                "name": "Door: Crateria, Keyhunter Room, bottom",
+                "hosted_item": "KihunterBottom",
+                "access_rules": [
+                    [
+                        "{$has_access_to|Keyhunter Room Bottom}"
+                    ]
+                ],
+                "visibility_rules": [
+                    "$is_door_rando"
+                ]
+            },
+            {
+                "name": "Door: Red Brinstar, Elevator, top",
+                "hosted_item": "RedBrinstarElevatorTop",
+                "access_rules": [
+                    [
+                        "{$has_access_to|Red Brinstar Elevator}"
+                    ]
+                ],
+                "visibility_rules": [
+                    "$is_door_rando"
+                ]
+            },
+            {
+                "name": "Transition: Keyhunter Room Bottom",
+                "hosted_item": "trans_KeyhunterRoomBottom",
+                "access_rules": [
+                    [
+                        "{$has_access_to|Keyhunter Room Bottom}"
+                    ]
+                ],
+                "visibility_rules": [
+                    "$is_area_rando"
+                ]
+            },
+            {
+                "name": "Transition: Red Brinstar Elevator",
+                "hosted_item": "trans_RedBrinstarElevator",
+                "access_rules": [
+                    [
+                        "{$has_access_to|Red Brinstar Elevator}"
+                    ]
+                ],
+                "visibility_rules": [
+                    "$is_area_rando"
+                ]
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "fullmap",
+                "x": 1128,
+                "y": 286
+            },
+            {
+                "map": "crateriamap",
+                "x": 1000,
+                "y": 286
+            }
+        ]
+    },
+    {
+        "name": "Crateria, Climb, right",
+        "sections": [
+            {
+                "name": "",
+                "hosted_item": "door_cr_b",
+                "access_rules": [
+                    [
+                        "{$has_access_to|Climb Bottom Left}"
+                    ]
+                ],
+                "visibility_rules": [
+                    "$is_door_rando"
+                ]
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "fullmap",
+                "x": 696,
+                "y": 596
+            },
+            {
+                "map": "crateriamap",
+                "x": 568,
+                "y": 596
+            }
+        ]
+    },
+    {
+        "name": "Blue Brinstar, Construction Zone, right",
+        "sections": [
+            {
+                "name": "",
+                "hosted_item": "door_bb",
+                "access_rules": [
+                    [
+                        "{$has_access_to|Blue Brinstar Elevator Bottom}"
+                    ]
+                ],
+                "visibility_rules": [
+                    "$is_door_rando"
+                ]
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "fullmap",
+                "x": 887,
+                "y": 979
+            },
+            {
+                "map": "brinstarmap",
+                "x": 887,
+                "y": 404
+            }
+        ]
+    },
+    {
+        "name": "Green Brinstar, Main Shaft, right",
+        "sections": [
+            {
+                "name": "",
+                "hosted_item": "MainShaftRight",
+                "access_rules": [
+                    [
+                        "{$has_access_to|Green Brinstar Elevator}"
+                    ]
+                ],
+                "visibility_rules": [
+                    "$is_door_rando"
+                ]
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "fullmap",
+                "x": 248,
+                "y": 785
+            },
+            {
+                "map": "brinstarmap",
+                "x": 248,
+                "y": 210
+            }
+        ]
+    },
+    {
+        "name": "Green Brinstar, Early Supers, right",
+        "sections": [
+            {
+                "name": "",
+                "hosted_item": "EarlySupersRight",
+                "access_rules": [
+                    [
+                        "{$has_access_to|Green Brinstar Elevator}",
+                        "{$can_mockball}"
+                    ],
+                    [
+                        "{$has_access_to|Green Brinstar Elevator}",
+                        "{$speed}"
+                    ]
+                ],
+                "visibility_rules": [
+                    "$is_door_rando"
+                ]
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "fullmap",
+                "x": 328,
+                "y": 784
+            },
+            {
+                "map": "brinstarmap",
+                "x": 328,
+                "y": 212
+            }
+        ]
+    },
+    {
+        "name": "Green Brinstar, save",
+        "sections": [
+            {
+                "name": "",
+                "hosted_item": "GreenBrinstarSaveStation",
+                "access_rules": [
+                    [
+                        "{$has_access_to|Green Brinstar Elevator}"
+                    ]
+                ],
+                "visibility_rules": [
+                    "$is_door_rando"
+                ]
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "fullmap",
+                "x": 215,
+                "y": 816
+            },
+            {
+                "map": "brinstarmap",
+                "x": 215,
+                "y": 242
+            }
+        ]
+    },
+    {
+        "name": "Green Brinstar, missile refill",
+        "sections": [
+            {
+                "name": "",
+                "hosted_item": "GreenBrinstarMissileRefill",
+                "access_rules": [
+                    [
+                        "{$has_access_to|Green Brinstar Elevator}"
+                    ]
+                ],
+                "visibility_rules": [
+                    "$is_door_rando"
+                ]
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "fullmap",
+                "x": 215,
+                "y": 848
+            },
+            {
+                "map": "brinstarmap",
+                "x": 215,
+                "y": 274
+            }
+        ]
+    },
+    {
+        "name": "Green Brinstar, Main Shaft, bottom right",
+        "sections": [
+            {
+                "name": "",
+                "hosted_item": "MainShaftBottomRight",
+                "access_rules": [
+                    [
+                        "{$has_access_to|Green Brinstar Elevator}"
+                    ]
+                ],
+                "visibility_rules": [
+                    "$is_door_rando"
+                ]
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "fullmap",
+                "x": 247,
+                "y": 848
+            },
+            {
+                "map": "brinstarmap",
+                "x": 247,
+                "y": 274
+            }
+        ]
+    },
+    {
+        "name": "Green Brinstar, Etecoon Energy Tank, left",
+        "sections": [
+            {
+                "name": "",
+                "hosted_item": "EtecoonEnergyTankLeft",
+                "access_rules": [
+                    [
+                        "{$has_access_to|Etecoons Bottom}"
+                    ]
+                ],
+                "visibility_rules": [
+                    "$is_door_rando"
+                ]
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "fullmap",
+                "x": 122,
+                "y": 944
+            },
+            {
+                "map": "brinstarmap",
+                "x": 122,
+                "y": 370
+            }
+        ]
+    },
+    {
+        "name": "Blue Brinstar <-> Green Brinstar",
+        "sections": [
+            {
+                "name": "Door: Green Brinstar, Green Hill Zone, top right",
+                "hosted_item": "GreenHillZoneTopRight",
+                "access_rules": [
+                    [
+                        "{$has_access_to|Green Hill Zone Top Right}"
+                    ]
+                ],
+                "visibility_rules": [
+                    "$is_door_rando"
+                ]
+            },
+            {
+                "name": "Transition: Green Hill Zone Top Right",
+                "hosted_item": "trans_GreenHillZoneTopRight",
+                "access_rules": [
+                    [
+                        "{$has_access_to|Green Hill Zone Top Right}"
+                    ]
+                ],
+                "visibility_rules": [
+                    "$is_area_rando"
+                ]
+            },
+            {
+                "name": "Transition: Morph Ball Room Left",
+                "hosted_item": "trans_MorphBallRoomLeft",
+                "access_rules": [
+                    [
+                        "{$has_access_to|Morph Ball Room Left}"
+                    ]
+                ],
+                "visibility_rules": [
+                    "$is_area_rando"
+                ]
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "fullmap",
+                "x": 600,
+                "y": 980
+            },
+            {
+                "map": "brinstarmap",
+                "x": 600,
+                "y": 405
+            }
+        ]
+    },
+    {
+        "name": "Green Brinstar <-> Red Brinstar",
+        "sections": [
+            {
+                "name": "Door: Green Brinstar, Noob Bridge, right",
+                "hosted_item": "NoobBridgeRight",
+                "access_rules": [
+                    [
+                        "{$has_access_to|Noob Bridge Right}"
+                    ]
+                ],
+                "visibility_rules": [
+                    "$is_door_rando"
+                ]
+            },
+            {
+                "name": "Transition: Noob Bridge Right",
+                "hosted_item": "trans_NoobBridgeRight",
+                "access_rules": [
+                    [
+                        "{$has_access_to|Noob Bridge Right}"
+                    ]
+                ],
+                "visibility_rules": [
+                    "$is_area_rando"
+                ]
+            },
+            {
+                "name": "Transition: Red Tower Top Left",
+                "hosted_item": "trans_RedTowerTopLeft",
+                "access_rules": [
+                    [
+                        "{$has_access_to|Red Tower Top Left}"
+                    ]
+                ],
+                "visibility_rules": [
+                    "$is_area_rando"
+                ]
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "fullmap",
+                "x": 983,
+                "y": 1076
+            },
+            {
+                "map": "brinstarmap",
+                "x": 983,
+                "y": 500
+            }
+        ]
+    },
+    //Pink Brinstar
+    {
+        "name": "Pink Brinstar, top right",
+        "sections": [
+            {
+                "name": "",
+                "hosted_item": "BigPinkTopRight",
+                "access_rules": [
+                    [
+                        "{$has_access_to|Big Pink}"
+                    ]
+                ],
+                "visibility_rules": [
+                    "$is_door_rando"
+                ]
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "fullmap",
+                "x": 535,
+                "y": 785
+            },
+            {
+                "map": "brinstarmap",
+                "x": 535,
+                "y": 210
+            }
+        ]
+    },
+    {
+        "name": "Pink Brinstar, right",
+        "sections": [
+            {
+                "name": "",
+                "hosted_item": "BigPinkRight",
+                "access_rules": [
+                    [
+                        "{$has_access_to|Big Pink}"
+                    ]
+                ],
+                "visibility_rules": [
+                    "$is_door_rando"
+                ]
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "fullmap",
+                "x": 535,
+                "y": 915
+            },
+            {
+                "map": "brinstarmap",
+                "x": 535,
+                "y": 340
+            }
+        ]
+    },
+    {
+        "name": "Pink Brinstar, bottom right",
+        "sections": [
+            {
+                "name": "",
+                "hosted_item": "BigPinkBottomRight",
+                "access_rules": [
+                    [
+                        "{$has_access_to|Big Pink}"
+                    ]
+                ],
+                "visibility_rules": [
+                    "$is_door_rando"
+                ]
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "fullmap",
+                "x": 535,
+                "y": 980
+            },
+            {
+                "map": "brinstarmap",
+                "x": 535,
+                "y": 405
+            }
+        ]
+    },
+    {
+        "name": "Pink Brinstar, bottom left",
+        "sections": [
+            {
+                "name": "",
+                "hosted_item": "BigPinkBottomLeft",
+                "access_rules": [
+                    [
+                        "{$has_access_to|Big Pink}",
+                        "{$can_use_power_bombs}"
+                    ]
+                ],
+                "visibility_rules": [
+                    "$is_door_rando"
+                ]
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "fullmap",
+                "x": 408,
+                "y": 1075
+            },
+            {
+                "map": "brinstarmap",
+                "x": 408,
+                "y": 500
+            }
+        ]
+    },
+    //Red Brinstar    
+    {
+        "name": "Red Brinstar, Red Tower Elevator, top left",
+        "sections": [
+            {
+                "name": "",
+                "hosted_item": "RedTowerElevatorTopLeft",
+                "access_rules": [
+                    [
+                        "{$has_access_to|Red Brinstar Elevator}"
+                    ]
+                ],
+                "visibility_rules": [
+                    "$is_door_rando"
+                ]
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "fullmap",
+                "x": 1112,
+                "y": 884
+            },
+            {
+                "map": "brinstarmap",
+                "x": 1112,
+                "y": 307
+            }
+        ]
+    },
+    {
+        "name": "Red Brinstar, Red Tower Elevator, left",
+        "sections": [
+            {
+                "name": "",
+                "hosted_item": "RedTowerElevatorLeft",
+                "access_rules": [
+                    [
+                        "{$has_access_to|Red Brinstar Elevator}"
+                    ]
+                ],
+                "visibility_rules": [
+                    "$is_door_rando"
+                ]
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "fullmap",
+                "x": 1112,
+                "y": 947
+            },
+            {
+                "map": "brinstarmap",
+                "x": 1112,
+                "y": 372
+            }
+        ]
+    },
+    {
+        "name": "Red Brinstar, Red Tower Elevator, bottom left",
+        "sections": [
+            {
+                "name": "",
+                "hosted_item": "RedTowerElevatorBottomLeft",
+                "access_rules": [
+                    [
+                        "{$has_access_to|Red Brinstar Elevator}"
+                    ]
+                ],
+                "visibility_rules": [
+                    "$is_door_rando"
+                ]
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "fullmap",
+                "x": 1112,
+                "y": 1012
+            },
+            {
+                "map": "brinstarmap",
+                "x": 1112,
+                "y": 436
+            }
+        ]
+    },
+    {
+        "name": "Red Brinstar, Red Tower, left",
+        "sections": [
+            {
+                "name": "",
+                "hosted_item": "RedTowerLeft",
+                "access_rules": [
+                    [
+                        "{$has_access_to|Red Tower Top Left}"
+                    ]
+                ],
+                "visibility_rules": [
+                    "$is_door_rando"
+                ]
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "fullmap",
+                "x": 985,
+                "y": 1140
+            },
+            {
+                "map": "brinstarmap",
+                "x": 985,
+                "y": 565
+            }
+        ]
+    },
+    {
+        "name": "Red Brinstar, Fireflea, left",
+        "sections": [
+            {
+                "name": "",
+                "hosted_item": "RedBrinstarFirefleaLeft",
+                "access_rules": [
+                    [
+                        "{$has_access_to|Red Tower Top Left}, {$can_get_through_xray}"
+                    ]
+                ],
+                "visibility_rules": [
+                    "$is_door_rando"
+                ]
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "fullmap",
+                "x": 728,
+                "y": 1140
+            },
+            {
+                "map": "brinstarmap",
+                "x": 728,
+                "y": 565
+            }
+        ]
+    },
+    {
+        "name": "Red Brinstar, energy refill",
+        "sections": [
+            {
+                "name": "",
+                "hosted_item": "RedBrinstarEnergyRefill",
+                "access_rules": [
+                    [
+                        "{$has_access_to|Red Tower Top Left}",
+                        "{$can_use_power_bombs}"
+                    ]
+                ],
+                "visibility_rules": [
+                    "$is_door_rando"
+                ]
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "fullmap",
+                "x": 985,
+                "y": 1238
+            },
+            {
+                "map": "brinstarmap",
+                "x": 985,
+                "y": 660
+            }
+        ]
+    },
+    {
+        "name": "Red Brinstar, Below Spazer, top right",
+        "sections": [
+            {
+                "name": "",
+                "hosted_item": "BelowSpazerTopRight",
+                "access_rules": [
+                    [
+                        "{$has_access_to|East Tunnel Right}",
+                        "{$can_pass_bomb_passages}"
+                    ],
+                    [
+                        "{$has_access_to|East Tunnel Right}",
+                        "{$morph}",
+                        "{$has_patch|20}"
+                    ]
+                ],
+                "visibility_rules": [
+                    "$is_door_rando"
+                ]
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "fullmap",
+                "x": 1128,
+                "y": 1200
+            },
+            {
+                "map": "brinstarmap",
+                "x": 1128,
+                "y": 628
+            }
+        ]
+    },
+    {
+        "name": "Red Brinstar, Bottom Save Station",
+        "sections": [
+            {
+                "name": "",
+                "hosted_item": "MaridiaBottomSaveStation",
+                "access_rules": [
+                    [
+                        "{$has_access_to|Glass Tunnel Top}"
+                    ]
+                ],
+                "visibility_rules": [
+                    "$is_door_rando"
+                ]
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "fullmap",
+                "x": 1210,
+                "y": 1270
+            },
+            {
+                "map": "maridiamap",
+                "x": 280,
+                "y": 690
+            }
+        ]
+    },
+    //Kriad's Lair
+    {
+        "name": "Karid's Lair, refill station",
+        "sections": [
+            {
+                "name": "",
+                "hosted_item": "KraidRefillStation",
+                "access_rules": [
+                    [
+                        "{$has_access_to|KraidRoomOut}"
+                    ]
+                ],
+                "visibility_rules": [
+                    "$is_door_rando"
+                ]
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "fullmap",
+                "x": 1655,
+                "y": 1235
+            },
+            {
+                "map": "brinstarmap",
+                "x": 1655,
+                "y": 660
+            }
+        ]
+    },
+    //Upper Norfair
+    {
+        "name": "Red Brinstar <-> Upper Norfair",
+        "sections": [     
+            {
+                "name": "Transition: East Tunnel Right",
+                "hosted_item": "trans_EastTunnelRight",
+                "access_rules": [
+                    [
+                        "{$has_access_to|East Tunnel Right}"
+                    ]
+                ],
+                "visibility_rules": [
+                    "$is_area_rando"
+                ]
+            },
+            {
+                "name": "Transition: Warehouse Entrance Left",
+                "hosted_item": "trans_WarehouseEntranceLeft",
+                "access_rules": [
+                    [
+                        "{$has_access_to|Warehouse Entrance Left}"
+                    ]
+                ],
+                "visibility_rules": [
+                    "$is_area_rando"
+                ]
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "fullmap",
+                "x": 1240,
+                "y": 1236
+            },            
+            {
+                "map": "brinstarmap",
+                "x": 312,
+                "y": 660
+            },            
+            {
+                "map": "maridiamap",
+                "x": 1240,
+                "y": 660
+            }
+        ]
+    },
+    {
+        "name": "Upper Norfair <-> Kraid's Lair",
+        "sections": [     
+            {
+                "name": "Transition: East Tunnel Right",
+                "hosted_item": "trans_EastTunnelRight",
+                "access_rules": [
+                    [
+                        "{$has_access_to|East Tunnel Right}"
+                    ]
+                ],
+                "visibility_rules": [
+                    "$is_area_rando"
+                ]
+            },
+            {
+                "name": "Transition: Warehouse Entrance Left",
+                "hosted_item": "trans_WarehouseEntranceLeft",
+                "access_rules": [
+                    [
+                        "{$has_access_to|Warehouse Entrance Left}"
+                    ]
+                ],
+                "visibility_rules": [
+                    "$is_area_rando"
+                ]
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "fullmap",
+                "x": 1336,
+                "y": 1236
+            },            
+            {
+                "map": "brinstarmap",
+                "x": 1336,
+                "y": 660
+            }
+        ]
+    },
+    {
+        "name": "Upper Norfair <-> Crocomire",
+        "sections": [     
+            {
+                "name": "Transition: Crocomire Speedway Bottom",
+                "hosted_item": "trans_CrocomireSpeedwayBottom",
+                "access_rules": [
+                    [
+                        "{$has_access_to|Crocomire Speedway Bottom}"
+                    ]
+                ],
+                "visibility_rules": [
+                    "$is_area_rando"
+                ]
+            },
+            {
+                "name": "Transition: Crocomire Room Top",
+                "hosted_item": "trans_CrocomireRoomTop",
+                "access_rules": [
+                    [
+                        "{$has_access_to|Crocomire Room Top}"
+                    ]
+                ],
+                "visibility_rules": [
+                    "$is_area_rando"
+                ]
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "fullmap",
+                "x": 1416,
+                "y": 1604
+            },                                  
+            {
+                "map": "norfairmap",
+                "x": 536,
+                "y": 388
+            }
+        ]
+    },
+    {
+        "name": "Upper Norfair <-> Lower Norfair Entrance",
+        "sections": [     
+            {
+                "name": "Door: Upper Norfair, Kronic Boost Bottom, left",
+                "hosted_item": "KronicBoostBottomLeft",
+                "access_rules": [
+                    [
+                        "{$has_access_to|Kronic Boost Room Bottom Left}"
+                    ]
+                ],
+                "visibility_rules": [
+                    "$is_door_rando"
+                ]
+            },
+            {
+                "name": "Transition: Kronic Boost Room Bottom Left",
+                "hosted_item": "trans_KronicBoostRoomBottomLeft",
+                "access_rules": [
+                    [
+                        "{$has_access_to|Kronic Boost Room Bottom Left}"
+                    ]
+                ],
+                "visibility_rules": [
+                    "$is_area_rando"
+                ]
+            },
+            {
+                "name": "Transition: Lava Dive Right",
+                "hosted_item": "trans_LavaDiveRight",
+                "access_rules": [
+                    [
+                        "{$has_access_to|Lava Dive Right}"
+                    ]
+                ],
+                "visibility_rules": [
+                    "$is_area_rando"
+                ]
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "fullmap",
+                "x": 1752,
+                "y": 1620
+            },                                  
+            {
+                "map": "norfairmap",
+                "x": 872,
+                "y": 402
+            }
+        ]
+    },
+    {
+        "name": "Upper Norfair <-> Lower Norfair Exit",
+        "sections": [     
+            {
+                "name": "Transition: Single Chamber Top Right",
+                "hosted_item": "trans_SingleChamberTopRight",
+                "access_rules": [
+                    [
+                        "{$has_access_to|SingleChamberTopRight}"
+                    ]
+                ],
+                "visibility_rules": [
+                    "$is_area_rando"
+                ]
+            },
+            {
+                "name": "Transition: Three Muskateers Room Left",
+                "hosted_item": "trans_ThreeMuskateersRoomLeft",
+                "access_rules": [
+                    [
+                        "{$has_access_to|Three Muskateers Room Left}"
+                    ]
+                ],
+                "visibility_rules": [
+                    "$is_area_rando"
+                ]
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "fullmap",
+                "x": 1880,
+                "y": 1396
+            },                                  
+            {
+                "map": "norfairmap",
+                "x": 1000,
+                "y": 180
+            }
+        ]
+    },
+    {
+        "name": "Upper Norfair, Business Center, top left",
+        "sections": [
+            {
+                "name": "",
+                "hosted_item": "BusinessCenterTopLeft",
+                "access_rules": [
+                    [
+                        "{$has_access_to|Business Center}"
+                    ]
+                ],
+                "visibility_rules": [
+                    "$is_door_rando"
+                ]
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "fullmap",
+                "x": 1240,
+                "y": 1395
+            },
+            {
+                "map": "norfairmap",
+                "x": 360,
+                "y": 180
+            }
+        ]
+    },
+    {
+        "name": "Upper Norfair, Business Center, bottom left",
+        "sections": [
+            {
+                "name": "",
+                "hosted_item": "BusinessCenterBottomLeft",
+                "access_rules": [
+                    [
+                        "{$has_access_to|Business Center}"
+                    ]
+                ],
+                "visibility_rules": [
+                    "$is_door_rando"
+                ]
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "fullmap",
+                "x": 1256,
+                "y": 1456
+            },
+            {
+                "map": "norfairmap",
+                "x": 376,
+                "y": 244
+            }
+        ]
+    },
+    {
+        "name": "Upper Norfair, Cathedral Entrance, right",
+        "sections": [
+            {
+                "name": "",
+                "hosted_item": "CathedralEntranceRight",
+                "access_rules": [
+                    [
+                        "{$has_access_to|Business Center}"
+                    ]
+                ],
+                "visibility_rules": [
+                    "$is_door_rando"
+                ]
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "fullmap",
+                "x": 1368,
+                "y": 1395
+            },
+            {
+                "map": "norfairmap",
+                "x": 488,
+                "y": 180
+            }
+        ]
+    },
+    {
+        "name": "Upper Norfair, Cathedral, right",
+        "sections": [
+            {
+                "name": "",
+                "hosted_item": "CathedralRight",
+                "access_rules": [
+                    [
+                        "{$has_access_to|Cathedral}"
+                    ]
+                ],
+                "visibility_rules": [
+                    "$is_door_rando"
+                ]
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "fullmap",
+                "x": 1464,
+                "y": 1424
+            },
+            {
+                "map": "norfairmap",
+                "x": 584,
+                "y": 212
+            }
+        ]
+    },
+    {
+        "name": "Upper Norfair, Bubble Mountain, top left",
+        "sections": [
+            {
+                "name": "",
+                "hosted_item": "BubbleMountainTopLeft",
+                "access_rules": [
+                    [
+                        "{$has_access_to|Bubble Mountain}"
+                    ]
+                ],
+                "visibility_rules": [
+                    "$is_door_rando"
+                ]
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "fullmap",
+                "x": 1640,
+                "y": 1360
+            },
+            {
+                "map": "norfairmap",
+                "x": 760,
+                "y": 148
+            }
+        ]
+    },
+    {
+        "name": "Upper Norfair, Bubble Mountain, top right",
+        "sections": [
+            {
+                "name": "",
+                "hosted_item": "BubbleMountainTopRight",
+                "access_rules": [
+                    [
+                        "{$has_access_to|Bubble Mountain Top}"
+                    ]
+                ],
+                "visibility_rules": [
+                    "$is_door_rando"
+                ]
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "fullmap",
+                "x": 1688,
+                "y": 1360
+            },
+            {
+                "map": "norfairmap",
+                "x": 808,
+                "y": 148
+            }
+        ]
+    },
+    {
+        "name": "Upper Norfair, Speed Booster Hall, right",
+        "sections": [
+            {
+                "name": "",
+                "hosted_item": "SpeedBoosterHallRight",
+                "access_rules": [
+                    [
+                        "{$has_access_to|Bubble Mountain Top}" , "{$traverse|BubbleMountainTopRight}"
+                    ]
+                ],
+                "visibility_rules": [
+                    "$is_door_rando"
+                ]
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "fullmap",
+                "x": 2104,
+                "y": 1328
+            },
+            {
+                "map": "norfairmap",
+                "x": 1224,
+                "y": 116
+            }
+        ]
+    },
+    {
+        "name": "Upper Norfair, Single Chamber, right",
+        "sections": [
+            {
+                "name": "",
+                "hosted_item": "SingleChamberRight",
+                "access_rules": [
+                    [
+                        "{$has_access_to|Bubble Mountain Top}"
+                    ]
+                ],
+                "visibility_rules": [
+                    "$is_door_rando"
+                ]
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "fullmap",
+                "x": 1720,
+                "y": 1428
+            },
+            {
+                "map": "norfairmap",
+                "x": 840,
+                "y": 210
+            }
+        ]
+    },
+    {
+        "name": "Upper Norfair, Double Chamber, right",
+        "sections": [
+            {
+                "name": "",
+                "hosted_item": "DoubleChamberRight",
+                "access_rules": [
+                    [
+                        "{$has_access_to|Bubble Mountain Top}" , "{$can_access_double_chamber_items}"
+                    ]
+                ],
+                "visibility_rules": [
+                    "$is_door_rando"
+                ]
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "fullmap",
+                "x": 1832,
+                "y": 1424
+            },
+            {
+                "map": "norfairmap",
+                "x": 952,
+                "y": 212
+            }
+        ]
+    },
+    //Crocomire
+    {
+        "name": "Crocomire, Post Crocomire, upper left",
+        "sections": [
+            {
+                "name": "",
+                "hosted_item": "PostCrocomireUpperLeft",
+                "access_rules": [
+                    [
+                        "{$has_access_to|Crocomire Room Top}", "{$can_access_croc_pb_door}"
+                    ]
+                ],
+                "visibility_rules": [
+                    "$is_door_rando"
+                ]
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "fullmap",
+                "x": 1256,
+                "y": 1616
+            },
+            {
+                "map": "norfairmap",
+                "x": 376,
+                "y": 404
+            }
+        ]
+    },
+    {
+        "name": "Crocomire, Post Crocomire Shaft, right",
+        "sections": [
+            {
+                "name": "",
+                "hosted_item": "PostCrocomireShaftRight",
+                "access_rules": [
+                    [
+                        "{$has_access_to|Crocomire Room Top}" , "{$enough_stuff_croc}", "{$morph}"
+                    ]
+                ],
+                "visibility_rules": [
+                    "$is_door_rando"
+                ]
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "fullmap",
+                "x": 1274,
+                "y": 1780
+            },
+            {
+                "map": "norfairmap",
+                "x": 392,
+                "y": 564
+            }
+        ]
+    },
+    //Lower Norfair
+    {
+        "name": "Lower Norfair, Red Kihunter Shaft, bottom",
+        "sections": [
+            {
+                "name": "",
+                "hosted_item": "RedKihunterShaftBottom",
+                "access_rules": [
+                    [
+                        "{$has_access_to|Firefleas}", "{$can_pass_red_ki_hunters}"
+                    ]
+                ],
+                "visibility_rules": [
+                    "$is_door_rando"
+                ]
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "fullmap",
+                "x": 2120,
+                "y": 1732
+            },
+            {
+                "map": "norfairmap",
+                "x": 1240,
+                "y": 516
+            }
+        ]
+    },
+    {
+        "name": "Lower Norfair, Wasteland, left",
+        "sections": [
+            {
+                "name": "",
+                "hosted_item": "WastelandLeft",
+                "access_rules": [
+                    [
+                        "{$has_access_to|Ridley Zone}" , "{$can_use_power_bombs}"
+                    ]
+                ],
+                "visibility_rules": [
+                    "$is_door_rando"
+                ]
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "fullmap",
+                "x": 1976,
+                "y": 1812
+            },
+            {
+                "map": "norfairmap",
+                "x": 1096,
+                "y": 598
+            }
+        ]
+    },
+    //Wrecked Ship
+    {
+        "name": "Wrecked Ship, West Ocean, right",
+        "sections": [
+            {
+                "name": "",
+                "hosted_item": "WestOceanRight",
+                "access_rules": [
+                    [
+                        "{$has_access_to|West Ocean Left}"
+                    ]
+                ],
+                "visibility_rules": [
+                    "$is_door_rando"
+                ]
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "fullmap",
+                "x": 1496,
+                "y": 212
+            },
+            {
+                "map": "wreckedshipmap",
+                "x": 392,
+                "y": 274
+            },
+            {
+                "map": "crateriamap",
+                "x": 1368,
+                "y": 212
+            }
+        ]
+    },
+    {
+        "name": "Wrecked Ship, Main Shaft, bottom",
+        "sections": [
+            {
+                "name": "",
+                "hosted_item": "WreckedShipMainShaftBottom",
+                "access_rules": [
+                    [
+                        "{$has_access_to|Wrecked Ship Main}"
+                    ]
+                ],
+                "visibility_rules": [
+                    "$is_door_rando"
+                ]
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "fullmap",
+                "x": 1640,
+                "y": 356
+            },
+            {
+                "map": "wreckedshipmap",
+                "x": 536,
+                "y": 420
+            }
+        ]
+    },
+    {
+        "name": "Wrecked Ship, Electric Death Room, top left",
+        "sections": [
+            {
+                "name": "",
+                "hosted_item": "ElectricDeathRoomTopLeft",
+                "access_rules": [
+                    [
+                        "{$has_access_to|Wrecked Ship Back}"
+                    ]
+                ],
+                "visibility_rules": [
+                    "$is_door_rando"
+                ]
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "fullmap",
+                "x": 1784,
+                "y": 180
+            },
+            {
+                "map": "wreckedshipmap",
+                "x": 680,
+                "y": 242
+            }
+        ]
+    },
+    //East Maridia
+    {
+        "name": "Wrecked Ship <-> East Maridia",
+        "sections": [
+            {
+                "name": "Door: East Maridia, Le Coude, bottom",
+                "hosted_item": "LeCoudeBottom",
+                "access_rules": [
+                    [
+                        "{$has_access_to|Le Coude Right}"
+                    ]
+                ],
+                "visibility_rules": [
+                    "$is_door_rando"
+                ]
+            },
+            {
+                "name": "Transition: Crab Maze Left",
+                "hosted_item": "trans_CrabMazeLeft",
+                "access_rules": [
+                    [
+                        "{$has_access_to|Crab Maze Left}"
+                    ]
+                ],
+                "visibility_rules": [
+                    "$is_area_rando"
+                ]
+            },
+            {
+                "name": "Transition: Le Coude Right",
+                "hosted_item": "trans_LeCoudeRight",
+                "access_rules": [
+                    [
+                        "{$has_access_to|Le Coude Right}"
+                    ]
+                ],
+                "visibility_rules": [
+                    "$is_area_rando"
+                ]
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "fullmap",
+                "x": 1928,
+                "y": 372
+            },
+            {
+                "map": "maridiamap",
+                "x": 1002,
+                "y": 85
+            },
+            {
+                "map": "crateriamap",
+                "x": 1548,
+                "y": 240
+            }
+        ]
+    },
+    {
+        "name": "East Maridia, Forgotten Highway Save Station",
+        "sections": [
+            {
+                "name": "",
+                "hosted_item": "ForgottenHighwaySaveStation",
+                "access_rules": [
+                    [
+                        "{$has_access_to|Le Coude Right}"
+                    ]
+                ],
+                "visibility_rules": [
+                    "$is_door_rando"
+                ]
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "fullmap",
+                "x": 1942,
+                "y": 788
+            },
+            {
+                "map": "maridiamap",
+                "x": 1016,
+                "y": 210
+            }
+        ]
+    },
+    {
+        "name": "East Maridia, Plasma Spark, bottom",
+        "sections": [
+            {
+                "name": "",
+                "hosted_item": "PlasmaSparkBottom",
+                "access_rules": [
+                    [
+                        "{$has_access_to|Toilet Top}"
+                    ]
+                ],
+                "visibility_rules": [
+                    "$is_door_rando"
+                ]
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "fullmap",
+                "x": 1544,
+                "y": 802
+            },
+            {
+                "map": "maridiamap",
+                "x": 616,
+                "y": 226
+            }
+        ]
+    },
+    {
+        "name": "East Maridia, Oasis, top",
+        "sections": [
+            {
+                "name": "",
+                "hosted_item": "PlasmaSparkBottom",
+                "access_rules": [
+                    [
+                        "{$has_access_to|Oasis Bottom}"
+                    ]
+                ],
+                "visibility_rules": [
+                    "$is_door_rando"
+                ]
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "fullmap",
+                "x": 1544,
+                "y": 1125
+            },
+            {
+                "map": "maridiamap",
+                "x": 616,
+                "y": 550
+            }
+        ]
+    },
+    {
+        "name": "East Maridia, Draygon Save Refill Station",
+        "sections": [
+            {
+                "name": "",
+                "hosted_item": "DraygonSaveRefillStation",
+                "access_rules": [
+                    [
+                        "{$has_access_to|Colosseum Top Right}"
+                    ]
+                ],
+                "visibility_rules": [
+                    "$is_door_rando"
+                ]
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "fullmap",
+                "x": 2136,
+                "y": 852
+            },
+            {
+                "map": "maridiamap",
+                "x": 1208,
+                "y": 276
+            }
+        ]
+    },
+    {
+        "name": "East Maridia, Colosseum Bottom, right",
+        "sections": [
+            {
+                "name": "",
+                "hosted_item": "ColosseumBottomRight",
+                "access_rules": [
+                    [
+                        "{$has_access_to|Colosseum Top Right}"
+                    ]
+                ],
+                "visibility_rules": [
+                    "$is_door_rando"
+                ]
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "fullmap",
+                "x": 2136,
+                "y": 884
+            },
+            {
+                "map": "maridiamap",
+                "x": 1208,
+                "y": 308
+            }
+        ]
+    },
+    {
+        "name": "East Maridia, Maridia Aqueduct Save Station",
+        "sections": [
+            {
+                "name": "",
+                "hosted_item": "MaridiaAqueductSaveStation",
+                "access_rules": [
+                    [
+                        "{$has_access_to|Aqueduct Bottom}"
+                    ]
+                ],
+                "visibility_rules": [
+                    "$is_door_rando"
+                ]
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "fullmap",
+                "x": 1464,
+                "y": 1012
+            },
+            {
+                "map": "maridiamap",
+                "x": 536,
+                "y": 438
+            }
+        ]
+    },
+    //West Maridia
+    {
+        "name": "West Maridia <-> East Maridia",
+        "sections": [
+            {
+                "name": "Door: West Maridia, Crab Shaft, right",
+                "hosted_item": "CrabShaftRight",
+                "access_rules": [
+                    [
+                        "{$has_access_to|Crab Shaft Right}"
+                    ]
+                ],
+                "visibility_rules": [
+                    "$is_door_rando"
+                ]
+            },
+            {
+                "name": "Transition: Crab Shaft Right",
+                "hosted_item": "trans_CrabShaftRight",
+                "access_rules": [
+                    [
+                        "{$has_access_to|Crab Shaft Right}"
+                    ]
+                ],
+                "visibility_rules": [
+                    "$is_area_rando"
+                ]
+            },
+            {
+                "name": "Transition: Aqueduct Top Left",
+                "hosted_item": "trans_AqueductTopLeft",
+                "access_rules": [
+                    [
+                        "{$has_access_to|Aqueduct Top Left}"
+                    ]
+                ],
+                "visibility_rules": [
+                    "$is_area_rando"
+                ]
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "fullmap",
+                "x": 1464,
+                "y": 980
+            },
+            {
+                "map": "maridiamap",
+                "x": 536,
+                "y": 404
+            }
+        ]
+    },
+    {
+        "name": "Red Brinstar Top <-> West Maridia",
+        "sections": [     
+            {
+                "name": "Transition: Caterpillar Room Top Right",
+                "hosted_item": "trans_CaterpillarRoomTopRight",
+                "access_rules": [
+                    [
+                        "{$has_access_to|Caterpillar Room Top Right}"
+                    ]
+                ],
+                "visibility_rules": [
+                    "$is_area_rando"
+                ]
+            },
+            {
+                "name": "Transition: Red Fish Room Left",
+                "hosted_item": "trans_RedFishRoomLeft",
+                "access_rules": [
+                    [
+                        "{$has_access_to|Red Fish Room Left}"
+                    ]
+                ],
+                "visibility_rules": [
+                    "$is_area_rando"
+                ]
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "fullmap",
+                "x": 1208,
+                "y": 883
+            },
+            {
+                "map": "brinstarmap",
+                "x": 1208,
+                "y": 308
+            },
+            {
+                "map": "maridiamap",
+                "x": 280,
+                "y": 308
+            }
+        ]
+    },
+    {
+        "name": "Red Brinstar Glass Tunnel <-> West Maridia",
+        "sections": [     
+            {
+                "name": "Transition: Glass Tunnel Top",
+                "hosted_item": "trans_GlassTunnelTop",
+                "access_rules": [
+                    [
+                        "{$has_access_to|Glass Tunnel Top}"
+                    ]
+                ],
+                "visibility_rules": [
+                    "$is_area_rando"
+                ]
+            },
+            {
+                "name": "Transition: Main Street Bottom",
+                "hosted_item": "trans_MainStreetBottom",
+                "access_rules": [
+                    [
+                        "{$has_access_to|Main Street Bottom}"
+                    ]
+                ],
+                "visibility_rules": [
+                    "$is_area_rando"
+                ]
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "fullmap",
+                "x": 1192,
+                "y": 1188
+            },            
+            {
+                "map": "maridiamap",
+                "x": 264,
+                "y": 612
+            }
+        ]
+    },
+    {
+        "name": "Red Brinstar East Tunnel <-> West Maridia",
+        "sections": [     
+            {
+                "name": "Transition: East Tunnel Top Right",
+                "hosted_item": "trans_EastTunnelTopRight",
+                "access_rules": [
+                    [
+                        "{$has_access_to|East Tunnel Top Right}"
+                    ]
+                ],
+                "visibility_rules": [
+                    "$is_area_rando"
+                ]
+            },
+            {
+                "name": "Transition: Crab Hole Bottom Left",
+                "hosted_item": "trans_CrabHoleBottomLeft",
+                "access_rules": [
+                    [
+                        "{$has_access_to|Crab Hole Bottom Left}"
+                    ]
+                ],
+                "visibility_rules": [
+                    "$is_area_rando"
+                ]
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "fullmap",
+                "x": 1336,
+                "y": 1204
+            },            
+            {
+                "map": "maridiamap",
+                "x": 408,
+                "y": 628
+            }
+        ]
+    },
+    {
+        "name": "West Maridia, Fish Tank, right",
+        "sections": [
+            {
+                "name": "",
+                "hosted_item": "FishTankRight",
+                "access_rules": [
+                    [
+                        "{$has_access_to|Main Street Bottom}"
+                    ]
+                ],
+                "visibility_rules": [
+                    "$is_door_rando"
+                ]
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "fullmap",
+                "x": 1368,
+                "y": 1140
+                
+            },
+            {
+                "map": "maridiamap",
+                "x": 440,
+                "y": 564
+            }
+        ]
+    },
+    {
+        "name": "West Maridia, Main Street, bottom right",
+        "sections": [
+            {
+                "name": "",
+                "hosted_item": "MainStreetBottomRight",
+                "access_rules": [
+                    [
+                        "{$has_access_to|Main Street Bottom}"
+                    ]
+                ],
+                "visibility_rules": [
+                    "$is_door_rando"
+                ]
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "fullmap",
+                "x": 1224,
+                "y": 1170                
+            },
+            {
+                "map": "maridiamap",
+                "x": 296,
+                "y": 596
+            }
+        ]
+    },
+]

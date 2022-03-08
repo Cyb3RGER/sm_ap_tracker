@@ -1,0 +1,29 @@
+﻿{
+  "tracker_broadcast": {
+    "type": "array",
+    "orientation": "vertical",
+    "margin": "0,0",
+    "content": [
+      {
+        "type": "array",
+        "orientation": "horizontal",
+        "margin": "0,0",
+        "content": [
+          {
+            "type": "itemgrid",
+            "item_margin": "6,1",
+            "h_alignment": "left",
+            "item_size": 48,
+            "rows": [
+              [ "ridley",   "charge", "varia",   "morph" ],
+              [ "phantoon", "ice",    "gravity", "bomb" ],
+              [ "kraid",    "wave",   "hijump",  "spring" ],
+              [ "draygon",  "spazer", "space",   "screw" ],
+              [ "",         "plasma", "speed",   "" ]
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

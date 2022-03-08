@@ -1,0 +1,22 @@
+﻿{
+  "name": "Super Metroid Varia Randomizer AP",
+  "game_name": "Super Metroid",
+  "package_version": "1.0.0.1",
+  "package_uid": "smrando_ap_cyb3r",
+  "platform": "snes",
+  "author": "Cyb3R",
+  "variants": {
+    "standard": {
+      "display_name": "Map Tracker",
+      "flags": [
+        "ap"
+      ]
+    },
+    "itemsonly": {
+     "display_name": "Items Only",
+     "flags": [
+       "ap"
+     ]
+    }
+  }
+}

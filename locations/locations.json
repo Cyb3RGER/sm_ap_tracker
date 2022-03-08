@@ -1,0 +1,2836 @@
+[
+    {
+        "name": "Crateria",
+        "children": [
+            {
+                "name": "Energy Tank, Gauntlet",
+                "access_rules": [
+                    [
+                        "$get_access_to_loc|Energy Tank, Gauntlet"
+                    ]
+                ],
+                "sections": [
+                    {
+                        "name": "",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 584,
+                        "y": 144
+                    },
+                    {
+                        "map": "crateriamap",
+                        "x": 456,
+                        "y": 148
+                    }
+                ]
+            },
+            {
+                "name": "Bomb",
+                "access_rules": [
+                    [
+                        "$get_access_to_loc|Bomb"
+                    ]
+                ],
+                "sections": [
+                    {
+                        "name": "",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 840,
+                        "y": 276
+                    },
+                    {
+                        "map": "crateriamap",
+                        "x": 712,
+                        "y": 276
+                    }
+                ]
+            },
+            {
+                "name": "Energy Tank, Terminator",
+                "access_rules": [
+                    [
+                        "$get_access_to_loc|Energy Tank, Terminator"
+                    ]
+                ],
+                "sections": [
+                    {
+                        "name": "",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 424,
+                        "y": 276
+                    },
+                    {
+                        "map": "crateriamap",
+                        "x": 296,
+                        "y": 276
+                    }
+                ]
+            },
+            {
+                "name": "Power Bomb (Crateria surface)",
+                "access_rules": [
+                    [
+                        "$get_access_to_loc|Power Bomb (Crateria surface)"
+                    ]
+                ],
+                "sections": [
+                    {
+                        "name": "",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 1096,
+                        "y": 112
+                    },
+                    {
+                        "map": "crateriamap",
+                        "x": 968,
+                        "y": 116
+                    }
+                ]
+            },
+            {
+                "name": "Missile (outside Wrecked Ship bottom)",
+                "access_rules": [
+                    [
+                        "$get_access_to_loc|Missile (outside Wrecked Ship bottom)"
+                    ]
+                ],
+                "sections": [
+                    {
+                        "name": "",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 1256,
+                        "y": 240
+                    },
+                    {
+                        "map": "crateriamap",
+                        "x": 1128,
+                        "y": 244
+                    }
+                ]
+            },
+            {
+                "name": "Missile (outside Wrecked Ship top)",
+                "access_rules": [
+                    [
+                        "$get_access_to_loc|Missile (outside Wrecked Ship top)"
+                    ]
+                ],
+                "sections": [
+                    {
+                        "name": "",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 1290,
+                        "y": 78
+                    },
+                    {
+                        "map": "crateriamap",
+                        "x": 1160,
+                        "y": 84
+                    }
+                ]
+            },
+            {
+                "name": "Missile (outside Wrecked Ship middle)",
+                "access_rules": [
+                    [
+                        "$get_access_to_loc|Missile (outside Wrecked Ship middle)"
+                    ]
+                ],
+                "sections": [
+                    {
+                        "name": "",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 1256,
+                        "y": 143
+                    },
+                    {
+                        "map": "crateriamap",
+                        "x": 1128,
+                        "y": 148
+                    }
+                ]
+            },
+            {
+                "name": "Missile (Crateria moat)",
+                "access_rules": [
+                    [
+                        "$get_access_to_loc|Missile (Crateria moat)"
+                    ]
+                ],
+                "sections": [
+                    {
+                        "name": "",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 1192,
+                        "y": 208
+                    },
+                    {
+                        "map": "crateriamap",
+                        "x": 1064,
+                        "y": 212
+                    }
+                ]
+            },
+            {
+                "name": "Missile (Crateria bottom)",
+                "access_rules": [
+                    [
+                        "$get_access_to_loc|Missile (Crateria bottom)"
+                    ]
+                ],
+                "sections": [
+                    {
+                        "name": "",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 680,
+                        "y": 660
+                    },
+                    {
+                        "map": "crateriamap",
+                        "x": 552,
+                        "y": 660
+                    }
+                ]
+            },
+            {
+                "name": "Missile (Crateria gauntlet right)",
+                "access_rules": [
+                    [
+                        "$get_access_to_loc|Missile (Crateria gauntlet right)"
+                    ]
+                ],
+                "sections": [
+                    {
+                        "name": "",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 408,
+                        "y": 176
+                    },
+                    {
+                        "map": "crateriamap",
+                        "x": 280,
+                        "y": 180
+                    }
+                ]
+            },
+            {
+                "name": "Missile (Crateria gauntlet left)",
+                "access_rules": [
+                    [
+                        "$get_access_to_loc|Missile (Crateria gauntlet left)"
+                    ]
+                ],
+                "sections": [
+                    {
+                        "name": "",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 376,
+                        "y": 176
+                    },
+                    {
+                        "map": "crateriamap",
+                        "x": 248,
+                        "y": 180
+                    }
+                ]
+            },
+            {
+                "name": "Super Missile (Crateria)",
+                "access_rules": [
+                    [
+                        "$get_access_to_loc|Super Missile (Crateria)"
+                    ]
+                ],
+                "sections": [
+                    {
+                        "name": "",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 808,
+                        "y": 368
+                    },
+                    {
+                        "map": "crateriamap",
+                        "x": 680,
+                        "y": 372
+                    }
+                ]
+            },
+            {
+                "name": "Missile (Crateria middle)",
+                "access_rules": [
+                    [
+                        "$get_access_to_loc|Missile (Crateria middle)"
+                    ]
+                ],
+                "sections": [
+                    {
+                        "name": "",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 552,
+                        "y": 304
+                    },
+                    {
+                        "map": "crateriamap",
+                        "x": 424,
+                        "y": 308
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Brinstar",
+        "children": [
+            {
+                "name": "Morphing Ball",
+                "access_rules": [
+                    [
+                        "$get_access_to_loc|Morphing Ball"
+                    ]
+                ],
+                "sections": [
+                    {
+                        "name": "",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 744,
+                        "y": 976
+                    },
+                    {
+                        "map": "brinstarmap",
+                        "x": 744,
+                        "y": 404
+                    }
+                ]
+            },
+            {
+                "name": "Energy Tank, Brinstar Ceiling",
+                "access_rules": [
+                    [
+                        "$get_access_to_loc|Energy Tank, Brinstar Ceiling"
+                    ]
+                ],
+                "sections": [
+                    {
+                        "name": "",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 936,
+                        "y": 976
+                    },
+                    {
+                        "map": "brinstarmap",
+                        "x": 936,
+                        "y": 404
+                    }
+                ]
+            },
+            {
+                "name": "Missile (blue Brinstar middle)",
+                "access_rules": [
+                    [
+                        "$get_access_to_loc|Missile (blue Brinstar middle)"
+                    ]
+                ],
+                "sections": [
+                    {
+                        "name": "",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 968,
+                        "y": 976
+                    },
+                    {
+                        "map": "brinstarmap",
+                        "x": 968,
+                        "y": 404
+                    }
+                ]
+            },
+            {
+                "name": "Missile (blue Brinstar bottom)",
+                "access_rules": [
+                    [
+                        "$get_access_to_loc|Missile (blue Brinstar bottom)"
+                    ]
+                ],
+                "sections": [
+                    {
+                        "name": "",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 840,
+                        "y": 1008
+                    },
+                    {
+                        "map": "brinstarmap",
+                        "x": 840,
+                        "y": 436
+                    }
+                ]
+            },
+            {
+                "name": "Missile (blue Brinstar top)",
+                "access_rules": [
+                    [
+                        "$get_access_to_loc|Missile (blue Brinstar top)"
+                    ]
+                ],
+                "sections": [
+                    {
+                        "name": "",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 872,
+                        "y": 896
+                    },
+                    {
+                        "map": "brinstarmap",
+                        "x": 872,
+                        "y": 324
+                    }
+                ]
+            },
+            {
+                "name": "Missile (blue Brinstar behind missile)",
+                "access_rules": [
+                    [
+                        "$get_access_to_loc|Missile (blue Brinstar behind missile)"
+                    ]
+                ],
+                "sections": [
+                    {
+                        "name": "",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 872,
+                        "y": 928
+                    },
+                    {
+                        "map": "brinstarmap",
+                        "x": 872,
+                        "y": 356
+                    }
+                ]
+            },
+            {
+                "name": "Power Bomb (blue Brinstar)",
+                "access_rules": [
+                    [
+                        "$get_access_to_loc|Power Bomb (blue Brinstar)"
+                    ]
+                ],
+                "sections": [
+                    {
+                        "name": "",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 680,
+                        "y": 976
+                    },
+                    {
+                        "map": "brinstarmap",
+                        "x": 680,
+                        "y": 404
+                    }
+                ]
+            },
+            {
+                "name": "Reserve Tank, Brinstar",
+                "access_rules": [
+                    [
+                        "$get_access_to_loc|Reserve Tank, Brinstar"
+                    ]
+                ],
+                "sections": [
+                    {
+                        "name": "",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 360,
+                        "y": 784
+                    },
+                    {
+                        "map": "brinstarmap",
+                        "x": 360,
+                        "y": 212
+                    }
+                ]
+            },
+            {
+                "name": "Energy Tank, Etecoons",
+                "access_rules": [
+                    [
+                        "$get_access_to_loc|Energy Tank, Etecoons"
+                    ]
+                ],
+                "sections": [
+                    {
+                        "name": "",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 136,
+                        "y": 976
+                    },
+                    {
+                        "map": "brinstarmap",
+                        "x": 136,
+                        "y": 404
+                    }
+                ]
+            },
+            {
+                "name": "Power Bomb (green Brinstar bottom)",
+                "access_rules": [
+                    [
+                        "$get_access_to_loc|Power Bomb (green Brinstar bottom)"
+                    ]
+                ],
+                "sections": [
+                    {
+                        "name": "",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 328,
+                        "y": 880
+                    },
+                    {
+                        "map": "brinstarmap",
+                        "x": 328,
+                        "y": 308
+                    }
+                ]
+            },
+            {
+                "name": "Missile (green Brinstar below super missile)",
+                "access_rules": [
+                    [
+                        "$get_access_to_loc|Missile (green Brinstar below super missile)"
+                    ]
+                ],
+                "sections": [
+                    {
+                        "name": "",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 296,
+                        "y": 784
+                    },
+                    {
+                        "map": "brinstarmap",
+                        "x": 296,
+                        "y": 212
+                    }
+                ]
+            },
+            {
+                "name": "Super Missile (green Brinstar top)",
+                "access_rules": [
+                    [
+                        "$get_access_to_loc|Super Missile (green Brinstar top)"
+                    ]
+                ],
+                "sections": [
+                    {
+                        "name": "",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 264,
+                        "y": 752
+                    },
+                    {
+                        "map": "brinstarmap",
+                        "x": 264,
+                        "y": 180
+                    }
+                ]
+            },
+            {
+                "name": "Missile (green Brinstar behind missile)",
+                "access_rules": [
+                    [
+                        "$get_access_to_loc|Missile (green Brinstar behind missile)"
+                    ]
+                ],
+                "sections": [
+                    {
+                        "name": "",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 392,
+                        "y": 768
+                    },
+                    {
+                        "map": "brinstarmap",
+                        "x": 392,
+                        "y": 196
+                    }
+                ]
+            },
+            {
+                "name": "Missile (green Brinstar behind reserve tank)",
+                "access_rules": [
+                    [
+                        "$get_access_to_loc|Missile (green Brinstar behind reserve tank)"
+                    ]
+                ],
+                "sections": [
+                    {
+                        "name": "",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 392,
+                        "y": 800
+                    },
+                    {
+                        "map": "brinstarmap",
+                        "x": 392,
+                        "y": 228
+                    }
+                ]
+            },
+            {
+                "name": "Missile (green Brinstar pipe)",
+                "access_rules": [
+                    [
+                        "$get_access_to_loc|Missile (green Brinstar pipe)"
+                    ]
+                ],
+                "sections": [
+                    {
+                        "name": "",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 648,
+                        "y": 1008
+                    },
+                    {
+                        "map": "brinstarmap",
+                        "x": 648,
+                        "y": 436
+                    }
+                ]
+            },
+            {
+                "name": "Super Missile (green Brinstar bottom)",
+                "access_rules": [
+                    [
+                        "$get_access_to_loc|Super Missile (green Brinstar bottom)"
+                    ]
+                ],
+                "sections": [
+                    {
+                        "name": "",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 104,
+                        "y": 976
+                    },
+                    {
+                        "map": "brinstarmap",
+                        "x": 104,
+                        "y": 404
+                    }
+                ]
+            },
+            {
+                "name": "Charge Beam",
+                "access_rules": [
+                    [
+                        "$get_access_to_loc|Charge Beam"
+                    ]
+                ],
+                "sections": [
+                    {
+                        "name": "",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 488,
+                        "y": 1008
+                    },
+                    {
+                        "map": "brinstarmap",
+                        "x": 488,
+                        "y": 436
+                    }
+                ]
+            },
+            {
+                "name": "Energy Tank, Waterway",
+                "access_rules": [
+                    [
+                        "$get_access_to_loc|Energy Tank, Waterway"
+                    ]
+                ],
+                "sections": [
+                    {
+                        "name": "",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 200,
+                        "y": 1072
+                    },
+                    {
+                        "map": "brinstarmap",
+                        "x": 200,
+                        "y": 500
+                    }
+                ]
+            },
+            {
+                "name": "Energy Tank, Brinstar Gate",
+                "access_rules": [
+                    [
+                        "$get_access_to_loc|Energy Tank, Brinstar Gate"
+                    ]
+                ],
+                "sections": [
+                    {
+                        "name": "",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 616,
+                        "y": 912
+                    },
+                    {
+                        "map": "brinstarmap",
+                        "x": 616,
+                        "y": 340
+                    }
+                ]
+            },
+            {
+                "name": "Super Missile (pink Brinstar)",
+                "access_rules": [
+                    [
+                        "$get_access_to_loc|Super Missile (pink Brinstar)"
+                    ]
+                ],
+                "sections": [
+                    {
+                        "name": "",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 712,
+                        "y": 944
+                    },
+                    {
+                        "map": "brinstarmap",
+                        "x": 712,
+                        "y": 372
+                    }
+                ]
+            },
+            {
+                "name": "Missile (pink Brinstar top)",
+                "access_rules": [
+                    [
+                        "$get_access_to_loc|Missile (pink Brinstar top)"
+                    ]
+                ],
+                "sections": [
+                    {
+                        "name": "",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 487,
+                        "y": 879
+                    },
+                    {
+                        "map": "brinstarmap",
+                        "x": 488,
+                        "y": 404
+                    }
+                ]
+            },
+            {
+                "name": "Missile (pink Brinstar bottom)",
+                "access_rules": [
+                    [
+                        "$get_access_to_loc|Missile (pink Brinstar bottom)"
+                    ]
+                ],
+                "sections": [
+                    {
+                        "name": "",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 488,
+                        "y": 976
+                    },
+                    {
+                        "map": "brinstarmap",
+                        "x": 488,
+                        "y": 308
+                    }
+                ]
+            },
+            {
+                "name": "Power Bomb (pink Brinstar)",
+                "access_rules": [
+                    [
+                        "$get_access_to_loc|Power Bomb (pink Brinstar)"
+                    ]
+                ],
+                "sections": [
+                    {
+                        "name": "",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 424,
+                        "y": 912
+                    },
+                    {
+                        "map": "brinstarmap",
+                        "x": 424,
+                        "y": 340
+                    }
+                ]
+            },
+            {
+                "name": "X-Ray Scope",
+                "access_rules": [
+                    [
+                        "$get_access_to_loc|X-Ray Scope"
+                    ]
+                ],
+                "sections": [
+                    {
+                        "name": "",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 680,
+                        "y": 1136
+                    },
+                    {
+                        "map": "brinstarmap",
+                        "x": 680,
+                        "y": 564
+                    }
+                ]
+            },
+            {
+                "name": "Spazer",
+                "access_rules": [
+                    [
+                        "$get_access_to_loc|Spazer"
+                    ]
+                ],
+                "sections": [
+                    {
+                        "name": "",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 1160,
+                        "y": 1200
+                    },
+                    {
+                        "map": "brinstarmap",
+                        "x": 1160,
+                        "y": 628
+                    }
+                ]
+            },
+            {
+                "name": "Power Bomb (red Brinstar sidehopper room)",
+                "access_rules": [
+                    [
+                        "$get_access_to_loc|Power Bomb (red Brinstar sidehopper room)"
+                    ]
+                ],
+                "sections": [
+                    {
+                        "name": "",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 1064,
+                        "y": 912
+                    },
+                    {
+                        "map": "brinstarmap",
+                        "x": 1064,
+                        "y": 340
+                    }
+                ]
+            },
+            {
+                "name": "Power Bomb (red Brinstar spike room)",
+                "access_rules": [
+                    [
+                        "$get_access_to_loc|Power Bomb (red Brinstar spike room)"
+                    ]
+                ],
+                "sections": [
+                    {
+                        "name": "",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 1064,
+                        "y": 1008
+                    },
+                    {
+                        "map": "brinstarmap",
+                        "x": 1064,
+                        "y": 436
+                    }
+                ]
+            },
+            {
+                "name": "Missile (red Brinstar spike room)",
+                "access_rules": [
+                    [
+                        "$get_access_to_loc|Missile (red Brinstar spike room)"
+                    ]
+                ],
+                "sections": [
+                    {
+                        "name": "",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 1032,
+                        "y": 1008
+                    },
+                    {
+                        "map": "brinstarmap",
+                        "x": 1032,
+                        "y": 436
+                    }
+                ]
+            },
+            {
+                "name": "Energy Tank, Kraid",
+                "access_rules": [
+                    [
+                        "$get_access_to_loc|Energy Tank, Kraid"
+                    ]
+                ],
+                "sections": [
+                    {
+                        "name": "",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 1320,
+                        "y": 1264
+                    },
+                    {
+                        "map": "brinstarmap",
+                        "x": 1320,
+                        "y": 692
+                    }
+                ]
+            },
+            {
+                "name": "Varia Suit",
+                "access_rules": [
+                    [
+                        "$get_access_to_loc|Varia Suit"
+                    ]
+                ],
+                "sections": [
+                    {
+                        "name": "",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 1768,
+                        "y": 1264
+                    },
+                    {
+                        "map": "brinstarmap",
+                        "x": 1768,
+                        "y": 692
+                    }
+                ]
+            },
+            {
+                "name": "Missile (Kraid)",
+                "access_rules": [
+                    [
+                        "$get_access_to_loc|Missile (Kraid)"
+                    ]
+                ],
+                "sections": [
+                    {
+                        "name": "",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 1448,
+                        "y": 1232
+                    },
+                    {
+                        "map": "brinstarmap",
+                        "x": 1448,
+                        "y": 660
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Norfair",
+        "children": [
+            {
+                "name": "Ice Beam",
+                "access_rules": [
+                    [
+                        "$get_access_to_loc|Ice Beam"
+                    ]
+                ],
+                "sections": [
+                    {
+                        "name": "",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 1096,
+                        "y": 1360
+                    },
+                    {
+                        "map": "norfairmap",
+                        "x": 216,
+                        "y": 148
+                    }
+                ]
+            },
+            {
+                "name": "Energy Tank, Crocomire",
+                "access_rules": [
+                    [
+                        "$get_access_to_loc|Energy Tank, Crocomire"
+                    ]
+                ],
+                "sections": [
+                    {
+                        "name": "",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 1544,
+                        "y": 1616
+                    },
+                    {
+                        "map": "norfairmap",
+                        "x": 664,
+                        "y": 404
+                    }
+                ]
+            },
+            {
+                "name": "Hi-Jump Boots",
+                "access_rules": [
+                    [
+                        "$get_access_to_loc|Hi-Jump Boots"
+                    ]
+                ],
+                "sections": [
+                    {
+                        "name": "",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 1160,
+                        "y": 1488
+                    },
+                    {
+                        "map": "norfairmap",
+                        "x": 280,
+                        "y": 276
+                    }
+                ]
+            },
+            {
+                "name": "Grapple Beam",
+                "access_rules": [
+                    [
+                        "$get_access_to_loc|Grapple Beam"
+                    ]
+                ],
+                "sections": [
+                    {
+                        "name": "",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 1032,
+                        "y": 1808
+                    },
+                    {
+                        "map": "norfairmap",
+                        "x": 152,
+                        "y": 596
+                    }
+                ]
+            },
+            {
+                "name": "Reserve Tank, Norfair",
+                "access_rules": [
+                    [
+                        "$get_access_to_loc|Reserve Tank, Norfair"
+                    ]
+                ],
+                "sections": [
+                    {
+                        "name": "",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 1512,
+                        "y": 1360
+                    },
+                    {
+                        "map": "norfairmap",
+                        "x": 632,
+                        "y": 148
+                    }
+                ]
+            },
+            {
+                "name": "Missile (Norfair Reserve Tank)",
+                "access_rules": [
+                    [
+                        "$get_access_to_loc|Missile (Norfair Reserve Tank)"
+                    ]
+                ],
+                "sections": [
+                    {
+                        "name": "",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 1544,
+                        "y": 1360
+                    },
+                    {
+                        "map": "norfairmap",
+                        "x": 664,
+                        "y": 148
+                    }
+                ]
+            },
+            {
+                "name": "Speed Booster",
+                "access_rules": [
+                    [
+                        "$get_access_to_loc|Speed Booster"
+                    ]
+                ],
+                "sections": [
+                    {
+                        "name": "",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 2120,
+                        "y": 1360
+                    },
+                    {
+                        "map": "norfairmap",
+                        "x": 1240,
+                        "y": 148
+                    }
+                ]
+            },
+            {
+                "name": "Wave Beam",
+                "access_rules": [
+                    [
+                        "$get_access_to_loc|Wave Beam"
+                    ]
+                ],
+                "sections": [
+                    {
+                        "name": "",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 1864,
+                        "y": 1424
+                    },
+                    {
+                        "map": "norfairmap",
+                        "x": 984,
+                        "y": 212
+                    }
+                ]
+            },
+            {
+                "name": "Missile (lava room)",
+                "access_rules": [
+                    [
+                        "$get_access_to_loc|Missile (lava room)"
+                    ]
+                ],
+                "sections": [
+                    {
+                        "name": "",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 1416,
+                        "y": 1424
+                    },
+                    {
+                        "map": "norfairmap",
+                        "x": 536,
+                        "y": 212
+                    }
+                ]
+            },
+            {
+                "name": "Missile (below Ice Beam)",
+                "access_rules": [
+                    [
+                        "$get_access_to_loc|Missile (below Ice Beam)"
+                    ]
+                ],
+                "sections": [
+                    {
+                        "name": "",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 1000,
+                        "y": 1424
+                    },
+                    {
+                        "map": "norfairmap",
+                        "x": 120,
+                        "y": 212
+                    }
+                ]
+            },
+            {
+                "name": "Missile (above Crocomire)",
+                "access_rules": [
+                    [
+                        "$get_access_to_loc|Missile (above Crocomire)"
+                    ]
+                ],
+                "sections": [
+                    {
+                        "name": "",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 1288,
+                        "y": 1488
+                    },
+                    {
+                        "map": "norfairmap",
+                        "x": 408,
+                        "y": 276
+                    }
+                ]
+            },
+            {
+                "name": "Missile (Hi-Jump Boots)",
+                "access_rules": [
+                    [
+                        "$get_access_to_loc|Missile (Hi-Jump Boots)"
+                    ]
+                ],
+                "sections": [
+                    {
+                        "name": "",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 1192,
+                        "y": 1456
+                    },
+                    {
+                        "map": "norfairmap",
+                        "x": 312,
+                        "y": 244
+                    }
+                ]
+            },
+            {
+                "name": "Energy Tank (Hi-Jump Boots)",
+                "access_rules": [
+                    [
+                        "$get_access_to_loc|Energy Tank (Hi-Jump Boots)"
+                    ]
+                ],
+                "sections": [
+                    {
+                        "name": "",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 1224,
+                        "y": 1456
+                    },
+                    {
+                        "map": "norfairmap",
+                        "x": 344,
+                        "y": 244
+                    }
+                ]
+            },
+            {
+                "name": "Power Bomb (Crocomire)",
+                "access_rules": [
+                    [
+                        "$get_access_to_loc|Power Bomb (Crocomire)"
+                    ]
+                ],
+                "sections": [
+                    {
+                        "name": "",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 1224,
+                        "y": 1616
+                    },
+                    {
+                        "map": "norfairmap",
+                        "x": 344,
+                        "y": 404
+                    }
+                ]
+            },
+            {
+                "name": "Missile (below Crocomire)",
+                "access_rules": [
+                    [
+                        "$get_access_to_loc|Missile (below Crocomire)"
+                    ]
+                ],
+                "sections": [
+                    {
+                        "name": "",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 1384,
+                        "y": 1776
+                    },
+                    {
+                        "map": "norfairmap",
+                        "x": 504,
+                        "y": 564
+                    }
+                ]
+            },
+            {
+                "name": "Missile (Grapple Beam)",
+                "access_rules": [
+                    [
+                        "$get_access_to_loc|Missile (Grapple Beam)"
+                    ]
+                ],
+                "sections": [
+                    {
+                        "name": "",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 1192,
+                        "y": 1776
+                    },
+                    {
+                        "map": "norfairmap",
+                        "x": 312,
+                        "y": 564
+                    }
+                ]
+            },
+            {
+                "name": "Missile (bubble Norfair green door)",
+                "access_rules": [
+                    [
+                        "$get_access_to_loc|Missile (bubble Norfair green door)"
+                    ]
+                ],
+                "sections": [
+                    {
+                        "name": "",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 1608,
+                        "y": 1360
+                    },
+                    {
+                        "map": "norfairmap",
+                        "x": 728,
+                        "y": 148
+                    }
+                ]
+            },
+            {
+                "name": "Missile (bubble Norfair)",
+                "access_rules": [
+                    [
+                        "$get_access_to_loc|Missile (bubble Norfair)"
+                    ]
+                ],
+                "sections": [
+                    {
+                        "name": "",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 1672,
+                        "y": 1456
+                    },
+                    {
+                        "map": "norfairmap",
+                        "x": 792,
+                        "y": 244
+                    }
+                ]
+            },
+            {
+                "name": "Missile (Speed Booster)",
+                "access_rules": [
+                    [
+                        "$get_access_to_loc|Missile (Speed Booster)"
+                    ]
+                ],
+                "sections": [
+                    {
+                        "name": "",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 2088,
+                        "y": 1360
+                    },
+                    {
+                        "map": "norfairmap",
+                        "x": 1208,
+                        "y": 148
+                    }
+                ]
+            },
+            {
+                "name": "Missile (Wave Beam)",
+                "access_rules": [
+                    [
+                        "$get_access_to_loc|Missile (Wave Beam)"
+                    ]
+                ],
+                "sections": [
+                    {
+                        "name": "",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 1768,
+                        "y": 1424
+                    },
+                    {
+                        "map": "norfairmap",
+                        "x": 888,
+                        "y": 212
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Lower Norfair",
+        "children": [
+            {
+                "name": "Energy Tank, Ridley",
+                "access_rules": [
+                    [
+                        "$get_access_to_loc|Energy Tank, Ridley"
+                    ]
+                ],
+                "sections": [
+                    {
+                        "name": "",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 1640,
+                        "y": 1840
+                    },
+                    {
+                        "map": "norfairmap",
+                        "x": 760,
+                        "y": 628
+                    }
+                ]
+            },
+            {
+                "name": "Screw Attack",
+                "access_rules": [
+                    [
+                        "$get_access_to_loc|Screw Attack"
+                    ]
+                ],
+                "sections": [
+                    {
+                        "name": "",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 1576,
+                        "y": 1808
+                    },
+                    {
+                        "map": "norfairmap",
+                        "x": 696,
+                        "y": 596
+                    }
+                ]
+            },
+            {
+                "name": "Energy Tank, Firefleas",
+                "access_rules": [
+                    [
+                        "$get_access_to_loc|Energy Tank, Firefleas"
+                    ]
+                ],
+                "sections": [
+                    {
+                        "name": "",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 2122,
+                        "y": 1646
+                    },
+                    {
+                        "map": "norfairmap",
+                        "x": 1240,
+                        "y": 436
+                    }
+                ]
+            },
+            {
+                "name": "Missile (Gold Torizo)",
+                "access_rules": [
+                    [
+                        "$get_access_to_loc|Missile (Gold Torizo)"
+                    ]
+                ],
+                "sections": [
+                    {
+                        "name": "",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 1512,
+                        "y": 1776
+                    },
+                    {
+                        "map": "norfairmap",
+                        "x": 632,
+                        "y": 564
+                    }
+                ]
+            },
+            {
+                "name": "Super Missile (Gold Torizo)",
+                "access_rules": [
+                    [
+                        "$get_access_to_loc|Super Missile (Gold Torizo)"
+                    ]
+                ],
+                "sections": [
+                    {
+                        "name": "",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 1544,
+                        "y": 1776
+                    },
+                    {
+                        "map": "norfairmap",
+                        "x": 664,
+                        "y": 564
+                    }
+                ]
+            },
+            {
+                "name": "Missile (Mickey Mouse room)",
+                "access_rules": [
+                    [
+                        "$get_access_to_loc|Missile (Mickey Mouse room)"
+                    ]
+                ],
+                "sections": [
+                    {
+                        "name": "",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 1832,
+                        "y": 1616
+                    },
+                    {
+                        "map": "norfairmap",
+                        "x": 952,
+                        "y": 404
+                    }
+                ]
+            },
+            {
+                "name": "Missile (lower Norfair above fire flea room)",
+                "access_rules": [
+                    [
+                        "$get_access_to_loc|Missile (lower Norfair above fire flea room)"
+                    ]
+                ],
+                "sections": [
+                    {
+                        "name": "",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 2056,
+                        "y": 1456
+                    },
+                    {
+                        "map": "norfairmap",
+                        "x": 1176,
+                        "y": 244
+                    }
+                ]
+            },
+            {
+                "name": "Power Bomb (lower Norfair above fire flea room)",
+                "access_rules": [
+                    [
+                        "$get_access_to_loc|Power Bomb (lower Norfair above fire flea room)"
+                    ]
+                ],
+                "sections": [
+                    {
+                        "name": "",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 2120,
+                        "y": 1488
+                    },
+                    {
+                        "map": "norfairmap",
+                        "x": 1240,
+                        "y": 276
+                    }
+                ]
+            },
+            {
+                "name": "Power Bomb (Power Bombs of shame)",
+                "access_rules": [
+                    [
+                        "$get_access_to_loc|Power Bomb (Power Bombs of shame)"
+                    ]
+                ],
+                "sections": [
+                    {
+                        "name": "",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 1960,
+                        "y": 1744
+                    },
+                    {
+                        "map": "norfairmap",
+                        "x": 1080,
+                        "y": 532
+                    }
+                ]
+            },
+            {
+                "name": "Missile (lower Norfair near Wave Beam)",
+                "access_rules": [
+                    [
+                        "$get_access_to_loc|Missile (lower Norfair near Wave Beam)"
+                    ]
+                ],
+                "sections": [
+                    {
+                        "name": "",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 1864,
+                        "y": 1456
+                    },
+                    {
+                        "map": "norfairmap",
+                        "x": 984,
+                        "y": 244
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Wrecked Ship",
+        "children": [
+            {
+                "name": "Reserve Tank, Wrecked Ship",
+                "access_rules": [
+                    [
+                        "$get_access_to_loc|Reserve Tank, Wrecked Ship"
+                    ]
+                ],
+                "sections": [
+                    {
+                        "name": "",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 1608,
+                        "y": 112
+                    },
+                    {
+                        "map": "wreckedshipmap",
+                        "x": 504,
+                        "y": 180
+                    }
+                ]
+            },
+            {
+                "name": "Energy Tank, Wrecked Ship",
+                "access_rules": [
+                    [
+                        "$get_access_to_loc|Energy Tank, Wrecked Ship"
+                    ]
+                ],
+                "sections": [
+                    {
+                        "name": "",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 1704,
+                        "y": 176
+                    },
+                    {
+                        "map": "wreckedshipmap",
+                        "x": 600,
+                        "y": 244
+                    }
+                ]
+            },
+            {
+                "name": "Right Super, Wrecked Ship",
+                "access_rules": [
+                    [
+                        "$get_access_to_loc|Right Super, Wrecked Ship"
+                    ]
+                ],
+                "sections": [
+                    {
+                        "name": "",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 1800,
+                        "y": 304
+                    },
+                    {
+                        "map": "wreckedshipmap",
+                        "x": 696,
+                        "y": 372
+                    }
+                ]
+            },
+            {
+                "name": "Gravity Suit",
+                "access_rules": [
+                    [
+                        "$get_access_to_loc|Gravity Suit"
+                    ]
+                ],
+                "sections": [
+                    {
+                        "name": "",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 1448,
+                        "y": 176
+                    },
+                    {
+                        "map": "wreckedshipmap",
+                        "x": 344,
+                        "y": 244
+                    }
+                ]
+            },
+            {
+                "name": "Missile (Wrecked Ship middle)",
+                "access_rules": [
+                    [
+                        "$get_access_to_loc|Missile (Wrecked Ship middle)"
+                    ]
+                ],
+                "sections": [
+                    {
+                        "name": "",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 1512,
+                        "y": 272
+                    },
+                    {
+                        "map": "wreckedshipmap",
+                        "x": 408,
+                        "y": 340
+                    }
+                ]
+            },
+            {
+                "name": "Missile (Gravity Suit)",
+                "access_rules": [
+                    [
+                        "$get_access_to_loc|Missile (Gravity Suit)"
+                    ]
+                ],
+                "sections": [
+                    {
+                        "name": "",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 1542,
+                        "y": 176
+                    },
+                    {
+                        "map": "wreckedshipmap",
+                        "x": 440,
+                        "y": 244
+                    }
+                ]
+            },
+            {
+                "name": "Missile (Wrecked Ship top)",
+                "access_rules": [
+                    [
+                        "$get_access_to_loc|Missile (Wrecked Ship top)"
+                    ]
+                ],
+                "sections": [
+                    {
+                        "name": "",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 1798,
+                        "y": 79
+                    },
+                    {
+                        "map": "wreckedshipmap",
+                        "x": 696,
+                        "y": 148
+                    }
+                ]
+            },
+            {
+                "name": "Super Missile (Wrecked Ship left)",
+                "access_rules": [
+                    [
+                        "$get_access_to_loc|Super Missile (Wrecked Ship left)"
+                    ]
+                ],
+                "sections": [
+                    {
+                        "name": "",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 1608,
+                        "y": 304
+                    },
+                    {
+                        "map": "wreckedshipmap",
+                        "x": 504,
+                        "y": 372
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Maridia",
+        "children": [
+            {
+                "name": "Energy Tank, Mama turtle",
+                "access_rules": [
+                    [
+                        "$get_access_to_loc|Energy Tank, Mama turtle"
+                    ]
+                ],
+                "sections": [
+                    {
+                        "name": "",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 1416,
+                        "y": 1040
+                    },
+                    {
+                        "map": "maridiamap",
+                        "x": 488,
+                        "y": 468
+                    }
+                ]
+            },
+            {
+                "name": "Reserve Tank, Maridia",
+                "access_rules": [
+                    [
+                        "$get_access_to_loc|Reserve Tank, Maridia"
+                    ]
+                ],
+                "sections": [
+                    {
+                        "name": "",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 1512,
+                        "y": 1136
+                    },
+                    {
+                        "map": "maridiamap",
+                        "x": 584,
+                        "y": 564
+                    }
+                ]
+            },
+            {
+                "name": "Missile (left Maridia sand pit room)",
+                "access_rules": [
+                    [
+                        "$get_access_to_loc|Missile (left Maridia sand pit room)"
+                    ]
+                ],
+                "sections": [
+                    {
+                        "name": "",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 1480,
+                        "y": 1104
+                    },
+                    {
+                        "map": "maridiamap",
+                        "x": 552,
+                        "y": 532
+                    }
+                ]
+            },
+            {
+                "name": "Spring Ball",
+                "access_rules": [
+                    [
+                        "$get_access_to_loc|Spring Ball"
+                    ]
+                ],
+                "sections": [
+                    {
+                        "name": "",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 1896,
+                        "y": 1168
+                    },
+                    {
+                        "map": "maridiamap",
+                        "x": 968,
+                        "y": 596
+                    }
+                ]
+            },
+            {
+                "name": "Missile (green Maridia shinespark)",
+                "access_rules": [
+                    [
+                        "$get_access_to_loc|Missile (green Maridia shinespark)"
+                    ]
+                ],
+                "sections": [
+                    {
+                        "name": "",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 1160,
+                        "y": 1040
+                    },
+                    {
+                        "map": "maridiamap",
+                        "x": 232,
+                        "y": 468
+                    }
+                ]
+            },
+            {
+                "name": "Super Missile (green Maridia)",
+                "access_rules": [
+                    [
+                        "$get_access_to_loc|Super Missile (green Maridia)"
+                    ]
+                ],
+                "sections": [
+                    {
+                        "name": "",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 1192,
+                        "y": 1008
+                    },
+                    {
+                        "map": "maridiamap",
+                        "x": 264,
+                        "y": 436
+                    }
+                ]
+            },
+            {
+                "name": "Missile (green Maridia tatori)",
+                "access_rules": [
+                    [
+                        "$get_access_to_loc|Missile (green Maridia tatori)"
+                    ]
+                ],
+                "sections": [
+                    {
+                        "name": "",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 1448,
+                        "y": 1072
+                    },
+                    {
+                        "map": "maridiamap",
+                        "x": 520,
+                        "y": 500
+                    }
+                ]
+            },
+            {
+                "name": "Missile (right Maridia sand pit room)",
+                "access_rules": [
+                    [
+                        "$get_access_to_loc|Missile (right Maridia sand pit room)"
+                    ]
+                ],
+                "sections": [
+                    {
+                        "name": "",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 1576,
+                        "y": 1104
+                    },
+                    {
+                        "map": "maridiamap",
+                        "x": 648,
+                        "y": 532
+                    }
+                ]
+            },
+            {
+                "name": "Power Bomb (right Maridia sand pit room)",
+                "access_rules": [
+                    [
+                        "$get_access_to_loc|Power Bomb (right Maridia sand pit room)"
+                    ]
+                ],
+                "sections": [
+                    {
+                        "name": "",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 1608,
+                        "y": 1136
+                    },
+                    {
+                        "map": "maridiamap",
+                        "x": 680,
+                        "y": 564
+                    }
+                ]
+            },
+            {
+                "name": "Energy Tank, Botwoon",
+                "access_rules": [
+                    [
+                        "$get_access_to_loc|Energy Tank, Botwoon"
+                    ]
+                ],
+                "sections": [
+                    {
+                        "name": "",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 1768,
+                        "y": 912
+                    },
+                    {
+                        "map": "maridiamap",
+                        "x": 840,
+                        "y": 340
+                    }
+                ]
+            },
+            {
+                "name": "Space Jump",
+                "access_rules": [
+                    [
+                        "$get_access_to_loc|Space Jump"
+                    ]
+                ],
+                "sections": [
+                    {
+                        "name": "",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 2056,
+                        "y": 976
+                    },
+                    {
+                        "map": "maridiamap",
+                        "x": 1128,
+                        "y": 404
+                    }
+                ]
+            },
+            {
+                "name": "Missile (pink Maridia)",
+                "access_rules": [
+                    [
+                        "$get_access_to_loc|Missile (pink Maridia)"
+                    ]
+                ],
+                "sections": [
+                    {
+                        "name": "",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 1608,
+                        "y": 944
+                    },
+                    {
+                        "map": "maridiamap",
+                        "x": 680,
+                        "y": 372
+                    }
+                ]
+            },
+            {
+                "name": "Super Missile (pink Maridia)",
+                "access_rules": [
+                    [
+                        "$get_access_to_loc|Super Missile (pink Maridia)"
+                    ]
+                ],
+                "sections": [
+                    {
+                        "name": "",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 1640,
+                        "y": 944
+                    },
+                    {
+                        "map": "maridiamap",
+                        "x": 712,
+                        "y": 372
+                    }
+                ]
+            },
+            {
+                "name": "Missile (Draygon)",
+                "access_rules": [
+                    [
+                        "$get_access_to_loc|Missile (Draygon)"
+                    ]
+                ],
+                "sections": [
+                    {
+                        "name": "",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 2184,
+                        "y": 880
+                    },
+                    {
+                        "map": "maridiamap",
+                        "x": 1256,
+                        "y": 308
+                    }
+                ]
+            },
+            {
+                "name": "Plasma Beam",
+                "access_rules": [
+                    [
+                        "$get_access_to_loc|Plasma Beam"
+                    ]
+                ],
+                "sections": [
+                    {
+                        "name": "",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 1736,
+                        "y": 720
+                    },
+                    {
+                        "map": "maridiamap",
+                        "x": 808,
+                        "y": 148
+                    }
+                ]
+            },
+            {
+                "name": "Super Missile (yellow Maridia)",
+                "access_rules": [
+                    [
+                        "$get_access_to_loc|Super Missile (yellow Maridia)"
+                    ]
+                ],
+                "sections": [
+                    {
+                        "name": "",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 1208,
+                        "y": 848
+                    },
+                    {
+                        "map": "maridiamap",
+                        "x": 280,
+                        "y": 276
+                    }
+                ]
+            },
+            {
+                "name": "Missile (yellow Maridia super missile)",
+                "access_rules": [
+                    [
+                        "$get_access_to_loc|Missile (yellow Maridia super missile)"
+                    ]
+                ],
+                "sections": [
+                    {
+                        "name": "",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 1240,
+                        "y": 848
+                    },
+                    {
+                        "map": "maridiamap",
+                        "x": 312,
+                        "y": 276
+                    }
+                ]
+            },
+            {
+                "name": "Missile (yellow Maridia false wall)",
+                "access_rules": [
+                    [
+                        "$get_access_to_loc|Missile (yellow Maridia false wall)"
+                    ]
+                ],
+                "sections": [
+                    {
+                        "name": "",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 1480,
+                        "y": 848
+                    },
+                    {
+                        "map": "maridiamap",
+                        "x": 552,
+                        "y": 276
+                    }
+                ]
+            },
+            {
+                "name": "Kraid",
+                "access_rules": [
+                    [
+                        "$get_access_to_loc|Kraid"
+                    ]
+                ],
+                "sections": [
+                    {
+                        "name": "",
+                        "hosted_item": "kraid",
+                        "item_count": 0
+                    },
+                    {
+                        "name": "Transition: Outside",
+                        "hosted_item": "trans_KraidRoomOut",
+                        "access_rules": [
+                            [
+                                "{$has_access_to|KraidRoomOut}"
+                            ]
+                        ],
+                        "visibility_rules": [
+                            "$is_boss_rando"
+                        ]
+                    },
+                    {
+                        "name": "Transition: Inside",
+                        "hosted_item": "trans_KraidRoomIn",
+                        "access_rules": [
+                            [
+                                "{$has_access_to|KraidRoomIn}"
+                            ]
+                        ],
+                        "visibility_rules": [
+                            "$is_boss_rando"
+                        ]
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 1722,
+                        "y": 1252
+                    },
+                    {
+                        "map": "brinstarmap",
+                        "x": 1722,
+                        "y": 678
+                    }
+                ]
+            },
+            {
+                "name": "Phantoon",
+                "access_rules": [
+                    [
+                        "$get_access_to_loc|Phantoon"
+                    ]
+                ],
+                "sections": [
+                    {
+                        "name": "",
+                        "hosted_item": "phantoon",
+                        "item_count": 0
+                    },
+                    {
+                        "name": "Transition: Outside",
+                        "hosted_item": "trans_PhantoonRoomOut",
+                        "access_rules": [
+                            [
+                                "{$has_access_to|PhantoonRoomOut}"
+                            ]
+                        ],
+                        "visibility_rules": [
+                            "$is_boss_rando"
+                        ]
+                    },
+                    {
+                        "name": "Transition: Inside",
+                        "hosted_item": "trans_PhantoonRoomIn",
+                        "access_rules": [
+                            [
+                                "{$has_access_to|PhantoonRoomIn}"
+                            ]
+                        ],
+                        "visibility_rules": [
+                            "$is_boss_rando"
+                        ]
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 1735,
+                        "y": 370
+                    },
+                    {
+                        "map": "wreckedshipmap",
+                        "x": 632,
+                        "y": 435
+                    }
+                ]
+            },
+            {
+                "name": "Draygon",
+                "access_rules": [
+                    [
+                        "$get_access_to_loc|Draygon"
+                    ]
+                ],
+                "sections": [
+                    {
+                        "name": "",
+                        "hosted_item": "draygon",
+                        "item_count": 0
+                    },
+                    {
+                        "name": "Transition: Outside",
+                        "hosted_item": "trans_DraygonRoomOut",
+                        "access_rules": [
+                            [
+                                "{$has_access_to|DraygonRoomOut}"
+                            ]
+                        ],
+                        "visibility_rules": [
+                            "$is_boss_rando"
+                        ]
+                    },
+                    {
+                        "name": "Transition: Inside",
+                        "hosted_item": "trans_DraygonRoomIn",
+                        "access_rules": [
+                            [
+                                "{$has_access_to|DraygonRoomIn}"
+                            ]
+                        ],
+                        "visibility_rules": [
+                            "$is_boss_rando"
+                        ]
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 2105,
+                        "y": 965
+                    },
+                    {
+                        "map": "maridiamap",
+                        "x": 1180,
+                        "y": 390
+                    }
+                ]
+            },
+            {
+                "name": "Ridley",
+                "access_rules": [
+                    [
+                        "$get_access_to_loc|Ridley"
+                    ]
+                ],
+                "sections": [
+                    {
+                        "name": "",
+                        "hosted_item": "ridley",
+                        "item_count": 0
+                    },
+                    {
+                        "name": "Transition: Outside",
+                        "hosted_item": "trans_RidleyRoomOut",
+                        "access_rules": [
+                            [
+                                "{$has_access_to|RidleyRoomOut}"
+                            ]
+                        ],
+                        "visibility_rules": [
+                            "$is_boss_rando"
+                        ]
+                    },
+                    {
+                        "name": "Transition: Inside",
+                        "hosted_item": "trans_RidleyRoomIn",
+                        "access_rules": [
+                            [
+                                "{$has_access_to|RidleyRoomIn}"
+                            ]
+                        ],
+                        "visibility_rules": [
+                            "$is_boss_rando"
+                        ]
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 1675,
+                        "y": 1840
+                    },
+                    {
+                        "map": "norfairmap",
+                        "x": 792,
+                        "y": 628
+                    }
+                ]
+            }
+        ]
+    }
+]
