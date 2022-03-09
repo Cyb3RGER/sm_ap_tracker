@@ -902,7 +902,7 @@
                 "hosted_item": "RedBrinstarFirefleaLeft",
                 "access_rules": [
                     [
-                        "{$has_access_to|Red Tower Top Left}, {$can_get_through_xray}"
+                        "{$has_access_to|Red Tower Top Left}", "{$can_get_through_xray}"
                     ]
                 ],
                 "visibility_rules": [
@@ -1237,7 +1237,7 @@
                 "hosted_item": "trans_SingleChamberTopRight",
                 "access_rules": [
                     [
-                        "{$has_access_to|SingleChamberTopRight}"
+                        "{$has_access_to|Single Chamber Top Right}"
                     ]
                 ],
                 "visibility_rules": [

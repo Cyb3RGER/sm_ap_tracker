@@ -183,6 +183,22 @@
     ]
   },
   {
+    "name": "Mother Brain",
+    "type": "progressive",
+    "allow_disabled": "false",
+    "loop": "true",
+    "stages": [
+      {
+        "img": "images/items/mother_brain.png"
+      },
+      {
+        "img": "images/items/mother_brain.png",
+        "img_mods": "@disabled",
+        "codes": "mother_brain, hyper"
+      }
+    ]
+  },
+  {
     "name": "Etanks",
     "type": "consumable",
     "img": "images/items/etank.png",
