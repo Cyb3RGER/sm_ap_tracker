@@ -898,10 +898,10 @@ LOCATIONS = {
                 wand({
                     traverse('BigPinkTopRight'),
                     enough_stuff_spore_spawn(),
-                    wand({
-                        can_open_green_doors(),
-                        can_pass_bomb_passages()
-                    })
+                }),
+                wand({
+                    can_open_green_doors(),
+                    can_pass_bomb_passages()
                 })
             })
         end,

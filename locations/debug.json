@@ -3,7 +3,7 @@
         "name": "Debug",
         "access_rules": [
           [
-            "$get_access_to_loc|Missile (Crateria gauntlet right)"
+            "$get_access_to_loc|Super Missile (pink Brinstar)"
           ]
         ],
         "sections": [
