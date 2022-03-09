@@ -1212,6 +1212,104 @@ NOTHING_SCREENS = {
         ["area"] = "Maridia"
     }
 }
+ITEM_BIT_MASKS_1 = {
+    ['varia'] = {
+        byteIndex = 0x0,
+        bitMask = 0x1
+    },
+    ['spring_ball'] = {
+        byteIndex = 0x0,
+        bitMask = 0x2
+    },
+    ['morph'] = {
+        byteIndex = 0x0,
+        bitMask = 0x4
+    },
+    ['screw'] = {
+        byteIndex = 0x0,
+        bitMask = 0x8
+    },
+    ['gravity'] = {
+        byteIndex = 0x0,
+        bitMask = 0x20
+    },
+    ['hijump'] = {
+        byteIndex = 0x1,
+        bitMask = 0x1
+    },
+    ['space'] = {
+        byteIndex = 0x1,
+        bitMask = 0x2
+    },
+    ['bomb'] = {
+        byteIndex = 0x1,
+        bitMask = 0x10
+    },
+    ['speed'] = {
+        byteIndex = 0x1,
+        bitMask = 0x20
+    },
+    ['grapple'] = {
+        byteIndex = 0x1,
+        bitMask = 0x40
+    },
+    ['xray'] = {
+        byteIndex = 0x1,
+        bitMask = 0x80
+    },
+    ['wave'] = {
+        byteIndex = 0x4,
+        bitMask = 0x1
+    },
+    ['ice'] = {
+        byteIndex = 0x4,
+        bitMask = 0x2
+    },
+    ['spazer'] = {
+        byteIndex = 0x4,
+        bitMask = 0x4
+    },
+    ['plasma'] = {
+        byteIndex = 0x4,
+        bitMask = 0x8
+    },
+    ['charge'] = {
+        byteIndex = 0x5,
+        bitMask = 0x10
+    }
+}
+ITEM_BIT_MASKS_2 = {
+    ['etank'] = {
+        byteIndex = 0x0,
+        valueFunc = function(readResult)
+            return math.floor((readResult - 0x63) / 0x64)
+        end      
+    },
+    ['missile'] = {
+        byteIndex = 0x4,
+        valueFunc = function(readResult)
+            return math.floor(readResult / 0x05)
+        end
+    },
+    ['super'] = {
+        byteIndex = 0x8,
+        valueFunc = function(readResult)
+            return math.floor(readResult / 0x05)
+        end
+    },
+    ['pb'] = {
+        byteIndex = 0xC,
+        valueFunc = function(readResult)
+            return math.floor(readResult / 0x05)
+        end
+    },
+    ['reserve'] = {
+        byteIndex = 0x10,
+        valueFunc = function(readResult)
+            return math.floor(readResult / 0x64)
+        end
+    }
+}
 
 CURRENT_MAP_DATA_ADDR = 0x7E07F7
 SAVED_MAP_DATA_ADDR = 0x7ECD52
@@ -1221,16 +1319,65 @@ CURRENT_AREA = nil
 CURRENT_AREA_ADDR = 0x7E079F
 
 BOSS_DATA_ADDR = 0x7ED828
-ITEM_DATA_ADDR = 0x7ED870
-
-AUTOTRACKER_ENABLE_DEBUG_LOGGING_SNES = true
+ITEM_DATA_1_ADDR = 0x7E09A4
+ITEM_DATA_1_SIZE = 0x06
+ITEM_DATA_2_ADDR = 0x7E09C4
+ITEM_DATA_2_SIZE = 0x12
 
 -- ToDo
-function is_ingame()
+function is_ingame(segment)
     return 1
 end
 
-function update_boss_data()
+function update_item_data_1(segment)
+    if AUTOTRACKER_ENABLE_DEBUG_LOGGING_SNES then
+        print(string.format("called update_item_data_1"))
+    end
+    for k, v in pairs(ITEM_BIT_MASKS_1) do
+        if LOCAL_ITEMS[k] ~= nil and LOCAL_ITEMS[k] > 0 then
+            local addr = ITEM_DATA_1_ADDR + v.byteIndex
+            local readResult = AutoTracker:ReadU8(addr)            
+            local obj = Tracker:FindObjectForCode(k)
+            if obj then
+                obj.Active = (readResult & v.bitMask) > 0
+            end
+            
+        end
+    end
+end
+
+function update_item_data_2(segment)
+    if AUTOTRACKER_ENABLE_DEBUG_LOGGING_SNES then
+        print(string.format("called update_item_data_2"))
+    end
+    for k, v in pairs(ITEM_BIT_MASKS_2) do
+        if LOCAL_ITEMS[k] ~= nil and LOCAL_ITEMS[k] > 0 then
+            local addr = ITEM_DATA_2_ADDR + v.byteIndex
+            local readResult = AutoTracker:ReadU16(addr)
+            local obj = Tracker:FindObjectForCode(k)
+            local value = v.valueFunc(readResult)
+            local global_count = 0
+            if GLOBAL_ITEMS[k] ~= nil then
+                global_count = GLOBAL_ITEMS[k]
+            end
+            if obj and value <= (global_count + LOCAL_ITEMS[k]) then
+                if value < global_count then
+                    obj.AcquiredCount = global_count
+                else
+                    obj.AcquiredCount = value
+                end
+               
+            end           
+        end
+    end
+end
+
+function update_item_data()
+    update_item_data_1()
+    update_item_data_2()
+end
+
+function update_boss_data(segment)
     if AUTOTRACKER_ENABLE_DEBUG_LOGGING_SNES then
         print(string.format("called update_boss_data"))
     end
@@ -1396,7 +1543,9 @@ function check_ap_entered(ap, is_current_data)
     return false
 end
 
+ScriptHost:AddMemoryWatch('current_area', CURRENT_AREA_ADDR, 0x1, update_current_area)
 ScriptHost:AddMemoryWatch('current_map_data', CURRENT_MAP_DATA_ADDR, 0x100, update_current_map_data)
 ScriptHost:AddMemoryWatch('saved_map_data', SAVED_MAP_DATA_ADDR, 0x500, update_saved_map_data)
-ScriptHost:AddMemoryWatch('current_area', CURRENT_AREA_ADDR, 0x1, update_current_area)
-ScriptHost:AddMemoryWatch('boss_data', BOSS_DATA_ADDR, 0x6, update_boss_data)
+ScriptHost:AddMemoryWatch('boss_data', BOSS_DATA_ADDR, 0x8, update_boss_data)
+ScriptHost:AddMemoryWatch('item_data 1',ITEM_DATA_1_ADDR, ITEM_DATA_1_SIZE ,update_item_data_1)
+ScriptHost:AddMemoryWatch('item_data 2',ITEM_DATA_2_ADDR, ITEM_DATA_2_SIZE ,update_item_data_2)

@@ -1,6 +1,9 @@
 ScriptHost:LoadScript("scripts/autotracking/item_mapping.lua")
 ScriptHost:LoadScript("scripts/autotracking/location_mapping.lua")
 
+LOCAL_ITEMS = {}
+GLOBAL_ITEMS = {}
+
 function onClear(slot_data)    
     if AUTOTRACKER_ENABLE_DEBUG_LOGGING then
         print(string.format("called onClear, slot_data:\n%s", dump_table(slot_data)))           
@@ -49,16 +52,19 @@ function onClear(slot_data)
         end
     end
     REACHED_ACCESS_POINTS = {}
+    LOCAL_ITEMS = {}
+    GLOBAL_ITEMS = {}
     --manually run snes interface functions after onClear in case we are already ingame
     update_saved_map_data()
     update_boss_data()
 end
 
-function onItem(index, item_id, item_name)
+function onItem(index, item_id, item_name, player_number)
     if AUTOTRACKER_ENABLE_DEBUG_LOGGING then
-        print(string.format("called onItem: %s, %s, %s, %s", index, item_id, item_name, CUR_INDEX))
+        print(string.format("called onItem: %s, %s, %s, %s, %s", index, item_id, item_name, player_number, CUR_INDEX))
     end
     if index <= CUR_INDEX then return end
+    local is_local = player_number == Archipelago.PlayerNumber
     CUR_INDEX = index;    
     local v = ITEM_MAPPING[item_id]
     if not v then
@@ -91,6 +97,25 @@ function onItem(index, item_id, item_name)
     elseif AUTOTRACKER_ENABLE_DEBUG_LOGGING then
         print(string.format("onItem: could not find object for code %s", v[1]))
     end
+    --track local items via snes interface
+    if is_local then
+        if LOCAL_ITEMS[v[1]] then
+            LOCAL_ITEMS[v[1]] = LOCAL_ITEMS[v[1]] + 1
+        else
+            LOCAL_ITEMS[v[1]] = 1
+        end
+    else
+        if GLOBAL_ITEMS[v[1]] then
+            GLOBAL_ITEMS[v[1]] = GLOBAL_ITEMS[v[1]] + 1
+        else
+            GLOBAL_ITEMS[v[1]] = 1
+        end      
+    end
+    if AUTOTRACKER_ENABLE_DEBUG_LOGGING then
+        print(string.format("local items: %s",dump_table(LOCAL_ITEMS)))
+        print(string.format("global items: %s",dump_table(GLOBAL_ITEMS)))        
+    end
+    update_item_data()
 end
 
 function onLocation(location_id, location_name)

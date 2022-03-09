@@ -1,5 +1,5 @@
 DEBUG_MODE = false
-ENABLE_DEBUG_LOG = true and DEBUG_MODE
+ENABLE_DEBUG_LOG = false or DEBUG_MODE
 
 print("-- SM AP Tracker --")
 print("Loaded tracker : ", Tracker.ActiveVariantUID)
