@@ -24,9 +24,10 @@ Make sure you have you layout backed up tho, so you don't lose it when you overr
 
 ## Autotracking
 
-This pack requires autotracking. It will track locations and items.
-Requirements for Autotracking in PopTracker can be found [here](https://github.com/black-sliver/PopTracker/#auto-tracking).
+This pack requires autotracking. It uses PopTracker's AP **and** SNES autotracking interface. It will track locations and items via the AP interface and use the SNES interface to track bosses and to mark doors and transtions while you go through the game. Requirements for Autotracking in PopTracker can be found [here](https://github.com/black-sliver/PopTracker/#auto-tracking).
 
+## Known Issues
 
+Local items do currently not reset after dying.
 
 
