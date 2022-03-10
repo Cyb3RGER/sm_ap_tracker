@@ -2830,6 +2830,28 @@
                         "y": 628
                     }
                 ]
+            },
+            {
+                "name": "Mother Brain",
+                "access_rules": [
+                    [
+                        "$get_access_to_loc|Mother Brain"
+                    ]
+                ],
+                "sections": [
+                    {
+                        "name": "",
+                        "hosted_item": "mother_brain",
+                        "item_count": 0
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 360,
+                        "y": 660
+                    }
+                ]
             }
         ]
     }

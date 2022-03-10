@@ -827,7 +827,13 @@ function can_inflict_enough_damages(boss_energy, double_super, _charge, power, g
     end
     if ignore_supers == nil then
         ignore_supers = false
-    end    
+    end 
+    if AUTOTRACKER_ENABLE_DEBUG_LOGGING_LOGIC then
+        print(string.format("called can_inflict_enough_damages: ".. 
+        "boss_energy: %s, double_super: %s, _charge: %s, power: %s, gives_drops: %s, ignore_missiles: %s, ignore_supers: %s ",
+        boss_energy, double_super, _charge, power, gives_drops, ignore_missiles, ignore_supers
+    ))
+    end   
     local standard_damage = 0
     if can_fire_charged_shots() > 0 and _charge then
         standard_damage = get_beam_damage()
@@ -844,19 +850,26 @@ function can_inflict_enough_damages(boss_energy, double_super, _charge, power, g
     local supers_damage = 0
     local supers_amount = get_consumable_qty('super') * 5
     local one_super = 300
+    if ignore_supers then
+        one_super = 0
+    end
+   
     if double_super then
         one_super = one_super * 2
     end
-    if not ignore_supers then
-        supers_damage = supers_amount * one_super
-    end
+    supers_damage = supers_amount * one_super
+    
     local power_damage = 0
     local power_amount = 0
     if power then
         power_amount = get_consumable_qty('pb') * 5
         power_damage = power_amount * 200
     end
+    print(string.format("can_beat_boss values: charge_damage: %s, gives_drops: %s, missiles_damage: %s, supers_damage: %s, power_damage: %s, boss_energy: %s",
+        charge_damage, gives_drops, missiles_damage, supers_damage, power_damage, boss_energy
+    ))
     local can_beat_boss = charge_damage > 0 or gives_drops or (missiles_damage+supers_damage+power_damage) >= boss_energy
+    print(can_beat_boss)
     if not can_beat_boss then
         return 0, 0
     end
@@ -884,6 +897,7 @@ function can_inflict_enough_damages(boss_energy, double_super, _charge, power, g
         {charge_dps, 10000, charge_damage}
     }    
     table.sort(dps_dict, function(a, b) return a[1] > b[1] end)    
+    dump_table(dps_dict)
     local secs = 0
     for _, v in ipairs(dps_dict) do
         local dps = v[1]
@@ -2547,7 +2561,7 @@ function enough_stuff_tourian()
         })
     })
     if AUTOTRACKER_ENABLE_DEBUG_LOGGING_LOGIC then
-        print(string.format("called can_traverse_sand_pits: value: %s", value))
+        print(string.format("called enough_stuff_tourian: value: %s", value))
     end
     if value > 0 then
         return 1
@@ -2560,6 +2574,9 @@ function can_pass_zebetites()
     local temp = 0
     if ammo_margin >= 1 then
         temp = 1
+    end
+    if AUTOTRACKER_ENABLE_DEBUG_LOGGING_LOGIC then
+        print(string.format("called can_pass_zebetites: temp: %s", temp))
     end
     local value = wor({
         wand({
@@ -2654,6 +2671,16 @@ end
 
 function can_open_green_doors()
     return super()
+end
+
+function can_open_red_doors()
+    return wor({
+        wand({
+            wnot(has_patch(1006)),
+            have_missile_or_super()
+        }),
+        missile()
+    })
 end
 
 function can_access_billy_mays()

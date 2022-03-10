@@ -1288,19 +1288,19 @@ ITEM_BIT_MASKS_2 = {
     ['missile'] = {
         byteIndex = 0x4,
         valueFunc = function(readResult)
-            return math.floor(readResult / 0x05)
+            return readResult
         end
     },
     ['super'] = {
         byteIndex = 0x8,
         valueFunc = function(readResult)
-            return math.floor(readResult / 0x05)
+            return readResult
         end
     },
     ['pb'] = {
         byteIndex = 0xC,
         valueFunc = function(readResult)
-            return math.floor(readResult / 0x05)
+            return readResult
         end
     },
     ['reserve'] = {
@@ -1340,8 +1340,7 @@ function update_item_data_1(segment)
             local obj = Tracker:FindObjectForCode(k)
             if obj then
                 obj.Active = (readResult & v.bitMask) > 0
-            end
-            
+            end            
         end
     end
 end
@@ -1365,8 +1364,7 @@ function update_item_data_2(segment)
                     obj.AcquiredCount = global_count
                 else
                     obj.AcquiredCount = value
-                end
-               
+                end               
             end           
         end
     end

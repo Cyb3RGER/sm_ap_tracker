@@ -55,8 +55,10 @@ function onClear(slot_data)
     LOCAL_ITEMS = {}
     GLOBAL_ITEMS = {}
     --manually run snes interface functions after onClear in case we are already ingame
-    update_saved_map_data()
-    update_boss_data()
+    if PopVersion < "0.20.1" or AutoTracker:GetConnectionState("SNES") == 3 then
+        update_saved_map_data()
+        update_boss_data()        
+    end
 end
 
 function onItem(index, item_id, item_name, player_number)
@@ -115,7 +117,9 @@ function onItem(index, item_id, item_name, player_number)
         print(string.format("local items: %s",dump_table(LOCAL_ITEMS)))
         print(string.format("global items: %s",dump_table(GLOBAL_ITEMS)))        
     end
-    update_item_data()
+    if PopVersion < "0.20.1" or AutoTracker:GetConnectionState("SNES") == 3 then
+        update_item_data()
+    end
 end
 
 function onLocation(location_id, location_name)
@@ -150,5 +154,5 @@ end
 Archipelago:AddClearHandler("clear handler", onClear)
 Archipelago:AddItemHandler("item handler", onItem)
 Archipelago:AddLocationHandler("location handler", onLocation)
-Archipelago:AddScoutHandler("scout handler", onScout)
+--Archipelago:AddScoutHandler("scout handler", onScout)
 -- Archipelago:AddBouncedHandler("bounce handler", onBounce)
