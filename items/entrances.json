@@ -1,5 +1,326 @@
 [
     {
-        
+        "name": "Golden Four",
+        "type": "static",
+        "img": "images/trans/golden_four.png",
+        "codes": "static_GoldenFour"
+    },
+    {
+        "name": "Crocomire Speedway Bottom",
+        "type": "static",
+        "img": "images/trans/crocomire_speedway_bottom.png",
+        "codes": "static_CrocomireSpeedwayBottom"
+    },
+    {
+        "name": "Three Muskateers Room Left",
+        "type": "static",
+        "img": "images/trans/three_muskateers_room_left.png",
+        "codes": "static_ThreeMuskateersRoomLeft"
+    },
+    {
+        "name": "Red Fish Room Left",
+        "type": "static",
+        "img": "images/trans/red_fish_room_left.png",
+        "codes": "static_RedFishRoomLeft"
+    },
+    {
+        "name": "hidden",
+        "type": "static",
+        "img": "images/trans/hidden.png",
+        "codes": "static_hidden"
+    },
+    {
+        "name": "Crab Hole Bottom Left",
+        "type": "static",
+        "img": "images/trans/crab_hole_bottom_left.png",
+        "codes": "static_CrabHoleBottomLeft"
+    },
+    {
+        "name": "Le Coude Right",
+        "type": "static",
+        "img": "images/trans/le_coude_right.png",
+        "codes": "static_LeCoudeRight"
+    },
+    {
+        "name": "PhantoonRoomOut",
+        "type": "static",
+        "img": "images/trans/phantoonroomout.png",
+        "codes": "static_PhantoonRoomOut"
+    },
+    {
+        "name": "Warehouse Entrance Left",
+        "type": "static",
+        "img": "images/trans/warehouse_entrance_left.png",
+        "codes": "static_WarehouseEntranceLeft"
+    },
+    {
+        "name": "Keyhunter Room Bottom",
+        "type": "static",
+        "img": "images/trans/keyhunter_room_bottom.png",
+        "codes": "static_KeyhunterRoomBottom"
+    },
+    {
+        "name": "RidleyRoomIn",
+        "type": "static",
+        "img": "images/trans/ridleyroomin.png",
+        "codes": "static_RidleyRoomIn"
+    },
+    {
+        "name": "Moat Right",
+        "type": "static",
+        "img": "images/trans/moat_right.png",
+        "codes": "static_MoatRight"
+    },
+    {
+        "name": "KraidRoomIn",
+        "type": "static",
+        "img": "images/trans/kraidroomin.png",
+        "codes": "static_KraidRoomIn"
+    },
+    {
+        "name": "Crocomire Room Top",
+        "type": "static",
+        "img": "images/trans/crocomire_room_top.png",
+        "codes": "static_CrocomireRoomTop"
+    },
+    {
+        "name": "Morph Ball Room Left",
+        "type": "static",
+        "img": "images/trans/morph_ball_room_left.png",
+        "codes": "static_MorphBallRoomLeft"
+    },
+    {
+        "name": "Arrow",
+        "type": "static",
+        "img": "images/trans/arrow.png",
+        "codes": "static_Arrow"
+    },
+    {
+        "name": "DraygonRoomOut",
+        "type": "static",
+        "img": "images/trans/draygonroomout.png",
+        "codes": "static_DraygonRoomOut"
+    },
+    {
+        "name": "PhantoonRoomIn",
+        "type": "static",
+        "img": "images/trans/phantoonroomin.png",
+        "codes": "static_PhantoonRoomIn"
+    },
+    {
+        "name": "Red Brinstar Elevator",
+        "type": "static",
+        "img": "images/trans/red_brinstar_elevator.png",
+        "codes": "static_RedBrinstarElevator"
+    },
+    {
+        "name": "West Ocean Left",
+        "type": "static",
+        "img": "images/trans/west_ocean_left.png",
+        "codes": "static_WestOceanLeft"
+    },
+    {
+        "name": "Green Hill Zone Top Right",
+        "type": "static",
+        "img": "images/trans/green_hill_zone_top_right.png",
+        "codes": "static_GreenHillZoneTopRight"
+    },
+    {
+        "name": "Main Street Bottom",
+        "type": "static",
+        "img": "images/trans/main_street_bottom.png",
+        "codes": "static_MainStreetBottom"
+    },
+    {
+        "name": "Single Chamber Top Right",
+        "type": "static",
+        "img": "images/trans/single_chamber_top_right.png",
+        "codes": "static_SingleChamberTopRight"
+    },
+    {
+        "name": "Crab Shaft Right",
+        "type": "static",
+        "img": "images/trans/crab_shaft_right.png",
+        "codes": "static_CrabShaftRight"
+    },
+    {
+        "name": "Warehouse Zeela Room Left",
+        "type": "static",
+        "img": "images/trans/warehouse_zeela_room_left.png",
+        "codes": "static_WarehouseZeelaRoomLeft"
+    },
+    {
+        "name": "RidleyRoomOut",
+        "type": "static",
+        "img": "images/trans/ridleyroomout.png",
+        "codes": "static_RidleyRoomOut"
+    },
+    {
+        "name": "Lava Dive Right",
+        "type": "static",
+        "img": "images/trans/lava_dive_right.png",
+        "codes": "static_LavaDiveRight"
+    },
+    {
+        "name": "Aqueduct Top Left",
+        "type": "static",
+        "img": "images/trans/aqueduct_top_left.png",
+        "codes": "static_AqueductTopLeft"
+    },
+    {
+        "name": "Caterpillar Room Top Right",
+        "type": "static",
+        "img": "images/trans/caterpillar_room_top_right.png",
+        "codes": "static_CaterpillarRoomTopRight"
+    },
+    {
+        "name": "Red Tower Top Left",
+        "type": "static",
+        "img": "images/trans/red_tower_top_left.png",
+        "codes": "static_RedTowerTopLeft"
+    },
+    {
+        "name": "Noob Bridge Right",
+        "type": "static",
+        "img": "images/trans/noob_bridge_right.png",
+        "codes": "static_NoobBridgeRight"
+    },
+    {
+        "name": "Green Brinstar Elevator",
+        "type": "static",
+        "img": "images/trans/green_brinstar_elevator.png",
+        "codes": "static_GreenBrinstarElevator"
+    },
+    {
+        "name": "KraidRoomOut",
+        "type": "static",
+        "img": "images/trans/kraidroomout.png",
+        "codes": "static_KraidRoomOut"
+    },
+    {
+        "name": "Crab Maze Left",
+        "type": "static",
+        "img": "images/trans/crab_maze_left.png",
+        "codes": "static_CrabMazeLeft"
+    },
+    {
+        "name": "Glass Tunnel Top",
+        "type": "static",
+        "img": "images/trans/glass_tunnel_top.png",
+        "codes": "static_GlassTunnelTop"
+    },
+    {
+        "name": "DraygonRoomIn",
+        "type": "static",
+        "img": "images/trans/draygonroomin.png",
+        "codes": "static_DraygonRoomIn"
+    },
+    {
+        "name": "Kronic Boost Room Bottom Left",
+        "type": "static",
+        "img": "images/trans/kronic_boost_room_bottom_left.png",
+        "codes": "static_KronicBoostRoomBottomLeft"
+    },
+    {
+        "name": "East Tunnel Right",
+        "type": "static",
+        "img": "images/trans/east_tunnel_right.png",
+        "codes": "static_EastTunnelRight"
+    },
+    {
+        "name": "East Tunnel Top Right",
+        "type": "static",
+        "img": "images/trans/east_tunnel_top_right.png",
+        "codes": "static_EastTunnelTopRight"
+    },
+    {
+        "name": "Lower Mushrooms Left",
+        "type": "static",
+        "img": "images/trans/lower_mushrooms_left.png",
+        "codes": "static_LowerMushroomsLeft"
+    },
+    {
+        "name": "Warehouse Entrance Right",
+        "type": "static",
+        "img": "images/trans/warehouse_entrance_right.png",
+        "codes": "static_WarehouseEntranceRight"
+    },
+    {
+        "name": "Green Pirates Shaft Bottom Right",
+        "type": "static",
+        "img": "images/trans/green_pirates_shaft_bottom_right.png",
+        "codes": "static_GreenPiratesShaftBottomRight"
+    },
+    {
+        "name": "Crocomire",
+        "type": "static",
+        "img": "images/trans/crocomire.png",
+        "codes": "static_Crocomire"
+    },
+    {
+        "name": "Wrecked Ship",
+        "type": "static",
+        "img": "images/trans/wrecked_ship.png",
+        "codes": "static_WreckedShip"
+    },
+    {
+        "name": "Tourian",
+        "type": "static",
+        "img": "images/trans/tourian.png",
+        "codes": "static_Tourian"
+    },
+    {
+        "name": "Upper Norfair",
+        "type": "static",
+        "img": "images/trans/upper_norfair.png",
+        "codes": "static_UpperNorfair"
+    },
+    {
+        "name": "West Maridia",
+        "type": "static",
+        "img": "images/trans/west_maridia.png",
+        "codes": "static_WestMaridia"
+    },
+    {
+        "name": "Lower Norfair",
+        "type": "static",
+        "img": "images/trans/lower_norfair.png",
+        "codes": "static_LowerNorfair"
+    },
+    {
+        "name": "Kraid's Lair",
+        "type": "static",
+        "img": "images/trans/kraids_lair.png",
+        "codes": "static_KraidsLair"
+    },
+    {
+        "name": "Red Brinstar",
+        "type": "static",
+        "img": "images/trans/red_brinstar.png",
+        "codes": "static_RedBrinstar"
+    },
+    {
+        "name": "Green Brinstar",
+        "type": "static",
+        "img": "images/trans/green_brinstar.png",
+        "codes": "static_GreenBrinstar"
+    },
+    {
+        "name": "Crateria",
+        "type": "static",
+        "img": "images/trans/crateria.png",
+        "codes": "static_Crateria"
+    },
+    {
+        "name": "East Maridia",
+        "type": "static",
+        "img": "images/trans/east_maridia.png",
+        "codes": "static_EastMaridia"
+    },
+    {
+        "name": "Arrow",
+        "type": "static",
+        "img": "images/trans/arrow.png",
+        "codes": "arrow"
     }
 ]

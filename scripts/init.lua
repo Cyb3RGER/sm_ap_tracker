@@ -25,6 +25,7 @@ ScriptHost:LoadScript("scripts/custom_items/transition.lua")
 
 -- Items
 Tracker:AddItems("items/items.json")
+Tracker:AddItems("items/entrances.json")
 -- Doors
 ScriptHost:LoadScript("scripts/init_doors.lua")
 -- Transitions
