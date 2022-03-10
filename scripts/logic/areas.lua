@@ -1436,15 +1436,16 @@ function check_access(region_name, goal, checked_regions)
         return 0
     end
     for k, v in pairs(REGIONS[region_name].exits) do
+        local exit_func_return = v()
         if AUTOTRACKER_ENABLE_DEBUG_LOGGING_ACCESS then
-            if v() == nil then
+            if exit_func_return == nil then
                 print(string.format("\t exits function has no return value: region_name: %s -> k: %s", region_name, k))
             end
-            print(string.format("\t region_name: %s -> k: %s, v(): %s", region_name, k, v()))
+            print(string.format("\t region_name: %s -> k: %s, v(): %s", region_name, k, exit_func_return))
         end
-        if k == goal then
-            return v()
-        elseif v() > 0 then
+        if k == goal and exit_func_return > 0 then
+            return 1
+        elseif exit_func_return > 0 then
             local already_checked = false
             for _,region in pairs(checked_regions) do
                 if region == k then
@@ -1457,7 +1458,7 @@ function check_access(region_name, goal, checked_regions)
                 if value > 0 then
                     if AUTOTRACKER_ENABLE_DEBUG_LOGGING_ACCESS then
                         print(string.format("\t we found it \\o/, returning 1; region_name: %s, goal: %s, checked_regions: %s", region_name, goal, #checked_regions))
-                    end                    
+                    end
                     return 1
                 end           
             else 
@@ -1499,9 +1500,11 @@ function set_transitions(slot_data)
                 obj:Set("active", is_boss_rando() == 0)  
             else
                 obj:Set("active", is_area_rando() == 0) 
-            end
-                        
+            end                      
         end
+    end
+    if AUTOTRACKER_ENABLE_DEBUG_LOGGING_ACCESS then        
+        print(string.format("REGIONS: %s", dump_table(REGIONS)))
     end
 end
 
