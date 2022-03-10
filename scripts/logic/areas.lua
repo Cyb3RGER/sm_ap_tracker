@@ -562,11 +562,7 @@ CLEAN_REGIONS = {
         end
     },
     ['KraidRoomIn'] = {
-        exits = {
-            ['Warehouse Zeela Room Left'] = function()
-                return can_pass_bomb_passages()
-            end
-        },
+        exits = {},
         traverse = function()
             return 1
         end
