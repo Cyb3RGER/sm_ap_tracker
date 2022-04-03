@@ -12,7 +12,7 @@
         "ap"
       ]
     },
-    "itemsonly": {
+    "var_itemsonly": {
      "display_name": "Items Only",
      "flags": [
        "ap"
