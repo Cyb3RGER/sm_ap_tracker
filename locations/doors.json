@@ -324,7 +324,7 @@
                 "hosted_item": "door_cr_b",
                 "access_rules": [
                     [
-                        "{$has_access_to|Climb Bottom Left}"
+                        "{$has_access_to|Landing Site}", "{$can_pass_bomb_passages}"
                     ]
                 ],
                 "visibility_rules": [
