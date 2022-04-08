@@ -6,7 +6,7 @@ PopTracker can be found [here](https://github.com/black-sliver/PopTracker/releas
 
 Also check out the Archipelago Discord [here](https://discord.gg/8Z65BR2) and the Poptracker Discord [here](https://discord.com/invite/gwThqMCPgK).
 
-Compatible with Archipelago v0.2.6+ and PopTracker v0.20.1+
+Compatible with Archipelago v0.3.0+ and PopTracker v0.20.1+
 
 ## Installation
 
