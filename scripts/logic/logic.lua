@@ -2957,12 +2957,11 @@ function is_boss_rando()
     return 0
 end
 
-function is_door_rando()
-    print("is_door_rando", dump_table(SLOT_DATA))
+function is_door_rando()    
     if not SLOT_DATA or not SLOT_DATA['doors_colors_rando'] then
         return 0
     end
-    if SLOT_DATA['doors_colors_rando'] > 0 then
+    if SLOT_DATA['doors_colors_rando'] ~= 0 and SLOT_DATA['doors_colors_rando'] ~= false then
         return 1        
     end
     return 0
