@@ -47,7 +47,7 @@ function traverse(door_code)
             value = 0        
         end 
     elseif door_state == 5 then
-        if powerbomb() > 0 then
+        if can_use_power_bombs() > 0 then
             value = 1
         else
             value = 0        
