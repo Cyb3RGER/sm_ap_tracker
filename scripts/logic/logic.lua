@@ -865,11 +865,7 @@ function can_inflict_enough_damages(boss_energy, double_super, _charge, power, g
         power_amount = get_consumable_qty('pb') * 5
         power_damage = power_amount * 200
     end
-    print(string.format("can_beat_boss values: charge_damage: %s, gives_drops: %s, missiles_damage: %s, supers_damage: %s, power_damage: %s, boss_energy: %s",
-        charge_damage, gives_drops, missiles_damage, supers_damage, power_damage, boss_energy
-    ))
     local can_beat_boss = charge_damage > 0 or gives_drops or (missiles_damage+supers_damage+power_damage) >= boss_energy
-    print(can_beat_boss)
     if not can_beat_boss then
         return 0, 0
     end
@@ -2950,8 +2946,8 @@ end
 function is_boss_rando()
     if not SLOT_DATA or not SLOT_DATA['boss_randomization'] then
         return 0
-    end
-    if SLOT_DATA['boss_randomization'] then
+    end    
+    if SLOT_DATA['boss_randomization'] ~= 0 and SLOT_DATA['boss_randomization'] ~= false then
         return 1        
     end
     return 0
