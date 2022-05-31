@@ -1406,8 +1406,7 @@ function has_access_to(region_name)
     if start == region_name then
         return 1
     end
-    local checked_regions = {}
-    local value = check_access(start, region_name, checked_regions)
+    local value = check_access(start, region_name, {})
     if AUTOTRACKER_ENABLE_DEBUG_LOGGING_ACCESS then
         print(string.format("called has_access_to: region_name: %s, start: %s, value: %s", region_name, start, value))
     end
@@ -1488,6 +1487,13 @@ function set_transitions(slot_data)
     if slot_data == nil or slot_data['InterAreaTransitions'] == nil or slot_data['area_randomization'] == nil then
         return
     end    
+    for k,v in pairs(slot_data['InterAreaTransitions']) do
+        local obj = Tracker:FindObjectForCode("trans_"..k:gsub("[%s]+",""))
+        if obj then
+            obj:Set("state", 0) 
+            obj:Set("active", false)
+        end
+    end
     for k,v in pairs(slot_data['InterAreaTransitions']) do
         local obj = Tracker:FindObjectForCode("trans_"..k:gsub("[%s]+",""))
         if obj then
