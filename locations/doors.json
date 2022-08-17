@@ -2037,7 +2037,7 @@
                 "hosted_item": "trans_CaterpillarRoomTopRight",
                 "access_rules": [
                     [
-                        "{$has_access_to|Caterpillar Room Top Right}"
+                        "{$has_access_to|Caterpillar Room Top Right, $morph}"
                     ]
                 ],
                 "visibility_rules": [
