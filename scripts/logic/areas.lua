@@ -156,7 +156,7 @@ CLEAN_REGIONS = {
             ['Big Pink'] = function()
                 return wand({
                     can_pass_dachora_room(),
-                    traverse('door_gb_tr2')
+                    traverse('door_gb_br')
                 })
             end,
             ['Etecoons Bottom'] = function()
