@@ -1628,7 +1628,7 @@
                 "hosted_item": "WastelandLeft",
                 "access_rules": [
                     [
-                        "{$has_access_to|Ridley Zone}" , "{$can_use_power_bombs}"
+                        "{$has_access_to|Firefleas}" , "{$can_use_power_bombs}", "{$traverse|RedKihunterShaftBottom}"
                     ]
                 ],
                 "visibility_rules": [
