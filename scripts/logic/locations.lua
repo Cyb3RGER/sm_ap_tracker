@@ -1412,7 +1412,7 @@ LOCATIONS = {
     ["Power Bomb (Power Bombs of shame)"] = {
         access_from = function()
             return wand({
-                has_access_to('Ridley Zone'),
+                has_access_to('Wasteland'),
                 can_use_power_bombs()
             })
         end,
