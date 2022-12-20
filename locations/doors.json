@@ -7,7 +7,10 @@
                 "hosted_item": "door_cr_ls_tr",
                 "access_rules": [
                     [
-                        "{$has_access_to|Landing Site}"
+                        "{$has_access_to|Landing Site}", "{$speed}"
+                    ],
+                    [
+                        "{$has_access_to|Landing Site}", "{$can_fly}"
                     ]
                 ],
                 "visibility_rules": [
@@ -902,7 +905,7 @@
                 "hosted_item": "RedBrinstarFirefleaLeft",
                 "access_rules": [
                     [
-                        "{$has_access_to|Red Tower Top Left}", "{$can_get_through_xray}"
+                        "{$has_access_to|Red Tower Top Left}", "{$can_get_through_xray}", "{$traverse|RedTowerLeft}"
                     ]
                 ],
                 "visibility_rules": [
@@ -931,8 +934,7 @@
                 "hosted_item": "RedBrinstarEnergyRefill",
                 "access_rules": [
                     [
-                        "{$has_access_to|Red Tower Top Left}",
-                        "{$can_use_power_bombs}"
+                        "{$has_access_to|Red Tower Top Left}"
                     ]
                 ],
                 "visibility_rules": [
@@ -1336,7 +1338,7 @@
                 "hosted_item": "CathedralEntranceRight",
                 "access_rules": [
                     [
-                        "{$has_access_to|Business Center}"
+                        "{$has_access_to|Business Center}", "{$can_access_cathedral_entrance_right}"
                     ]
                 ],
                 "visibility_rules": [
@@ -2165,7 +2167,7 @@
                 "hosted_item": "FishTankRight",
                 "access_rules": [
                     [
-                        "{$has_access_to|Main Street Bottom}"
+                        "{$has_access_to|Main Street Bottom}, {$can_do_outer_maridia}"
                     ]
                 ],
                 "visibility_rules": [

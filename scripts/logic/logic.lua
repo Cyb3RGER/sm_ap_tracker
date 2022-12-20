@@ -700,7 +700,7 @@ function can_crystal_flash(n)
         item_count_ok('pb', 2*n+1),
     })
     if AUTOTRACKER_ENABLE_DEBUG_LOGGING_LOGIC then
-        print(string.format("called energy_reserve_count_ok_hell_run: value: %s", value))
+        print(string.format("called can_crystal_flash: value: %s", value))
     end
     if value > 0 then
         return 1
@@ -1245,6 +1245,34 @@ function can_access_kraids_lair()
         return 1
     end
     return 0
+end
+
+function can_access_cathedral_entrance_right()
+    local mult = HELL_RUNS_TABLE['MainUpperNorfair']['Norfair Entrance -> Cathedral Missiles']['mult']
+    if mult == nil then
+        mult = 1
+    end
+    return wor({
+        wand({
+            can_hell_run('MainUpperNorfair', mult),
+            wor({
+                wor({
+                    has_patch(31),
+                    hijump(),
+                    can_fly()
+                }),
+                wor({
+                    speed(),
+                    can_spring_ball_jump()
+                })
+            }),
+        }),
+        wand({
+            can_hell_run('MainUpperNorfair', 0.5*mult),
+            morph(),
+            knows('NovaBoost')
+        })
+    })
 end
 
 function can_enter_cathedral(mult)

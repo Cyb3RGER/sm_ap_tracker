@@ -273,10 +273,10 @@
                     "h_alignment": "left",
                     "rows": [
                         [
-                            "door_ln_t",
+                            "door_ln_t"
                         ],
                         [
-                            "door_ln_b",
+                            "door_ln_b"
                         ]
                     ]
                 }
@@ -375,27 +375,27 @@
                     [
                         "static_LowerMushroomsLeft",
                         "arrow",
-                        "trans_LowerMushroomsLeft",
+                        "trans_LowerMushroomsLeft"
                     ],
                     [
                         "static_GreenPiratesShaftBottomRight",
                         "arrow",
-                        "trans_GreenPiratesShaftBottomRight",
+                        "trans_GreenPiratesShaftBottomRight"
                     ],
                     [
                         "static_KeyhunterRoomBottom",
                         "arrow",
-                        "trans_KeyhunterRoomBottom",
+                        "trans_KeyhunterRoomBottom"
                     ],
                     [
                         "static_MoatRight",
                         "arrow",
-                        "trans_MoatRight",
+                        "trans_MoatRight"
                     ],
                     [
                         "static_MorphBallRoomLeft",
                         "arrow",
-                        "trans_MorphBallRoomLeft",
+                        "trans_MorphBallRoomLeft"
                     ]
                 ]
             }
@@ -421,12 +421,12 @@
                     [
                         "static_GreenBrinstarElevator",
                         "arrow",
-                        "trans_GreenBrinstarElevator",
+                        "trans_GreenBrinstarElevator"
                     ],
                     [
                         "static_GreenHillZoneTopRight",
                         "arrow",
-                        "trans_GreenHillZoneTopRight",
+                        "trans_GreenHillZoneTopRight"
                     ],
                     [
                         "static_NoobBridgeRight",
@@ -457,27 +457,27 @@
                     [
                         "static_RedBrinstarElevator",
                         "arrow",
-                        "trans_RedBrinstarElevator",
+                        "trans_RedBrinstarElevator"
                     ],
                     [
                         "static_CaterpillarRoomTopRight",
                         "arrow",
-                        "trans_CaterpillarRoomTopRight",
+                        "trans_CaterpillarRoomTopRight"
                     ],
                     [
                         "static_RedTowerTopLeft",
                         "arrow",
-                        "trans_RedTowerTopLeft",
+                        "trans_RedTowerTopLeft"
                     ],
                     [
                         "static_GlassTunnelTop",
                         "arrow",
-                        "trans_GlassTunnelTop",
+                        "trans_GlassTunnelTop"
                     ],
                     [
                         "static_EastTunnelTopRight",
                         "arrow",
-                        "trans_EastTunnelTopRight",
+                        "trans_EastTunnelTopRight"
                     ],
                     [
                         "static_EastTunnelRight",
@@ -508,12 +508,12 @@
                     [
                         "static_WarehouseZeelaRoomLeft",
                         "arrow",
-                        "trans_WarehouseZeelaRoomLeft",
+                        "trans_WarehouseZeelaRoomLeft"
                     ],
                     [
                         "static_KraidRoomOut",
                         "arrow",
-                        "trans_KraidRoomOut",
+                        "trans_KraidRoomOut"
                     ],
                     [
                         "static_KraidRoomIn",
@@ -544,22 +544,22 @@
                     [
                         "static_WarehouseEntranceLeft",
                         "arrow",
-                        "trans_WarehouseEntranceLeft",
+                        "trans_WarehouseEntranceLeft"
                     ],
                     [
                         "static_WarehouseEntranceRight",
                         "arrow",
-                        "trans_WarehouseEntranceRight",
+                        "trans_WarehouseEntranceRight"
                     ],
                     [
                         "static_CrocomireSpeedwayBottom",
                         "arrow",
-                        "trans_CrocomireSpeedwayBottom",
+                        "trans_CrocomireSpeedwayBottom"
                     ],
                     [
                         "static_SingleChamberTopRight",
                         "arrow",
-                        "trans_SingleChamberTopRight",
+                        "trans_SingleChamberTopRight"
                     ],
                     [
                         "static_KronicBoostRoomBottomLeft",
@@ -616,17 +616,17 @@
                     [
                         "static_LavaDiveRight",
                         "arrow",
-                        "trans_LavaDiveRight",
+                        "trans_LavaDiveRight"
                     ],
                     [
                         "static_ThreeMuskateersRoomLeft",
                         "arrow",
-                        "trans_ThreeMuskateersRoomLeft",
+                        "trans_ThreeMuskateersRoomLeft"
                     ],
                     [
                         "static_RidleyRoomOut",
                         "arrow",
-                        "trans_RidleyRoomOut",
+                        "trans_RidleyRoomOut"
                     ],
                     [
                         "static_RidleyRoomIn",
@@ -657,17 +657,17 @@
                     [
                         "static_WestOceanLeft",
                         "arrow",
-                        "trans_WestOceanLeft",
+                        "trans_WestOceanLeft"
                     ],
                     [
                         "static_CrabMazeLeft",
                         "arrow",
-                        "trans_CrabMazeLeft",
+                        "trans_CrabMazeLeft"
                     ],
                     [
                         "static_PhantoonRoomOut",
                         "arrow",
-                        "trans_PhantoonRoomOut",
+                        "trans_PhantoonRoomOut"
                     ],
                     [
                         "static_PhantoonRoomIn",
@@ -698,17 +698,17 @@
                     [
                         "static_LeCoudeRight",
                         "arrow",
-                        "trans_LeCoudeRight",
+                        "trans_LeCoudeRight"
                     ],
                     [
                         "static_AqueductTopLeft",
                         "arrow",
-                        "trans_AqueductTopLeft",
+                        "trans_AqueductTopLeft"
                     ],
                     [
                         "static_DraygonRoomOut",
                         "arrow",
-                        "trans_DraygonRoomOut",
+                        "trans_DraygonRoomOut"
                     ],
                     [
                         "static_DraygonRoomIn",
@@ -739,17 +739,17 @@
                     [
                         "static_RedFishRoomLeft",
                         "arrow",
-                        "trans_RedFishRoomLeft",
+                        "trans_RedFishRoomLeft"
                     ],
                     [
                         "static_CrabShaftRight",
                         "arrow",
-                        "trans_CrabShaftRight",
+                        "trans_CrabShaftRight"
                     ],
                     [
                         "static_MainStreetBottom",
                         "arrow",
-                        "trans_MainStreetBottom",
+                        "trans_MainStreetBottom"
                     ],
                     [
                         "static_CrabHoleBottomLeft",

@@ -627,7 +627,7 @@ LOCATIONS = {
                 can_traverse_sand_pits()
             })
         end,
-        avaiable = function()
+        available = function()
             return wand({
                 can_use_power_bombs(),
                 wor({
