@@ -1,216 +1,216 @@
 ﻿{
-  "tracker_default": {
-    "type": "container",
-    "background": "#000000",
-    "content": {
-      "type": "dock",
-      "dropshadow": true,
-      "content": [
-        {
-          "type": "dock",
-          "dock": "left",
-          "v_alignment": "stretch",
-          "content": [
-            {
-              "type": "group",
-              "header": "Items",
-              "dock": "top",
-              "content": {
-                "type": "layout",
-                "key": "shared_item_grid"
-              }
-            },
-            /*{
-              "type": "group",
-              "header": "Doors",
-              "dock": "top",
-              "content": {
-                "type": "layout",
-                "key": "doors_item_grid"
-              }
-            },*/
-            {
-              "type": "group",
-              "header": "Transitions",
-              "dock": "top",
-              "content": {
-                "type": "layout",
-                "key": "transitions_item_grid"
-              }
-            }
-          ]
-        },
-        {
-          "type": "tabbed",
-          "tabs": [
-            {
-              "title": "Full Map",
-              "content": {
-                "type": "map",
-                "maps": [
-                  "fullmap"
-                ]
-              }
-            },
-            {
-              "title": "Crateria",
-              "content": {
-                "type": "map",
-                "maps": [
-                  "crateriamap"
-                ]
-              }
-            },
-            {
-              "title": "Brinstar",
-              "content": {
-                "type": "map",
-                "maps": [
-                  "brinstarmap"
-                ]
-              }
-            },
-            {
-              "title": "Norfair",
-              "content": {
-                "type": "map",
-                "maps": [
-                  "norfairmap"
-                ]
-              }
-            },
-            {
-              "title": "Wrecked Ship",
-              "content": {
-                "type": "map",
-                "maps": [
-                  "wreckedshipmap"
-                ]
-              }
-            },
-            {
-              "title": "Maridia",
-              "content": {
-                "type": "map",
-                "maps": [
-                  "maridiamap"
-                ]
-              }
-            }
-          ]
+    "tracker_default": {
+        "type": "container",
+        "background": "#000000",
+        "content": {
+            "type": "dock",
+            "dropshadow": true,
+            "content": [
+                {
+                    "type": "dock",
+                    "dock": "left",
+                    "v_alignment": "stretch",
+                    "content": [
+                        {
+                            "type": "group",
+                            "header": "Items",
+                            "dock": "top",
+                            "content": {
+                                "type": "layout",
+                                "key": "shared_item_grid"
+                            }
+                        },
+                        /*{
+                            "type": "group",
+                            "header": "Doors",
+                            "dock": "top",
+                            "content": {
+                                "type": "layout",
+                                "key": "doors_item_grid"
+                            }
+                        },*/
+                        {
+                            "type": "group",
+                            "header": "Transitions",
+                            "dock": "top",
+                            "content": {
+                                "type": "layout",
+                                "key": "transitions_item_grid"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "tabbed",
+                    "tabs": [
+                        {
+                            "title": "Full Map",
+                            "content": {
+                                "type": "map",
+                                "maps": [
+                                    "fullmap"
+                                ]
+                            }
+                        },
+                        {
+                            "title": "Crateria",
+                            "content": {
+                                "type": "map",
+                                "maps": [
+                                    "crateriamap"
+                                ]
+                            }
+                        },
+                        {
+                            "title": "Brinstar",
+                            "content": {
+                                "type": "map",
+                                "maps": [
+                                    "brinstarmap"
+                                ]
+                            }
+                        },
+                        {
+                            "title": "Norfair",
+                            "content": {
+                                "type": "map",
+                                "maps": [
+                                    "norfairmap"
+                                ]
+                            }
+                        },
+                        {
+                            "title": "Wrecked Ship",
+                            "content": {
+                                "type": "map",
+                                "maps": [
+                                    "wreckedshipmap"
+                                ]
+                            }
+                        },
+                        {
+                            "title": "Maridia",
+                            "content": {
+                                "type": "map",
+                                "maps": [
+                                    "maridiamap"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
         }
-      ]
-    }
-  },
-  "tracker_horizontal": {
-    "type": "container",
-    "background": "#000000",
-    "content": {
-      "type": "dock",
-      "dropshadow": true,
-      "content": [
-        {
-          "type": "dock",
-          "dock": "bottom",
-          "content": [
-            {
-              "type": "group",
-              "header": "Items",
-              "dock": "left",
-              "margin": "0,0,3,0",
-              "content": {
-                "type": "layout",
-                "h_alignment": "center",
-                "v_alignment": "center",
-                "key": "shared_item_grid"
-              }
-            },
-            /*{
-              "type": "group",
-              "header": "Doors",
-              "dock": "left",
-              "margin": "0,0,3,0",
-              "content": {
-                "type": "layout",
-                "h_alignment": "center",
-                "v_alignment": "center",
-                "key": "doors_item_grid"
-              }
-            },*/
-            {
-              "type": "group",
-              "header": "Transitions",
-              "dock": "left",
-              "margin": "0,0,3,0",
-              "content": {
-                "type": "layout",
-                "h_alignment": "center",
-                "v_alignment": "center",
-                "key": "transitions_item_grid"
-              }
-            }
-          ]
-        },
-        {
-          "type": "tabbed",
-          "tabs": [
-            {
-              "title": "Full Map",
-              "content": {
-                "type": "map",
-                "maps": [
-                  "fullmap"
-                ]
-              }
-            },
-            {
-              "title": "Crateria",
-              "content": {
-                "type": "map",
-                "maps": [
-                  "crateriamap"
-                ]
-              }
-            },
-            {
-              "title": "Brinstar",
-              "content": {
-                "type": "map",
-                "maps": [
-                  "brinstarmap"
-                ]
-              }
-            },
-            {
-              "title": "Norfair",
-              "content": {
-                "type": "map",
-                "maps": [
-                  "norfairmap"
-                ]
-              }
-            },
-            {
-              "title": "Wrecked Ship",
-              "content": {
-                "type": "map",
-                "maps": [
-                  "wreckedshipmap"
-                ]
-              }
-            },
-            {
-              "title": "Maridia",              
-              "content": {
-                "type": "map",
-                "maps": [
-                  "maridiamap"
-                ]
-              }
-            }
-          ]
+    },
+    "tracker_horizontal": {
+        "type": "container",
+        "background": "#000000",
+        "content": {
+            "type": "dock",
+            "dropshadow": true,
+            "content": [
+                {
+                    "type": "dock",
+                    "dock": "bottom",
+                    "content": [
+                        {
+                            "type": "group",
+                            "header": "Items",
+                            "dock": "left",
+                            "margin": "0,0,3,0",
+                            "content": {
+                                "type": "layout",
+                                "h_alignment": "center",
+                                "v_alignment": "center",
+                                "key": "shared_item_grid"
+                            }
+                        },
+                        /*{
+                            "type": "group",
+                            "header": "Doors",
+                            "dock": "left",
+                            "margin": "0,0,3,0",
+                            "content": {
+                                "type": "layout",
+                                "h_alignment": "center",
+                                "v_alignment": "center",
+                                "key": "doors_item_grid"
+                            }
+                        },*/
+                        {
+                            "type": "group",
+                            "header": "Transitions",
+                            "dock": "left",
+                            "margin": "0,0,3,0",
+                            "content": {
+                                "type": "layout",
+                                "h_alignment": "center",
+                                "v_alignment": "center",
+                                "key": "transitions_item_grid"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "tabbed",
+                    "tabs": [
+                        {
+                            "title": "Full Map",
+                            "content": {
+                                "type": "map",
+                                "maps": [
+                                    "fullmap"
+                                ]
+                            }
+                        },
+                        {
+                            "title": "Crateria",
+                            "content": {
+                                "type": "map",
+                                "maps": [
+                                    "crateriamap"
+                                ]
+                            }
+                        },
+                        {
+                            "title": "Brinstar",
+                            "content": {
+                                "type": "map",
+                                "maps": [
+                                    "brinstarmap"
+                                ]
+                            }
+                        },
+                        {
+                            "title": "Norfair",
+                            "content": {
+                                "type": "map",
+                                "maps": [
+                                    "norfairmap"
+                                ]
+                            }
+                        },
+                        {
+                            "title": "Wrecked Ship",
+                            "content": {
+                                "type": "map",
+                                "maps": [
+                                    "wreckedshipmap"
+                                ]
+                            }
+                        },
+                        {
+                            "title": "Maridia",
+                            "content": {
+                                "type": "map",
+                                "maps": [
+                                    "maridiamap"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
         }
-      ]
     }
-  }
 }

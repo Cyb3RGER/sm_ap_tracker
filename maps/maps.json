@@ -1,38 +1,38 @@
 [
-  {
-    "name": "fullmap",
-    "location_size": 27,
-    "location_border_thickness": 5,
-    "img": "images/maps/map_full.png"
-  },
-  {
-    "name": "crateriamap",
-    "location_size": 27,
-    "location_border_thickness": 5,
-    "img": "images/maps/map_crateria.png"
-  },
-  {
-    "name": "brinstarmap",
-    "location_size": 27,
-    "location_border_thickness": 5,
-    "img": "images/maps/map_brinstar.png"
-  },
-  {
-    "name": "norfairmap",
-    "location_size": 27,
-    "location_border_thickness": 5,
-    "img": "images/maps/map_norfair.png"
-  },
-  {
-    "name": "wreckedshipmap",
-    "location_size": 27,
-    "location_border_thickness": 5,
-    "img": "images/maps/map_ws.png"
-  },
-  {
-    "name": "maridiamap",
-    "location_size": 27,
-    "location_border_thickness": 5,
-    "img": "images/maps/map_maridia.png"
-  }
+    {
+        "name": "fullmap",
+        "location_size": 27,
+        "location_border_thickness": 5,
+        "img": "images/maps/map_full.png"
+    },
+    {
+        "name": "crateriamap",
+        "location_size": 27,
+        "location_border_thickness": 5,
+        "img": "images/maps/map_crateria.png"
+    },
+    {
+        "name": "brinstarmap",
+        "location_size": 27,
+        "location_border_thickness": 5,
+        "img": "images/maps/map_brinstar.png"
+    },
+    {
+        "name": "norfairmap",
+        "location_size": 27,
+        "location_border_thickness": 5,
+        "img": "images/maps/map_norfair.png"
+    },
+    {
+        "name": "wreckedshipmap",
+        "location_size": 27,
+        "location_border_thickness": 5,
+        "img": "images/maps/map_ws.png"
+    },
+    {
+        "name": "maridiamap",
+        "location_size": 27,
+        "location_border_thickness": 5,
+        "img": "images/maps/map_maridia.png"
+    }
 ]

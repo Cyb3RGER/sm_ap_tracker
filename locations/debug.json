@@ -1,23 +1,23 @@
 [
-      {
+    {
         "name": "Debug",
         "access_rules": [
-          [
-            "$get_access_to_loc|Mother Brain"
-          ]
+            [
+                "$get_access_to_loc|Mother Brain"
+            ]
         ],
         "sections": [
-          {
-            "name": "",          
-            "item_count": 1
-          }
+            {
+                "name": "",
+                "item_count": 1
+            }
         ],
         "map_locations": [
-          {
-            "map": "fullmap",
-            "x": 0,
-            "y": 0
-          }
+            {
+                "map": "fullmap",
+                "x": 0,
+                "y": 0
+            }
         ]
-      }     
+    }
 ]
