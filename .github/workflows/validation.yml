@@ -1,5 +1,6 @@
 name: Pack validation
 on:
+  workflow_dispatch:
   push:
     paths:
       - '*.json'
