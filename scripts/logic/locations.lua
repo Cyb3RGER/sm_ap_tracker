@@ -616,7 +616,7 @@ LOCATIONS = {
                 can_climb_west_sand_hole()
             })
         end,
-        avaiable = function()
+        available = function()
             return can_access_items_in_west_sand_hole()
         end
     },
