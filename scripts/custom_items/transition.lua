@@ -93,13 +93,14 @@ Transition.STATES = {
 
 function Transition:init(name, codes, defaultState, enableStateChanging)
     if ENABLE_DEBUG_LOG_TRANSITION then
-        print(string.format("Transition:init: name: %s, codes: %s, defaultState: %s, enableStateChanging: %s", name, codes, defaultState, enableStateChanging))
+        print(string.format("Transition:init: name: %s, codes: %s, defaultState: %s, enableStateChanging: %s", name,
+            codes, defaultState, enableStateChanging))
     end
     self:createItem(name)
 
     self.name = name
     self.codes = {}
-    
+
     for code in string.gmatch(codes, "[^,]+") do
         local clean = string.gsub(code, "[%s]+", "")
         if ENABLE_DEBUG_LOG_TRANSITION then
@@ -117,7 +118,7 @@ function Transition:init(name, codes, defaultState, enableStateChanging)
     self.enableStateChanging = enableStateChanging
     self.state = defaultState
     self.old_value = self.state
-    
+
     self:getImages()
     self:setState(self.state)
     self:setActive(self.active)
@@ -129,7 +130,7 @@ function Transition:getImages()
         if type(v) ~= "string" then
             -- skip reverse lookup entiers
         else
-            local name = v:lower():gsub('[%s]+', '_')            
+            local name = v:lower():gsub('[%s]+', '_')
             self.images[k] = ImageReference:FromPackRelativePath("images/trans/" .. name .. ".png")
         end
     end
@@ -216,14 +217,17 @@ end
 function Transition:removeExit()
     if self.old_state ~= 0 and self.old_state ~= nil then
         if ENABLE_DEBUG_LOG_TRANSITION then
-            print(string.format("\tremoving exit for %s (%s (%s))", self.name, self.old_state, Transition.STATES[self.old_state]))
+            print(string.format("\tremoving exit for %s (%s (%s))", self.name, self.old_state,
+                Transition.STATES[self.old_state]))
         end
         local target_region = REGIONS[self.name]
         if target_region == nil and ENABLE_DEBUG_LOG_TRANSITION then
             print(string.format("\tdidn't find region for %s", self.name))
-        end     
-        if target_region.exits[Transition.STATES[self.old_state]] ~= nil then
-            target_region.exits[Transition.STATES[self.old_state]] = nil
+        end
+        if target_region ~= nil then
+            if target_region.exits[Transition.STATES[self.old_state]] ~= nil then
+                target_region.exits[Transition.STATES[self.old_state]] = nil
+            end
         end
     end
 end
@@ -233,11 +237,26 @@ function Transition:addExit()
         if ENABLE_DEBUG_LOG_TRANSITION then
             print(string.format("\tadding exit for %s (%s)", self.name, self.state))
         end
-        local target_region = REGIONS[self.name]            
+        local target_region = REGIONS[self.name]
         if target_region == nil and ENABLE_DEBUG_LOG_TRANSITION then
             print(string.format("\tdidn't find region for %s", self.name))
         end
-        target_region.exits[Transition.STATES[self.state]] = target_region.traverse
+        if target_region ~= nil then
+            target_region.exits[Transition.STATES[self.state]] = target_region.traverse
+        end
+    end
+end
+
+function Transition:setDisplayName(name)
+    self.display_name = name
+    self.ItemInstance.Name = name
+end
+
+function Transition:updateDisplayName()
+    if self.active then
+        self:setDisplayName(Transition.STATES[self.state])
+    else
+        self:setDisplayName(Transition.STATES[0])
     end
 end
 
@@ -246,36 +265,36 @@ function Transition:propertyChanged(key, value)
         print(string.format("Transition:propertyChanged for %s key %s with value %s", self.name, key, value))
     end
     if key == "state" then
-        --remove old exit    
-        self:removeExit()            
+        -- remove old exit    
+        self:removeExit()
         self.state = value
         self.old_state = self.state
-        --add new exit
+        -- add new exit
         if self.active then
             self:addExit()
         end
-        
+
         -- set the opposite site as well
-        --local code = "trans_" .. Transition.STATES[value]:gsub("[%s]+", "")
-        --local obj = Tracker:FindObjectForCode(code)
-        --local state = Transition.STATES[self.name]   
-        --if obj and obj:Get("state") ~= Transition.STATES[self.name] then
+        -- local code = "trans_" .. Transition.STATES[value]:gsub("[%s]+", "")
+        -- local obj = Tracker:FindObjectForCode(code)
+        -- local state = Transition.STATES[self.name]   
+        -- if obj and obj:Get("state") ~= Transition.STATES[self.name] then
         --    if ENABLE_DEBUG_LOG_TRANSITION then            
         --        print(string.format("\tchanging obj %s to state %s", code, state))
         --    end
         --    obj:Set("state", state)
         --    --obj:Set("active", true)
-        --end
+        -- end
     end
     if key == "active" then
         self.active = value
-        --add/remove exit
+        -- add/remove exit
         if self.active then
             self:addExit()
         else
             self:removeExit()
         end
-        if self.state then            
+        if self.state then
             local code = "trans_" .. Transition.STATES[self.state]:gsub("[%s]+", "")
             local obj = Tracker:FindObjectForCode(code)
             if obj and obj:Get("active") ~= value then
@@ -288,5 +307,6 @@ function Transition:propertyChanged(key, value)
     end
     if key == "state" or key == "active" then
         self:updateIcon()
+        self:updateDisplayName()
     end
 end
