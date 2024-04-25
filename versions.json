@@ -1,0 +1,88 @@
+{
+    "versions": [
+        {
+            "package_version": "0.1.0.7",
+            "download_url": "https://github.com/Cyb3RGER/sm_ap_tracker/releases/download/0.1.0.7/sm_ap_tracker-v0_1_0_7.zip",
+            "sha256": "d52c260b29e92f228b22cc0253c4216b15bc77ae6d6975cc0ca1bda62263632c",
+            "changelog": [
+                "show name of exit door in transition on tooltip",
+                "fixed West Maridia, Fish Tank, right access",
+                "fixed Ridley transition access",
+                "added auto tracking for save/energy refill doors",
+                "added auto map switching"
+            ]
+        },
+        {
+            "package_version": "0.1.0.6",
+            "download_url": "https://github.com/Cyb3RGER/sm_ap_tracker/releases/download/0.1.0.6/sm_ap_tracker-v0_1_0_6.zip",
+            "sha256": "11e6ab0e84cb7b87a62bbbb2db24d6fac8a215d7687d592cb72cd14f14b6028b",
+            "changelog": [
+                "fix Reserve Tank, Maridia access",
+                "new area rando color-coded maps (Thanks The T!)"
+            ]
+        },
+        {
+            "package_version": "0.1.0.5",
+            "download_url": "https://github.com/Cyb3RGER/sm_ap_tracker/releases/download/0.1.0.5/sm_ap_tracker-v0_1_0_5.zip",
+            "sha256": "fdd136eb554dae6b05a3ff1640a12864755ed9ab61c8bb1606d2b8cb8f45cc34",
+            "changelog": [
+                "fix Power Bomb (Power Bombs of shame) access",
+                "fix Lower Norfair, Wasteland, left access",
+                "fix springball access logic",
+                "fix some door access logic"
+            ]
+        },
+        {
+            "package_version": "0.1.0.4",
+            "download_url": "https://github.com/Cyb3RGER/sm_ap_tracker/releases/download/0.1.0.4/sm_ap_tracker-v0_1_0_4.zip",
+            "sha256": "db798c178edd31b5548e88ab456b7af9ff8b0b4bcc45ddd2d29789826e35737c",
+            "changelog": [
+                "Fixed traverse logic Green Brinstar Elevator -> Big Pink using wrong door",
+                "Fixed access to Transition: Caterpillar Room Top Right"
+            ]
+        },
+        {
+            "package_version": "0.1.0.3",
+            "download_url": "https://github.com/Cyb3RGER/sm_ap_tracker/releases/download/0.1.0.3/sm_ap_tracker-v0_1_0_3.zip",
+            "sha256": "f8920773d67d510cbf62cbc4b389944067e8b4291b20ca9251b8258a4e893e19",
+            "changelog": [
+                "fixed yellow doors being traversable without Morph Ball"
+            ]
+        },
+        {
+            "package_version": "0.1.0.2",
+            "download_url": "https://github.com/Cyb3RGER/sm_ap_tracker/releases/download/0.1.0.2/sm_ap_tracker-v0_1_0_2.zip",
+            "sha256": "5bdaa4a5334e94f264d6101c7ac5a1cd693b92d0bee2a6cb72e1331dfdca748b",
+            "changelog": [
+                "fixed a bug where door rando was detected as on when it wasn't"
+            ]
+        },
+        {
+            "package_version": "0.1.0.1",
+            "download_url": "https://github.com/Cyb3RGER/sm_ap_tracker/releases/download/0.1.0.1/sm_ap_tracker-v0_1_0_1.zip",
+            "sha256": "749e95ad169b393983a7c5eef66a1f352f28da53bafafdb7b5c3f1290d681986",
+            "changelog": [
+                "fixed pink brinstar missiles being swapped on the brinstar map"
+            ]
+        },
+        {
+            "package_version": "0.0.1.1",
+            "download_url": "https://github.com/Cyb3RGER/sm_ap_tracker/releases/download/0.0.1.1/sm_ap_tracker-v0_0_1_1.zip",
+            "sha256": "76b1cccf5907a17720013e78fb6c14b917f0aefed4f91d9f3eef1d2a65724cd8",
+            "changelog": [
+                "added SNES tracking for local items so items will be properly tracked after death/reset",
+                "fixed access_rule for \"Super Missile (pink Brinstar)\"",
+                "made transitions more readable",
+                "doors are now only as hosted items on the map by default"
+            ]
+        },
+        {
+            "package_version": "0.0.1.0",
+            "download_url": "https://github.com/Cyb3RGER/sm_ap_tracker/releases/download/0.0.1.0/sm_ap_tracker-v0_0_1_0.zip",
+            "sha256": "4caf48f53424d218f8dfef71618fb17e3f6c9968c64b177de72eba27dd1c2b1e",
+            "changelog": [
+                "Initial release"
+            ]
+        }
+    ]
+}
