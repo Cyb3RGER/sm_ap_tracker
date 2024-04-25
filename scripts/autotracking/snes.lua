@@ -74,7 +74,19 @@ DOORS_SCREENS = {
         room = 0x9ad9,
         area = "Brinstar"
     },
+    ['GreenBrinstarSaveStation'] = {
+        byteIndex = 25,
+        bitMask = 64,
+        room = 0x9ad9,
+        area = "Brinstar"
+    },
     ['MainShaftBottomRight'] = {
+        byteIndex = 29,
+        bitMask = 64,
+        room = 0x9ad9,
+        area = "Brinstar"
+    },
+    ['GreenBrinstarMissileRefill'] = {
         byteIndex = 29,
         bitMask = 64,
         room = 0x9ad9,
@@ -124,6 +136,12 @@ DOORS_SCREENS = {
         room = 0xa253,
         area = "Brinstar"
     },
+    ['RedBrinstarEnergyRefill'] = {
+        byteIndex = 204,
+        bitMask = 64,
+        room = 0xa253,
+        area = "Brinstar"
+    },
     ['RedBrinstarFirefleaLeft'] = {
         byteIndex = 67,
         bitMask = 64,
@@ -152,6 +170,18 @@ DOORS_SCREENS = {
         byteIndex = 200,
         bitMask = 4,
         room = 0xa408,
+        area = "Brinstar"
+    },
+    ["MaridiaBottomSaveStation"] = {
+        byteIndex = 81,
+        bitMask = 16,
+        room = 0xcefb,
+        area = "Maridia"
+    },
+    ['KraidRefillStation'] = {
+        byteIndex = 206,
+        bitMask = 4,
+        room = 0xcefb,
         area = "Brinstar"
     },
     -- Wrecked ship
@@ -291,6 +321,12 @@ DOORS_SCREENS = {
         room = 0xd1a3,
         area = "Maridia"
     },
+    ['DraygonSaveRefillStation'] = {
+        byteIndex = 157,
+        bitMask = 128,
+        room = 0xd72a,
+        area = "Maridia"
+    },
     ['ColosseumBottomRight'] = {
         byteIndex = 161,
         bitMask = 128,
@@ -308,7 +344,19 @@ DOORS_SCREENS = {
         bitMask = 2,
         room = 0xd48e,
         area = "Maridia"
-    }
+    },
+    ['ForgottenHighwaySaveStation'] = {
+        byteIndex = 148,
+        bitMask = 32,
+        --room = 0xd72a, --this is wrong
+        area = "Maridia"
+    },
+    ["MaridiaAqueductSaveStation"] = {
+        byteIndex = 50,
+        bitMask = 8,
+        room = 0xd5a7,
+        area = "Maridia"
+    },
 }
 AREA_MAPPING = {
     [0] = 'Crateria',
@@ -318,6 +366,13 @@ AREA_MAPPING = {
     [4] = 'Maridia',
     [5] = 'Tourian',
     [6] = 'Ceres'
+}
+AREA_TAB_MAPPING = {
+    [0] = 'Crateria',
+    [1] = 'Brinstar',
+    [2] = 'Norfair',
+    [3] = 'Wrecked Ship',
+    [4] = 'Maridia',
 }
 AREA_OFFSETS = {
     ['Crateria'] = 0x0,
@@ -363,7 +418,6 @@ BOSS_BIT_MASKS = {
     --    ["byteIndex"] = 0x02,
     --    ["bitMask"] = 0x04
     --}
-    
 }
 AREA_ACCESS_POINTS = {
     ["Lower Mushrooms Left"] = {
@@ -1283,7 +1337,7 @@ ITEM_BIT_MASKS_2 = {
         byteIndex = 0x0,
         valueFunc = function(readResult)
             return math.floor((readResult - 0x63) / 0x64)
-        end      
+        end
     },
     ['missile'] = {
         byteIndex = 0x4,
@@ -1336,11 +1390,11 @@ function update_item_data_1(segment)
     for k, v in pairs(ITEM_BIT_MASKS_1) do
         if LOCAL_ITEMS[k] ~= nil and LOCAL_ITEMS[k] > 0 then
             local addr = ITEM_DATA_1_ADDR + v.byteIndex
-            local readResult = AutoTracker:ReadU8(addr)            
+            local readResult = AutoTracker:ReadU8(addr)
             local obj = Tracker:FindObjectForCode(k)
             if obj then
                 obj.Active = (readResult & v.bitMask) > 0
-            end            
+            end
         end
     end
 end
@@ -1364,8 +1418,8 @@ function update_item_data_2(segment)
                     obj.AcquiredCount = global_count
                 else
                     obj.AcquiredCount = value
-                end               
-            end           
+                end
+            end
         end
     end
 end
@@ -1385,7 +1439,8 @@ function update_boss_data(segment)
             local readResult = AutoTracker:ReadU8(addr)
             local obj = Tracker:FindObjectForCode(k)
             if AUTOTRACKER_ENABLE_DEBUG_LOGGING_SNES then
-                print(string.format("checking boss %s with readResult %x (%x) from addr %x", k, readResult, v.bitMask, addr))
+                print(string.format("checking boss %s with readResult %x (%x) from addr %x", k, readResult, v.bitMask,
+                    addr))
             end
             if obj then
                 if readResult & v.bitMask > 0 then
@@ -1408,13 +1463,16 @@ function update_current_area(segment)
             print(string.format("setting current area to %s", AREA_MAPPING[readResult]))
         end
         CURRENT_AREA = AREA_MAPPING[readResult]
+        if AUTOTRACKER_ENABLE_AUTO_MAP_SWITCHING and AREA_TAB_MAPPING[readResult] then
+            Tracker:UiHint("ActivateTab", AREA_TAB_MAPPING[readResult])
+        end
     end
 end
 
 function update_saved_map_data(segment)
     if AUTOTRACKER_ENABLE_DEBUG_LOGGING_SNES then
         print(string.format("called update_saved_map_data"))
-    end    
+    end
     update_map_data(false)
 end
 
@@ -1439,7 +1497,7 @@ function update_map_data(is_current_data)
     if is_door_rando() > 0 then
         for k, v in pairs(DOORS_SCREENS) do
             if v ~= nil and v.area ~= nil and v.bitMask ~= nil and v.byteIndex ~= nil and (v.area == CURRENT_AREA or not is_current_data) then
-                local addr 
+                local addr
                 if is_current_data then
                     addr = CURRENT_MAP_DATA_ADDR + v.byteIndex
                 else
@@ -1459,18 +1517,18 @@ function update_map_data(is_current_data)
                     end
                 end
             end
-        end        
+        end
     end
     -- Transitions
     if is_area_rando() > 0 or is_boss_rando() > 0 then
         for k, v in pairs(Transition.STATES) do
             --only check one half to skip reverse lookup entries
             -- and only check boss transition if boss rando is on
-            -- and only check area transition if area rando is on 
-            if type(k) == 'string' and 
-            ((is_boss_rando() > 0 and (k:find('In') or k:find('Out'))) or 
-            (is_area_rando() > 0 and not (k:find('In') or k:find('Out')))) then 
-                local code = "trans_"..(k:gsub("[%s]+",""))
+            -- and only check area transition if area rando is on
+            if type(k) == 'string' and
+                ((is_boss_rando() > 0 and (k:find('In') or k:find('Out'))) or
+                    (is_area_rando() > 0 and not (k:find('In') or k:find('Out')))) then
+                local code = "trans_" .. (k:gsub("[%s]+", ""))
                 local obj = Tracker:FindObjectForCode(code)
                 if AUTOTRACKER_ENABLE_DEBUG_LOGGING_SNES then
                     print(string.format("checking area trans: %s (CURRENT_AREA: %s)", k, CURRENT_AREA))
@@ -1494,14 +1552,13 @@ function update_map_data(is_current_data)
                     end
                 end
             elseif type(k) == 'string' and AUTOTRACKER_ENABLE_DEBUG_LOGGING_SNES then
-                print(string.format("skipping area trans %s due to settings", k))      
+                print(string.format("skipping area trans %s due to settings", k))
             end
-        end 
+        end
     end
-    
 end
 
-function check_ap_entered(ap, is_current_data)    
+function check_ap_entered(ap, is_current_data)
     if is_current_data == nil then
         is_current_data = true
     end
@@ -1517,7 +1574,7 @@ function check_ap_entered(ap, is_current_data)
     if ap:find('In') or ap:find('Out') then
         v = BOSS_ACCESS_POINTS[ap]
     else
-        v = AREA_ACCESS_POINTS[ap]        
+        v = AREA_ACCESS_POINTS[ap]
     end
     if CURRENT_AREA ~= nil and v ~= nil and v.area ~= nil and v.byteIndex ~= nil and v.bitMask ~= nil and (CURRENT_AREA == v.area or not is_current_data) then
         local addr
@@ -1545,5 +1602,5 @@ ScriptHost:AddMemoryWatch('current_area', CURRENT_AREA_ADDR, 0x1, update_current
 ScriptHost:AddMemoryWatch('current_map_data', CURRENT_MAP_DATA_ADDR, 0x100, update_current_map_data)
 ScriptHost:AddMemoryWatch('saved_map_data', SAVED_MAP_DATA_ADDR, 0x500, update_saved_map_data)
 ScriptHost:AddMemoryWatch('boss_data', BOSS_DATA_ADDR, 0x8, update_boss_data)
-ScriptHost:AddMemoryWatch('item_data 1',ITEM_DATA_1_ADDR, ITEM_DATA_1_SIZE ,update_item_data_1)
-ScriptHost:AddMemoryWatch('item_data 2',ITEM_DATA_2_ADDR, ITEM_DATA_2_SIZE ,update_item_data_2)
+ScriptHost:AddMemoryWatch('item_data 1', ITEM_DATA_1_ADDR, ITEM_DATA_1_SIZE, update_item_data_1)
+ScriptHost:AddMemoryWatch('item_data 2', ITEM_DATA_2_ADDR, ITEM_DATA_2_SIZE, update_item_data_2)

@@ -14,7 +14,7 @@ CLEAN_REGIONS = {
     ['Landing Site'] = {
         exits = {
             ['Lower Mushrooms Left'] = function()
-                return wand({can_pass_terminator_bomb_wall(), can_pass_crateria_green_pirates()})
+                return wand({ can_pass_terminator_bomb_wall(), can_pass_crateria_green_pirates() })
             end,
             ['Keyhunter Room Bottom'] = function()
                 return traverse('door_cr_ls_br')
@@ -43,7 +43,7 @@ CLEAN_REGIONS = {
     ['Gauntlet Top'] = {
         exits = {
             ['Green Pirates Shaft Bottom Right'] = function()
-                return wand({morph(), can_pass_crateria_green_pirates()})
+                return wand({ morph(), can_pass_crateria_green_pirates() })
             end
         },
         traverse = function()
@@ -53,7 +53,7 @@ CLEAN_REGIONS = {
     ['Lower Mushrooms Left'] = {
         exits = {
             ['Landing Site'] = function()
-                return wand({can_pass_terminator_bomb_wall(0), can_pass_crateria_green_pirates()})
+                return wand({ can_pass_terminator_bomb_wall(0), can_pass_crateria_green_pirates() })
             end,
             ['Green Pirates Shaft Bottom Right'] = function()
                 return 1
@@ -105,7 +105,7 @@ CLEAN_REGIONS = {
                 return traverse('door_cr_moat')
             end,
             ['Moat Right'] = function()
-                return wand({traverse('door_cr_moat'), can_pass_moat()})
+                return wand({ traverse('door_cr_moat'), can_pass_moat() })
             end,
             ['Landing Site'] = function()
                 return 1
@@ -138,7 +138,7 @@ CLEAN_REGIONS = {
             return 1
         end
     },
-    ['Flyway Right'] = { 
+    ['Flyway Right'] = {
         exits = {},
         traverse = function()
             return 1
@@ -160,7 +160,7 @@ CLEAN_REGIONS = {
                 })
             end,
             ['Etecoons Bottom'] = function()
-                return  can_access_etecoons()
+                return can_access_etecoons()
             end
         },
         traverse = function()
@@ -291,12 +291,12 @@ CLEAN_REGIONS = {
                     })
                 })
             end,
-            ['PhantoonRoomOut'] = function()                
+            ['PhantoonRoomOut'] = function()
                 return wand({
                     traverse('door_ws_b'),
                     can_pass_bomb_passages()
                 })
-            end            
+            end
         },
         traverse = function()
             return 1
@@ -336,13 +336,13 @@ CLEAN_REGIONS = {
             ['Wrecked Ship Main'] = function()
                 return can_pass_bomb_passages()
             end
-        },        
+        },
         traverse = function()
             return can_open_eye_doors()
         end
     },
     ['PhantoonRoomIn'] = {
-        exits = {},        
+        exits = {},
         traverse = function()
             return 1
         end
@@ -352,13 +352,13 @@ CLEAN_REGIONS = {
             ['Wrecked Ship Main'] = function()
                 return 1
             end
-        },        
+        },
         traverse = function()
             return 1
         end
     },
     ['Wrecked Ship Map Room'] = {
-        exits = {},               
+        exits = {},
         traverse = function()
             return 1
         end
@@ -423,7 +423,7 @@ CLEAN_REGIONS = {
                     super(),
                     can_use_power_bombs(),
                 })
-          end
+            end
         },
         traverse = function()
             return 1
@@ -501,6 +501,29 @@ CLEAN_REGIONS = {
             end,
             ['RidleyRoomOut'] = function()
                 return can_hell_run(HELL_RUNS_TABLE['LowerNorfair']['Main'])
+            end,
+            ['Wasteland'] = function()
+                return wand({
+                    can_hell_run(HELL_RUNS_TABLE['LowerNorfair']['Main']),
+                    can_get_back_from_ridley_zone(),
+                    can_pass_wasteland_dessgeegas()
+                })
+            end
+        },
+        traverse = function()
+            return 1
+        end
+    },
+    ['Wasteland'] = {
+        exits = {
+            ['Ridley Zone'] = function()
+                return wand({
+                    can_hell_run(HELL_RUNS_TABLE['LowerNorfair']['Main']),
+                    traverse('WastelandLeft'),
+                    can_get_back_from_ridley_zone(),
+                    can_pass_wasteland_dessgeegas(),
+                    can_pass_ninja_pirates()
+                })
             end
         },
         traverse = function()
@@ -537,7 +560,7 @@ CLEAN_REGIONS = {
     ['RidleyRoomIn'] = {
         exits = {},
         traverse = function()
-            return 1        
+            return 1
         end
     },
     -- Kraid
@@ -594,7 +617,8 @@ CLEAN_REGIONS = {
     ['Business Center'] = {
         exits = {
             ['Cathedral'] = function()
-                return can_enter_cathedral(HELL_RUNS_TABLE['MainUpperNorfair']['Norfair Entrance -> Cathedral Missiles']['mult'])
+                return can_enter_cathedral(HELL_RUNS_TABLE['MainUpperNorfair']['Norfair Entrance -> Cathedral Missiles']
+                ['mult'])
             end,
             ['Bubble Mountain'] = function()
                 return wand({
@@ -612,7 +636,8 @@ CLEAN_REGIONS = {
                         wor({
                             wand({
                                 wave(),
-                                can_hell_run(HELL_RUNS_TABLE['MainUpperNorfair']['Norfair Entrance -> Croc via Frog w/Wave'])
+                                can_hell_run(HELL_RUNS_TABLE['MainUpperNorfair']
+                                ['Norfair Entrance -> Croc via Frog w/Wave'])
                             }),
                             can_hell_run(HELL_RUNS_TABLE['MainUpperNorfair']['Norfair Entrance -> Croc via Frog'])
                         }),
@@ -639,7 +664,7 @@ CLEAN_REGIONS = {
     },
     ['Single Chamber Top Right'] = {
         exits = {
-            ['Bubble Mountain Top'] = function() 
+            ['Bubble Mountain Top'] = function()
                 return wand({
                     can_destroy_bomb_walls(),
                     morph(),
@@ -871,7 +896,7 @@ CLEAN_REGIONS = {
         exits = {
             ['Main Street Bottom'] = function()
                 return can_jump_underwater()
-            end 
+            end
         },
         traverse = function()
             return 1
@@ -982,7 +1007,7 @@ CLEAN_REGIONS = {
         end
     },
     ['Crab Hole Bottom Right'] = {
-        exits ={
+        exits = {
             ['Crab Hole Bottom Left'] = function()
                 return 1
             end
@@ -1292,7 +1317,7 @@ CLEAN_REGIONS = {
             ['Red Tower Top Left'] = function()
                 return wor({
                     has_patch(25),
-                    traverse('RedTowerElevatorLeft')
+                    traverse('door_rb_tyd')
                 })
             end
         },
@@ -1396,13 +1421,13 @@ START_LOCATIONS = {
 
 function has_access_to(region_name)
     local start = get_start_location()
-    
+
     if not start or not REGIONS[start] then
         if AUTOTRACKER_ENABLE_DEBUG_LOGGING_ACCESS then
             print(string.format("called has_access_to: unknown start location %s", start))
         end
         return 0
-    end    
+    end
     if start == region_name then
         return 1
     end
@@ -1419,12 +1444,13 @@ function has_access_to(region_name)
     return 0
 end
 
-function check_access(region_name, goal, checked_regions)    
+function check_access(region_name, goal, checked_regions)
     if AUTOTRACKER_ENABLE_DEBUG_LOGGING_ACCESS then
-        print(string.format("called check_access: region_name: %s, goal: %s, checked_regions: %s", region_name, goal, #checked_regions))
+        print(string.format("called check_access: region_name: %s, goal: %s, checked_regions: %s", region_name, goal,
+            #checked_regions))
         for k, v in pairs(checked_regions) do
             print(string.format('\t already checked %s', v))
-        end        
+        end
     end
     local value = 0
     if not REGIONS[region_name] or not REGIONS[region_name].exits then
@@ -1442,21 +1468,23 @@ function check_access(region_name, goal, checked_regions)
             return 1
         elseif exit_func_return > 0 then
             local already_checked = false
-            for _,region in pairs(checked_regions) do
+            for _, region in pairs(checked_regions) do
                 if region == k then
                     already_checked = true
                 end
             end
-            if not already_checked then                              
+            if not already_checked then
                 table.insert(checked_regions, region_name)
                 value = check_access(k, goal, checked_regions)
                 if value > 0 then
                     if AUTOTRACKER_ENABLE_DEBUG_LOGGING_ACCESS then
-                        print(string.format("\t we found it \\o/, returning 1; region_name: %s, goal: %s, checked_regions: %s", region_name, goal, #checked_regions))
+                        print(string.format(
+                        "\t we found it \\o/, returning 1; region_name: %s, goal: %s, checked_regions: %s", region_name,
+                            goal, #checked_regions))
                     end
                     return 1
-                end           
-            else 
+                end
+            else
                 if AUTOTRACKER_ENABLE_DEBUG_LOGGING_ACCESS then
                     print(string.format("\t skipping k %s: already checked", k))
                 end
@@ -1464,7 +1492,8 @@ function check_access(region_name, goal, checked_regions)
         end
     end
     if AUTOTRACKER_ENABLE_DEBUG_LOGGING_ACCESS then
-        print(string.format("\t deadend returning 0; region_name: %s, goal: %s, checked_regions: %s", region_name, goal, #checked_regions))
+        print(string.format("\t deadend returning 0; region_name: %s, goal: %s, checked_regions: %s", region_name, goal,
+            #checked_regions))
     end
     return 0
 end
@@ -1486,27 +1515,27 @@ function set_transitions(slot_data)
     end
     if slot_data == nil or slot_data['InterAreaTransitions'] == nil or slot_data['area_randomization'] == nil then
         return
-    end    
-    for k,v in pairs(slot_data['InterAreaTransitions']) do
-        local obj = Tracker:FindObjectForCode("trans_"..k:gsub("[%s]+",""))
+    end
+    for k, v in pairs(slot_data['InterAreaTransitions']) do
+        local obj = Tracker:FindObjectForCode("trans_" .. k:gsub("[%s]+", ""))
         if obj then
-            obj:Set("state", 0) 
+            obj:Set("state", 0)
             obj:Set("active", false)
         end
     end
-    for k,v in pairs(slot_data['InterAreaTransitions']) do
-        local obj = Tracker:FindObjectForCode("trans_"..k:gsub("[%s]+",""))
+    for k, v in pairs(slot_data['InterAreaTransitions']) do
+        local obj = Tracker:FindObjectForCode("trans_" .. k:gsub("[%s]+", ""))
         if obj then
-            obj:Set("state",Transition.STATES[v])  
+            obj:Set("state", Transition.STATES[v])
             if k:find('In') or k:find('Out') then
-                obj:Set("active", is_boss_rando() == 0)  
+                obj:Set("active", is_boss_rando() == 0)
             else
-                obj:Set("active", is_area_rando() == 0) 
-            end                      
+                obj:Set("active", is_area_rando() == 0)
+            end
         end
     end
-    if AUTOTRACKER_ENABLE_DEBUG_LOGGING_ACCESS then        
-        print(string.format("REGIONS: %s", dump_table(REGIONS)))
+    if AUTOTRACKER_ENABLE_DEBUG_LOGGING_ACCESS then
+        --print(string.format("REGIONS: %s", dump_table(REGIONS)))
     end
 end
 
@@ -1518,7 +1547,7 @@ end
 --    if slot_data == nil or slot_data['InterAreaTransitions'] == nil then
 --       return
 --    end
---    for k, v in pairs(slot_data['InterAreaTransitions']) do        
+--    for k, v in pairs(slot_data['InterAreaTransitions']) do
 --        if REGIONS[k] and not REGIONS[k].exits[v] and REGIONS[k].traverse then
 --            if AUTOTRACKER_ENABLE_DEBUG_LOGGING then
 --                print(string.format("\tinjecting %s exit into %s", v, k))
@@ -1528,21 +1557,20 @@ end
 --            if AUTOTRACKER_ENABLE_DEBUG_LOGGING then
 --                print(string.format("\tskipping injecting %s exit into %s", v, k))
 --            end
---        end        
---    end    
+--        end
+--    end
 --end
 
 function get_connection(region_name)
     if REGIONS == nil or REGIONS[region_name] == nil then
         return nil
-    end   
+    end
     return REGIONS[region_name]
 end
 
-function is_vanilla_draygon()    
+function is_vanilla_draygon()
     if get_connection('DraygonRoomOut') == 'DraygonRoomIn' then
         return 1
     end
     return 0
 end
-

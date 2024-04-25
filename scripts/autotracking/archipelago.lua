@@ -4,10 +4,11 @@ ScriptHost:LoadScript("scripts/autotracking/location_mapping.lua")
 LOCAL_ITEMS = {}
 GLOBAL_ITEMS = {}
 
-function onClear(slot_data)    
+function onClear(slot_data)
     if AUTOTRACKER_ENABLE_DEBUG_LOGGING then
-        print(string.format("called onClear, slot_data:\n%s", dump_table(slot_data)))           
+        print(string.format("called onClear, slot_data:\n%s", dump_table(slot_data)))
     end
+    Tracker.BulkUpdate = true
     SLOT_DATA = slot_data
     CUR_INDEX = -1
     set_transitions(slot_data)
@@ -22,7 +23,7 @@ function onClear(slot_data)
                 if v[1]:sub(1, 1) == "@" then
                     obj.AvailableChestCount = obj.ChestCount
                 else
-                    obj.Active = false 
+                    obj.Active = false
                 end
             elseif AUTOTRACKER_ENABLE_DEBUG_LOGGING then
                 print(string.format("onClear: could not find object for code %s", v[1]))
@@ -57,7 +58,7 @@ function onClear(slot_data)
     --manually run snes interface functions after onClear in case we are already ingame
     if PopVersion < "0.20.1" or AutoTracker:GetConnectionState("SNES") == 3 then
         update_saved_map_data()
-        update_boss_data()        
+        update_boss_data()
     end
 end
 
@@ -67,7 +68,7 @@ function onItem(index, item_id, item_name, player_number)
     end
     if index <= CUR_INDEX then return end
     local is_local = player_number == Archipelago.PlayerNumber
-    CUR_INDEX = index;    
+    CUR_INDEX = index;
     local v = ITEM_MAPPING[item_id]
     if not v then
         if AUTOTRACKER_ENABLE_DEBUG_LOGGING then
@@ -111,15 +112,16 @@ function onItem(index, item_id, item_name, player_number)
             GLOBAL_ITEMS[v[1]] = GLOBAL_ITEMS[v[1]] + 1
         else
             GLOBAL_ITEMS[v[1]] = 1
-        end      
+        end
     end
     if AUTOTRACKER_ENABLE_DEBUG_LOGGING then
-        print(string.format("local items: %s",dump_table(LOCAL_ITEMS)))
-        print(string.format("global items: %s",dump_table(GLOBAL_ITEMS)))        
+        print(string.format("local items: %s", dump_table(LOCAL_ITEMS)))
+        print(string.format("global items: %s", dump_table(GLOBAL_ITEMS)))
     end
     if PopVersion < "0.20.1" or AutoTracker:GetConnectionState("SNES") == 3 then
         update_item_data()
     end
+    Tracker.BulkUpdate = false
 end
 
 function onLocation(location_id, location_name)
@@ -133,7 +135,7 @@ function onLocation(location_id, location_name)
     if not v[1] then
         return
     end
-    local obj = Tracker:FindObjectForCode(v[1])    
+    local obj = Tracker:FindObjectForCode(v[1])
     if obj then
         if v[1]:sub(1, 1) == "@" then
             obj.AvailableChestCount = obj.AvailableChestCount - 1
@@ -147,7 +149,8 @@ end
 
 function onScout(location_id, location_name, item_id, item_name, item_player)
     if AUTOTRACKER_ENABLE_DEBUG_LOGGING then
-        print(string.format("called onScout: %s, %s, %s, %s, %s",  location_id, location_name, item_id, item_name, item_player))
+        print(string.format("called onScout: %s, %s, %s, %s, %s", location_id, location_name, item_id, item_name,
+            item_player))
     end
 end
 

@@ -47,7 +47,7 @@ BOSS_TRANSITIONS = {}
 for k, v in pairs(Transition.STATES) do
     if k == "hidden" or type(k) ~= "string" then
         --skip hidden and backwards lookup entries
-    else        
+    else
         if ENABLE_DEBUG_LOG then
             print(string.format('adding transition %s with code %s and default state %s', k, "trans_"..(k:gsub("[%s]+","")), DEFAULT_TRANSITIONS[v]))
         end

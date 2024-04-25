@@ -2782,23 +2782,23 @@
             },
             {
                 "name": "Ridley",
-                "access_rules": [
-                    [
-                        "$get_access_to_loc|Ridley"
-                    ]
-                ],
                 "sections": [
                     {
                         "name": "",
                         "hosted_item": "ridley",
-                        "item_count": 0
+                        "item_count": 0,
+                        "access_rules": [
+                            [
+                                "$get_access_to_loc|Ridley"
+                            ]
+                        ]
                     },
                     {
                         "name": "Transition: Outside",
                         "hosted_item": "trans_RidleyRoomOut",
                         "access_rules": [
                             [
-                                "{$has_access_to|RidleyRoomOut}"
+                                "$has_access_to|RidleyRoomOut"
                             ]
                         ],
                         "visibility_rules": [
@@ -2810,7 +2810,7 @@
                         "hosted_item": "trans_RidleyRoomIn",
                         "access_rules": [
                             [
-                                "{$has_access_to|RidleyRoomIn}"
+                                "$has_access_to|RidleyRoomIn"
                             ]
                         ],
                         "visibility_rules": [

@@ -18,10 +18,10 @@ function set_doors(slot_data)
     if slot_data == nil or slot_data['Doors'] == nil or slot_data['doors_colors_rando'] == nil then
         return
     end
-    for k,v in pairs(slot_data['Doors']) do
+    for k, v in pairs(slot_data['Doors']) do
         local obj = Tracker:FindObjectForCode(k)
         if obj then
-            obj:Set("state", DOOR_COLOR_MAPPING[v])            
+            obj:Set("state", DOOR_COLOR_MAPPING[v])
             obj:Set("active", (is_door_rando() == 0) or (obj:Get("isAreaTrans") and is_area_rando() > 0))
         end
     end
@@ -35,47 +35,47 @@ function traverse(door_code)
     elseif door_state == 2 then
         value = 1
     elseif door_state == 3 then
-        if missile() > 0 then
+        if missile() > 0 or is_door_rando() == 0 and super() > 0 then
             value = 1
         else
-            value = 0        
+            value = 0
         end
     elseif door_state == 4 then
         if super() > 0 then
             value = 1
         else
-            value = 0        
-        end 
+            value = 0
+        end
     elseif door_state == 5 then
         if can_use_power_bombs() > 0 then
             value = 1
         else
-            value = 0        
-        end 
+            value = 0
+        end
     elseif door_state == 6 then
         if wave() > 0 then
             value = 1
         else
-            value = 0        
-        end 
+            value = 0
+        end
     elseif door_state == 7 then
         if spazer() > 0 then
             value = 1
         else
-            value = 0        
-        end 
+            value = 0
+        end
     elseif door_state == 8 then
         if plasma() > 0 then
             value = 1
         else
-            value = 0        
-        end 
+            value = 0
+        end
     elseif door_state == 9 then
         if ice() > 0 then
             value = 1
         else
-            value = 0        
-        end     
+            value = 0
+        end
     end
     if AUTOTRACKER_ENABLE_DEBUG_LOGGING_DOORS then
         print(string.format("called traverse: door_code: %s, door_state: %s, value: %s", door_code, door_state, value))

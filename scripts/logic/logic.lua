@@ -1,9 +1,9 @@
 -- logic helper
-function can_enter_and_leave_gauntlet_qty(pbs, tanks)  
+function can_enter_and_leave_gauntlet_qty(pbs, tanks)
     if AUTOTRACKER_ENABLE_DEBUG_LOGGING_LOGIC then
-        print(string.format("called can_enter_and_leave_gauntlet_qty: pbs %s, tanks %s",pbs, tanks))
-    end  
-    local value = wand({ 
+        print(string.format("called can_enter_and_leave_gauntlet_qty: pbs %s, tanks %s", pbs, tanks))
+    end
+    local value = wand({
         wor({
             can_fly(),
             speed(),
@@ -21,7 +21,7 @@ function can_enter_and_leave_gauntlet_qty(pbs, tanks)
                     wand({
                         can_use_power_bombs(),
                         wor({
-                            item_count_ok('pb',pbs),
+                            item_count_ok('pb', pbs),
                             wand({
                                 speed(),
                                 energy_reserve_count_ok(tanks)
@@ -32,15 +32,15 @@ function can_enter_and_leave_gauntlet_qty(pbs, tanks)
                 wand({
                     energy_reserve_count_ok_hard_room('Gauntlet', 0.51),
                     can_use_bombs()
-                })                
+                })
             })
         })
     })
     if AUTOTRACKER_ENABLE_DEBUG_LOGGING_LOGIC then
-        print(string.format("\tcan_enter_and_leave_gauntlet_qty: value: %s",value))
-    end  
+        print(string.format("\tcan_enter_and_leave_gauntlet_qty: value: %s", value))
+    end
     if value > 0 then
-        return 1    
+        return 1
     end
     return 0
 end
@@ -49,52 +49,51 @@ function can_enter_and_leave_gauntlet()
     local value = wor({
         wand({
             can_short_charge(),
-            can_enter_and_leave_gauntlet_qty(2,2)
+            can_enter_and_leave_gauntlet_qty(2, 2)
         }),
-        can_enter_and_leave_gauntlet_qty(2,3)
+        can_enter_and_leave_gauntlet_qty(2, 3)
     })
     if AUTOTRACKER_ENABLE_DEBUG_LOGGING_LOGIC then
         print(string.format("called can_enter_and_leave_gauntlet: value: %s", value))
     end
     if value > 0 then
-        return 1    
+        return 1
     end
     return 0
 end
 
 function can_short_charge()
-    local value = wand({speed(), knows('ShortCharge')})
+    local value = wand({ speed(), knows('ShortCharge') })
     if AUTOTRACKER_ENABLE_DEBUG_LOGGING_LOGIC then
         print(string.format("called can_short_charge: value: %s", value))
     end
     if value > 0 then
-        return 1    
+        return 1
     end
     return 0
 end
 
 function can_fly()
-    local value = wor({space(), can_infinite_bomb_jump()})
+    local value = wor({ space(), can_infinite_bomb_jump() })
     if AUTOTRACKER_ENABLE_DEBUG_LOGGING_LOGIC then
         print(string.format("called can_fly: value: %s", value))
     end
     if value > 0 then
-        return 1    
+        return 1
     end
     return 0
 end
 
 function can_infinite_bomb_jump()
-    local value = wand({morph(), bomb(), knows('InfiniteBombJump')})
+    local value = wand({ morph(), bomb(), knows('InfiniteBombJump') })
     if AUTOTRACKER_ENABLE_DEBUG_LOGGING_LOGIC then
         print(string.format("called can_infinite_bomb_jump: value: %s", value))
     end
     if value > 0 then
-        return 1    
+        return 1
     end
     return 0
 end
-
 
 function item_count_ok(code, count)
     local value = get_consumable_qty(code)
@@ -114,42 +113,41 @@ function get_dmg_reduction(envDmg)
     local ret = 1
     local items = {}
     local hasVaria = varia() > 0
-    local hasGrav = gravity() > 0    
+    local hasGrav = gravity() > 0
     if has_patch(1000) then --no grav env protection
         if hasVaria then
-            items = {'varia'}
+            items = { 'varia' }
             if envDmg then
                 ret = 4
             else
                 ret = 2
-            end                
+            end
         end
         if hasGrav and not envDmg then
             ret = 4
-            items = {'gravity'}
-        end            
+            items = { 'gravity' }
+        end
     elseif has_patch(1003) then --progressive suits
         if hasVaria then
             items:insert('varia')
             ret = ret * 2
         end
-    else    
+    else
         if hasVaria then
             ret = 2
-            items = {'varia'}
+            items = { 'varia' }
         end
         if hasGrav then
             ret = 4
-            items = {'gravity'}
+            items = { 'gravity' }
         end
     end
     if AUTOTRACKER_ENABLE_DEBUG_LOGGING_LOGIC then
-        print(string.format("called get_dmg_reduction: envDmg: %s, hasVaria: %s, hasGrav: %s, ret: %s, items: %s", envDmg, hasVaria, hasGrav, ret, items))
+        print(string.format("called get_dmg_reduction: envDmg: %s, hasVaria: %s, hasGrav: %s, ret: %s, items: %s", envDmg,
+            hasVaria, hasGrav, ret, items))
     end
-    return {ret, items}
+    return { ret, items }
 end
-
-
 
 function energy_reserve_count_ok_hard_room(room_name, mult)
     if mult == nil then
@@ -160,7 +158,9 @@ function energy_reserve_count_ok_hard_room(room_name, mult)
     mult = mult * dmgRedPair[1]
     local result = energy_reserve_count_ok_diff(difficulties, mult)
     if AUTOTRACKER_ENABLE_DEBUG_LOGGING_LOGIC then
-        print(string.format("called energy_reserve_count_ok_hard_room: room_name: %s, mult: %s, result: %s", room_name, mult, result))
+        print(string.format(
+            "called energy_reserve_count_ok_hard_room: room_name: %s, mult: %s, difficulties: %s, result: %s",
+            room_name, mult, difficulties, result))
     end
     if result > 0 then
         return 1
@@ -173,14 +173,14 @@ function energy_reserve_count_ok_diff(difficulties, mult)
         mult = 1
     end
     if AUTOTRACKER_ENABLE_DEBUG_LOGGING_LOGIC then
-        print(string.format("called energy_reserve_count_ok_diff: mult: %s", mult)) 
+        print(string.format("called energy_reserve_count_ok_diff: mult: %s, diffs: %s", mult, difficulties))
     end
     if not difficulties or type(difficulties) ~= "table" then
         return 0
-    end       
+    end
     local value = 0
     for k, v in pairs(difficulties) do
-        value = wor({ value, energy_reserve_count_ok(round(v[1]/mult),v[2])})
+        value = wor({ value, energy_reserve_count_ok(round(v[1] / mult), v[2]) })
     end
     if AUTOTRACKER_ENABLE_DEBUG_LOGGING_LOGIC then
         print(string.format("\tvalue: %s", value))
@@ -197,15 +197,15 @@ function energy_reserve_count_ok(count, difficulty)
     end
     local value = (energy_reserve_count() >= count and is_below_max_difficutly(difficulty) > 0)
     if AUTOTRACKER_ENABLE_DEBUG_LOGGING_LOGIC then
-        print(string.format("called energy_reserve_count_ok: count: %s, energy_reserve_count(): %s, difficulty: %s, value: %s", count, energy_reserve_count(), difficulty, value))
-    end   
+        print(string.format(
+        "called energy_reserve_count_ok: count: %s, energy_reserve_count(): %s, difficulty: %s, value: %s", count,
+            energy_reserve_count(), difficulty, value))
+    end
     if value then
         return 1
     end
     return 0
 end
-
-
 
 function energy_reserve_count()
     local value = get_consumable_qty('etank') + get_consumable_qty('reserve')
@@ -214,7 +214,6 @@ function energy_reserve_count()
     end
     return value
 end
-
 
 function can_use_bombs()
     local value = wand({ morph(), bomb() })
@@ -359,7 +358,7 @@ function can_pass_moat()
             knows('DiagonalBombJump'),
             can_use_bombs()
         }),
-        knows('SimpleShortCharge'),
+        can_simple_short_charge(),
         wand({
             gravity(),
             wor({
@@ -523,7 +522,7 @@ function can_spring_ball_jump()
 end
 
 function can_pass_forgotten_highway(from_ws)
-    local suitless = wand({hijump(), knows('GravLessLevel1')})
+    local suitless = wand({ hijump(), knows('GravLessLevel1') })
     if from_ws > 0 and has_patch(43) == 0 then
         suitless = wand({
             suitless,
@@ -636,48 +635,47 @@ function can_pass_lower_norfair_chozo()
     return 0
 end
 
-
-function can_hell_run(hell_run, mult, min_e)   
+function can_hell_run(hell_run, mult, min_e)
     if type(hell_run) == "table" then
         mult = hell_run.mult
-        min_e = hell_run.minE 
+        min_e = hell_run.minE
         hell_run = hell_run.hellRun
     end
     if mult == nil then
-        mult = 1        
+        mult = 1
     end
     if min_e == nil then
         min_e = 2
     end
-     
+
     local value = 0
     if heat_proof() > 0 then
         return 1
     end
-    if wand({has_patch(1003), gravity()}) > 0 then
+    if wand({ has_patch(1003), gravity() }) > 0 then
         mult = mult * 2
         min_e = min_e / 2
     end
     if energy_reserve_count() >= min_e then
         if hell_run ~= 'LowerNorfair' then
-            value = energy_reserve_count_ok_hell_run(hell_run, mult)           
+            value = energy_reserve_count_ok_hell_run(hell_run, mult)
         else
             local tanks = energy_reserve_count()
             local multCF = mult
             if tanks >= 14 then
                 multCF = multCF * 2
             end
-            local nCF = math.ceil(2/multCF)
+            local nCF = math.ceil(2 / multCF)
             if gravity() > 0 then
                 mult = mult * .7
             elseif screw() > 0 then
-                mult = mult * .7                
+                mult = mult * .7
             end
 
             value = wand({
                 energy_reserve_count_ok_hell_run(hell_run, mult),
                 can_crystal_flash(nCF)
-            })            
+            })
         end
     end
     if AUTOTRACKER_ENABLE_DEBUG_LOGGING_LOGIC then
@@ -695,9 +693,9 @@ function can_crystal_flash(n)
     end
     local value = wand({
         can_use_power_bombs(),
-        item_count_ok('missile', 2*n),
-        item_count_ok('super', 2*n),
-        item_count_ok('pb', 2*n+1),
+        item_count_ok('missile', 2 * n),
+        item_count_ok('super', 2 * n),
+        item_count_ok('pb', 2 * n + 1),
     })
     if AUTOTRACKER_ENABLE_DEBUG_LOGGING_LOGIC then
         print(string.format("called can_crystal_flash: value: %s", value))
@@ -789,17 +787,17 @@ function enough_stuff_gt()
         charge(),
         plasma()
     })
-    local ammo_margin, _ = can_inflict_enough_damages(9000,nil,nil,nil,has_beams,true,nil)
+    local ammo_margin, _ = can_inflict_enough_damages(9000, nil, nil, nil, has_beams, true, nil)
     local value = 1
     local low_stuff = knows('LowStuffGT')
-    if ammo_margin == 0 then        
+    if ammo_margin == 0 then
         value = low_stuff
     else
         value = wor({
-            energy_reserve_count_ok(math.ceil(8/get_dmg_reduction(false)[1])),
+            energy_reserve_count_ok(math.ceil(8 / get_dmg_reduction(false)[1])),
             low_stuff
-        })     
-    end   
+        })
+    end
     if AUTOTRACKER_ENABLE_DEBUG_LOGGING_LOGIC then
         print(string.format("called can_pass_worst_room_pirates: value: %s", value))
     end
@@ -809,7 +807,8 @@ function enough_stuff_gt()
     return 0
 end
 
-function can_inflict_enough_damages(boss_energy, double_super, _charge, power, gives_drops, ignore_missiles, ignore_supers)
+function can_inflict_enough_damages(boss_energy, double_super, _charge, power, gives_drops, ignore_missiles,
+                                    ignore_supers)
     if double_super == nil then
         double_super = false
     end
@@ -827,13 +826,13 @@ function can_inflict_enough_damages(boss_energy, double_super, _charge, power, g
     end
     if ignore_supers == nil then
         ignore_supers = false
-    end 
+    end
     if AUTOTRACKER_ENABLE_DEBUG_LOGGING_LOGIC then
-        print(string.format("called can_inflict_enough_damages: ".. 
-        "boss_energy: %s, double_super: %s, _charge: %s, power: %s, gives_drops: %s, ignore_missiles: %s, ignore_supers: %s ",
-        boss_energy, double_super, _charge, power, gives_drops, ignore_missiles, ignore_supers
-    ))
-    end   
+        print(string.format("called can_inflict_enough_damages: " ..
+            "boss_energy: %s, double_super: %s, _charge: %s, power: %s, gives_drops: %s, ignore_missiles: %s, ignore_supers: %s ",
+            boss_energy, double_super, _charge, power, gives_drops, ignore_missiles, ignore_supers
+        ))
+    end
     local standard_damage = 0
     if can_fire_charged_shots() > 0 and _charge then
         standard_damage = get_beam_damage()
@@ -853,25 +852,26 @@ function can_inflict_enough_damages(boss_energy, double_super, _charge, power, g
     if ignore_supers then
         one_super = 0
     end
-   
+
     if double_super then
         one_super = one_super * 2
     end
     supers_damage = supers_amount * one_super
-    
+
     local power_damage = 0
     local power_amount = 0
     if power then
         power_amount = get_consumable_qty('pb') * 5
         power_damage = power_amount * 200
     end
-    local can_beat_boss = charge_damage > 0 or gives_drops or (missiles_damage+supers_damage+power_damage) >= boss_energy
+    local can_beat_boss = charge_damage > 0 or gives_drops or (missiles_damage + supers_damage + power_damage) >=
+    boss_energy
     if not can_beat_boss then
         return 0, 0
     end
     local ammo_margin = (missiles_damage + supers_damage + power_damage) / boss_energy
     if charge_damage > 0 then
-        ammo_margin = ammo_margin + 2        
+        ammo_margin = ammo_margin + 2
     end
 
     local missiles_dps = MISSILES_PER_SEC * 100
@@ -885,25 +885,25 @@ function can_inflict_enough_damages(boss_energy, double_super, _charge, power, g
     else
         power_dps = 0
     end
-    local charge_dps = CHARGED_PER_SEC * charge_damage    
+    local charge_dps = CHARGED_PER_SEC * charge_damage
     local dps_dict = {
-        {missiles_dps, missiles_amount, 100},
-        {supers_dps, supers_amount, one_super},
-        {power_dps, power_amount, 200},
-        {charge_dps, 10000, charge_damage}
-    }    
-    table.sort(dps_dict, function(a, b) return a[1] > b[1] end)    
+        { missiles_dps, missiles_amount, 100 },
+        { supers_dps,   supers_amount,   one_super },
+        { power_dps,    power_amount,    200 },
+        { charge_dps,   10000,           charge_damage }
+    }
+    table.sort(dps_dict, function(a, b) return a[1] > b[1] end)
     dump_table(dps_dict)
     local secs = 0
     for _, v in ipairs(dps_dict) do
         local dps = v[1]
         local amount = v[2]
-        local one = v[3]    
+        local one = v[3]
         if dps == 0 or one == 0 or amount == 0 then
             --do nothing
         else
-            local fire = math.min(boss_energy/ one, amount)
-            secs = secs + fire * (one/dps)
+            local fire = math.min(boss_energy / one, amount)
+            secs = secs + fire * (one / dps)
             boss_energy = boss_energy - fire * one
             if boss_energy <= 0 then
                 break
@@ -912,62 +912,60 @@ function can_inflict_enough_damages(boss_energy, double_super, _charge, power, g
     end
     if boss_energy > 0 then
         secs = secs + boss_energy * MISSILES_DROP_PER_MIN * 100 / 60
-    end   
+    end
     if AUTOTRACKER_ENABLE_DEBUG_LOGGING_LOGIC then
         print(string.format("called can_inflict_enough_damages: ammo_margin: %s, secs: %s", ammo_margin, secs))
     end
     return ammo_margin, secs
 end
 
-
-
 function get_beam_damage()
     local standard_damage = 20
     if wand({
-        ice(),
-        wave(),
-        plasma()
-    }) > 0 then
+            ice(),
+            wave(),
+            plasma()
+        }) > 0 then
         standard_damage = 300
     elseif wand({
-        wave(),
-        plasma(),
-    }) > 0 then
+            wave(),
+            plasma(),
+        }) > 0 then
         standard_damage = 250
     elseif wand({
-        ice(),
-        plasma()
-    }) > 0 then            
+            ice(),
+            plasma()
+        }) > 0 then
         standard_damage = 200
-    elseif plasma() > 0 then 
+    elseif plasma() > 0 then
         standard_damage = 150
     elseif wand({
-        ice(),
-        wave(),
-        spazer()
-    }) > 0 then  
+            ice(),
+            wave(),
+            spazer()
+        }) > 0 then
         standard_damage = 100
     elseif wand({
-        wave(),
-        spazer()
-    }) > 0 then  
+            wave(),
+            spazer()
+        }) > 0 then
         standard_damage = 70
     elseif wand({
-        ice(),
-        spazer()
-    }) > 0 then  
+            ice(),
+            spazer()
+        }) > 0 then
         standard_damage = 60
     elseif wand({
-        ice(),
-        wave()
-    }) > 0 then  
+            ice(),
+            wave()
+        }) > 0 then
         standard_damage = 60
     elseif wave() > 0 then
         standard_damage = 50
     elseif spazer() > 0 then
         standard_damage = 40
     elseif ice() > 0 then
-        standard_damage = 30              
+        standard_damage = 30
     end
     return standard_damage
 end
@@ -1054,8 +1052,8 @@ end
 
 function can_pass_amphitheater_reverse()
     local dmg_red = get_dmg_reduction()[1]
-    local tanks_grav = 4 * 4/dmg_red
-    local tanks_no_grav = 6 * 4/dmg_red
+    local tanks_grav = 4 * 4 / dmg_red
+    local tanks_no_grav = 6 * 4 / dmg_red
     local value = wor({
         wand({
             gravity(),
@@ -1111,16 +1109,16 @@ function can_go_through_lower_norfair_enemy(enemy_health, enemy_num, enemy_hit_d
     end
     local value
     if get_consumable_qty('super') * 5 * super_damage >= enemy_num * enemy_health then
-        value = 1        
+        value = 1
     else
         local dmg_red = get_dmg_reduction()[1]
         local dmg = enemy_hit_damage / dmg_red
-    
-        if heat_proof() and (get_consumable_qty('super') * 5 * super_damage)/enemy_health + (energy_reserve_count()*100-2)/dmg >= enemy_num then
+
+        if heat_proof() and (get_consumable_qty('super') * 5 * super_damage) / enemy_health + (energy_reserve_count() * 100 - 2) / dmg >= enemy_num then
             value = heat_proof()
         else
             value = knows('DodgeLowerNorfairEnemies')
-        end    
+        end
     end
     if AUTOTRACKER_ENABLE_DEBUG_LOGGING_LOGIC then
         print(string.format("called can_go_through_lower_norfair_enemy: value: %s", value))
@@ -1268,7 +1266,7 @@ function can_access_cathedral_entrance_right()
             }),
         }),
         wand({
-            can_hell_run('MainUpperNorfair', 0.5*mult),
+            can_hell_run('MainUpperNorfair', 0.5 * mult),
             morph(),
             knows('NovaBoost')
         })
@@ -1297,7 +1295,7 @@ function can_enter_cathedral(mult)
                 }),
             }),
             wand({
-                can_hell_run('MainUpperNorfair', 0.5*mult),
+                can_hell_run('MainUpperNorfair', 0.5 * mult),
                 morph(),
                 knows('NovaBoost')
             })
@@ -1416,13 +1414,13 @@ function can_climb_bubble_mountain()
 end
 
 function enough_stuff_croc()
-    local ammo_margin = can_inflict_enough_damages(5000, nil,  nil, nil, false, nil, nil)[1]
+    local ammo_margin = can_inflict_enough_damages(5000, nil, nil, nil, false, nil, nil)[1]
     local value
     if ammo_margin == 0 then
         value = wand({
             knows('LowAmmoCroc'),
             wor({
-                item_count_ok('missile',2),
+                item_count_ok('missile', 2),
                 wand({
                     missile(),
                     super()
@@ -1430,7 +1428,7 @@ function enough_stuff_croc()
             })
         })
     else
-        value = 1        
+        value = 1
     end
     if AUTOTRACKER_ENABLE_DEBUG_LOGGING_LOGIC then
         print(string.format("called enough_stuff_croc: value: %s", value))
@@ -1462,7 +1460,7 @@ function can_go_up_mt_everest()
             can_do_suitless_outer_maridia(),
             grapple()
         })
-    })   
+    })
     if AUTOTRACKER_ENABLE_DEBUG_LOGGING_LOGIC then
         print(string.format("called can_go_up_mt_everest: value: %s", value))
     end
@@ -1669,15 +1667,15 @@ end
 function enough_stuff_botwoon()
     local ammo_margin = can_inflict_enough_damages(6000, nil, nil, nil, false, nil, nil)
     local low_stuff = knows('LowStuffBotwoon')
-    local value  
-    if ammo_margin == 0 then        
+    local value
+    if ammo_margin == 0 then
         value = low_stuff
     else
         value = wor({
-            energy_reserve_count_ok(math.ceil(8/get_dmg_reduction(false)[1])),
+            energy_reserve_count_ok(math.ceil(8 / get_dmg_reduction(false)[1])),
             low_stuff
-        })     
-    end 
+        })
+    end
     if AUTOTRACKER_ENABLE_DEBUG_LOGGING_LOGIC then
         print(string.format("called enough_stuff_botwoon: value: %s", value))
     end
@@ -1719,7 +1717,7 @@ function can_crystal_flash_clip()
             }),
             wand({
                 knows('SuitlessCrystalFlashClip'),
-                item_count_ok('pb',4)
+                item_count_ok('pb', 4)
             })
         })
     })
@@ -1793,7 +1791,7 @@ function can_go_through_colosseum_suitless()
         space(),
         wand({
             ice(),
-            energy_reserve_count_ok(7/get_dmg_reduction(false)[1]),
+            energy_reserve_count_ok(7 / get_dmg_reduction(false)[1]),
             knows('BotwoonToDraygonWithIce')
         })
     })
@@ -1933,7 +1931,7 @@ function can_exit_precious_room_randomized()
             })
         }),
         suitless_room_exit
-    })    
+    })
     if AUTOTRACKER_ENABLE_DEBUG_LOGGING_LOGIC then
         print(string.format("called can_exit_precious_room_randomized: value: %s", value))
     end
@@ -1953,7 +1951,7 @@ function can_fight_draygon()
                 knows('GravLessLevel3')
             })
         })
-    })    
+    })
     if AUTOTRACKER_ENABLE_DEBUG_LOGGING_LOGIC then
         print(string.format("called can_fight_draygon: value: %s", value))
     end
@@ -1968,13 +1966,13 @@ function enough_stuff_draygon()
         print(string.format("called enough_stuff_draygon"))
     end
     if morph() == 0 and gravity() == 0 then
-        return 0        
+        return 0
     end
     if have_missile_or_super() == 0 then
         return 0
     end
-    local ammo_margin, secs = can_inflict_enough_damages(6000)    
-    local fight 
+    local ammo_margin, secs = can_inflict_enough_damages(6000)
+    local fight
     if ammo_margin > 0 then
         local diff, energy_ok = compute_boss_difficulty(ammo_margin, secs, get_boss_difficulty('Draygon'))
 
@@ -1985,21 +1983,21 @@ function enough_stuff_draygon()
                 diff = diff * DRAYGON_NO_GRAV_MALUS
             end
             if morph() == 0 then
-                diff = diff * DRAYGON_NO_MORPH_MALUS        
+                diff = diff * DRAYGON_NO_MORPH_MALUS
             end
             if gravity() > 0 and screw() > 0 then
                 diff = diff / DRAYGON_SCREW_BONUS
-            end  
+            end
             diff = adjust_health_drop_diff(diff)
             if only_boss_left() > 0 then
                 diff = 1
             end
-            fight = wand({ energy_ok, is_below_max_difficutly(diff)})
+            fight = wand({ energy_ok, is_below_max_difficutly(diff) })
         end
     else
         fight = 0
     end
-    local tanks_grapple = (240/get_dmg_reduction(true)[1] + 2*160/get_dmg_reduction(false)[1])/100
+    local tanks_grapple = (240 / get_dmg_reduction(true)[1] + 2 * 160 / get_dmg_reduction(false)[1]) / 100
     local value = wor({
         fight,
         wand({
@@ -2034,7 +2032,7 @@ function only_boss_left()
     -- in post_fill: if all other items can be collected but bosses could not be reached this will force thier difficulty to 1 (easy)
     --local value = 1
     --for k,_ in pairs(LOCATIONS) do
-    --    if k ~= "Kraid" or k ~= "Ridley" or k ~= "Phantoon" or k ~= "Draygon" or k ~= "Mother Brain" then  
+    --    if k ~= "Kraid" or k ~= "Ridley" or k ~= "Phantoon" or k ~= "Draygon" or k ~= "Mother Brain" then
     --        local obj = Tracker:FindObjectForCode("@"..k.."/")
     --        if obj then
     --            value = value and (obj.item_count == 0)
@@ -2121,7 +2119,7 @@ function can_climb_bottom_red_tower()
 end
 
 function can_pass_red_tower_to_maridia_node()
-    local value = wor({
+    local value = wand({
         morph(),
         has_patch(102)
     })
@@ -2140,7 +2138,7 @@ function can_exit_draygon()
         value = can_exit_draygon_vanilla()
     else
         value = can_exit_draygon_randomized()
-    end    
+    end
     if AUTOTRACKER_ENABLE_DEBUG_LOGGING_LOGIC then
         print(string.format("called can_exit_draygon: value: %s", value))
     end
@@ -2174,7 +2172,7 @@ function can_exit_draygon_vanilla()
             })
         }),
         can_double_spring_ball_jump()
-    })  
+    })
     if AUTOTRACKER_ENABLE_DEBUG_LOGGING_LOGIC then
         print(string.format("called can_exit_draygon_vanilla: value: %s", value))
     end
@@ -2190,7 +2188,7 @@ function can_exit_draygon_randomized()
         can_draygon_crystal_flash_suit(),
         can_grapple_exit_draygon(),
         can_double_spring_ball_jump()
-    })  
+    })
     if AUTOTRACKER_ENABLE_DEBUG_LOGGING_LOGIC then
         print(string.format("called can_exit_draygon_randomized: value: %s", value))
     end
@@ -2225,7 +2223,7 @@ function can_draygon_crystal_flash_suit()
     local value = wand({
         can_crystal_flash(),
         knows('DraygonRoomCrystalFlash'),
-        item_count_ok('pb',4)
+        item_count_ok('pb', 4)
     })
     if AUTOTRACKER_ENABLE_DEBUG_LOGGING_LOGIC then
         print(string.format("called can_draygon_crystal_flash_suit: value: %s", value))
@@ -2247,25 +2245,25 @@ function can_grapple_exit_draygon()
     if value > 0 then
         return 1
     end
-    return 0    
+    return 0
 end
 
 function enough_stuff_kraid()
-    local value 
+    local value
     local ammo_margin, secs = can_inflict_enough_damages(1000)
 
     if ammo_margin == 0 then
         value = 0
     else
-        local diff = compute_boss_difficulty(ammo_margin, secs, get_boss_difficulty('Kraid'))   
+        local diff = compute_boss_difficulty(ammo_margin, secs, get_boss_difficulty('Kraid'))
         if only_boss_left() then
-            diff = 1                    
-        end    
+            diff = 1
+        end
         if diff < 0 then
             value = 0
         else
             value = is_below_max_difficutly(diff)
-        end 
+        end
     end
     if AUTOTRACKER_ENABLE_DEBUG_LOGGING_LOGIC then
         print(string.format("called enough_stuff_kraid: value: %s", value))
@@ -2346,7 +2344,7 @@ function can_enter_norfair_reserve_area_from_bubble_mountain_top()
 end
 
 function can_hell_run_to_speed_booster()
-    local value 
+    local value
     if speed() > 0 then
         value = can_hell_run(HELL_RUNS_TABLE['MainUpperNorfair']['Bubble -> Speed Booster w/Speed'])
     else
@@ -2375,10 +2373,10 @@ function can_access_double_chamber_items()
                 can_fly(),
                 knows('DoubleChamberWallJump')
             }),
-            can_hell_run(hell_run['hellRun'], hell_run['mult']*0.8, hell_run['minE'])
+            can_hell_run(hell_run['hellRun'], hell_run['mult'] * 0.8, hell_run['minE'])
         })
     })
-    
+
     if AUTOTRACKER_ENABLE_DEBUG_LOGGING_LOGIC then
         print(string.format("called can_hell_run_to_speed_booster: value: %s", value))
     end
@@ -2389,7 +2387,7 @@ function can_access_double_chamber_items()
 end
 
 function enough_stuff_ridley()
-    local value 
+    local value
     if morph() == 0 and screw() == 0 then
         value = 0
     else
@@ -2421,7 +2419,7 @@ function enough_stuff_phantoon()
     if AUTOTRACKER_ENABLE_DEBUG_LOGGING_LOGIC then
         print(string.format("called enough_stuff_phantoon"))
     end
-    local value    
+    local value
     local ammo_margin, secs = can_inflict_enough_damages(2500, true, nil, nil, nil, nil, nil)
     if ammo_margin == 0 then
         value = 0
@@ -2441,7 +2439,7 @@ function enough_stuff_phantoon()
             end
             diff = adjust_health_drop_diff(diff)
             if only_boss_left() > 0 then
-                diff = 1                
+                diff = 1
             end
             local fight = is_below_max_difficutly(diff)
             value = wor({
@@ -2464,7 +2462,7 @@ function enough_stuff_phantoon()
     return 0
 end
 
-function can_pass_bowling()     
+function can_pass_bowling()
     local temp = 0
     if get_dmg_reduction()[1] >= 2 then
         temp = 1
@@ -2611,7 +2609,7 @@ function can_pass_zebetites()
             speed(),
             knows('SpeedZebSkip')
         }),
-        temp  
+        temp
     })
     if AUTOTRACKER_ENABLE_DEBUG_LOGGING_LOGIC then
         print(string.format("called can_pass_zebetites: value: %s", value))
@@ -2654,9 +2652,10 @@ function enough_stuff_motherbrain()
             else
                 local possible, energy_diff = mb_etank_check()
                 if possible == 0 then
-                    value  = 0
+                    value = 0
                 else
-                    local diff = compute_boss_difficulty(ammo_margin, secs, get_boss_difficulty('MotherBrain'), energy_diff)
+                    local diff = compute_boss_difficulty(ammo_margin, secs, get_boss_difficulty('MotherBrain'),
+                        energy_diff)
                     if only_boss_left() > 0 then
                         diff = 1
                     end
@@ -2763,7 +2762,7 @@ function mb_etank_check()
         if varia() > 0 then
             energy_diff = 2.8
         end
-        value = 1        
+        value = 1
     else
         local tanks = energy_reserve_count()
         energy_diff = 0
@@ -2784,7 +2783,7 @@ function mb_etank_check()
     end
     if AUTOTRACKER_ENABLE_DEBUG_LOGGING_LOGIC then
         print(string.format("called mb_etank_check: value: %s, energy_diff: %s", value, energy_diff))
-    end    
+    end
     return value, energy_diff
 end
 
@@ -2803,7 +2802,7 @@ end
 
 function compute_boss_difficulty(ammo_margin, secs, diff_tbl, energy_diff)
     if diff_tbl == nil then
-        return 0        
+        return 0
     end
     if energy_diff == nil then
         energy_diff = 0
@@ -2821,7 +2820,7 @@ function compute_boss_difficulty(ammo_margin, secs, diff_tbl, energy_diff)
     local suitCoeff = get_dmg_reduction()[1]
     suitCoeff = suitCoeff / 2
     local energy_count = energy_reserve_count()
-    local energy = suitCoeff * (1+ energy_count + energy_diff)
+    local energy = suitCoeff * (1 + energy_count + energy_diff)
     local energy_ok = energy_reserve_count_ok(energy_count)
     local energy_dict = nil
     if diff_tbl['Energy'] then
@@ -2835,14 +2834,14 @@ function compute_boss_difficulty(ammo_margin, secs, diff_tbl, energy_diff)
             table.insert(keys, tonumber(k))
         end
         table.sort(keys)
-        if #keys > 0 then            
+        if #keys > 0 then
             local current = keys[1]
             if energy < current then
-                return -1, {}        
+                return -1, {}
             end
             local sup = nil
             diff = energy_dict[tostring(current)]
-            for _,k in ipairs(keys) do
+            for _, k in ipairs(keys) do
                 if k > energy then
                     sup = k
                     break
@@ -2851,53 +2850,53 @@ function compute_boss_difficulty(ammo_margin, secs, diff_tbl, energy_diff)
                 diff = energy_dict[tostring(current)]
             end
             if energy > current and sup then
-                diff = diff + ((energy_dict[tostring(sup)] - diff)/(sup - current) * (energy - current))
+                diff = diff + ((energy_dict[tostring(sup)] - diff) / (sup - current) * (energy - current))
             end
-        end       
+        end
     end
-    diff = diff * (duration/120)
+    diff = diff * (duration / 120)
     local diff_adjust = (1 - (ammo_margin - AMMO_MARGIN_IF_NO_CHARGE))
     if diff_adjust > 1 then
-        diff = diff * diff_adjust        
+        diff = diff * diff_adjust
     end
     if AUTOTRACKER_ENABLE_DEBUG_LOGGING_LOGIC then
         print(string.format("called compute_boss_difficulty: diff: %s, energy_ok: %s", diff, energy_ok))
     end
     return round(diff, 2), energy_ok
-
 end
 
 function knows(name)
     if AUTOTRACKER_ENABLE_DEBUG_LOGGING_LOGIC then
         print(string.format("called knows: name: %s", name))
-    end 
+    end
     if not SLOT_DATA or not SLOT_DATA['Preset'] or not SLOT_DATA['Preset']['Knows'] then
         return 0
     end
-    local entry = SLOT_DATA['Preset']['Knows'][name]      
+    local entry = SLOT_DATA['Preset']['Knows'][name]
     if not entry then
         if AUTOTRACKER_ENABLE_DEBUG_LOGGING_LOGIC then
             print(string.format("\tknows: %s, unknown name", name))
-        end 
+        end
         return 0
     end
     if AUTOTRACKER_ENABLE_DEBUG_LOGGING_LOGIC then
         print(string.format("\tvalue: %s, difficulty: %s", entry[1], entry[2]))
     end
-    if entry[1] and is_below_max_difficutly(entry[2]) > 0 then        
+    if entry[1] and is_below_max_difficutly(entry[2]) > 0 then
         return 1
     else
         return 0
     end
 end
 
-function is_below_max_difficutly(value)  
+function is_below_max_difficutly(value)
     if value == nil or get_max_difficulty() == nil then
         return 0
-    end 
+    end
     local result = (value <= get_max_difficulty())
     if AUTOTRACKER_ENABLE_DEBUG_LOGGING_LOGIC then
-        print(string.format("called is_below_max_difficutly: value: %s, get_max_difficulty(): %s, result: %s", value, get_max_difficulty(), result))
+        print(string.format("called is_below_max_difficutly: value: %s, get_max_difficulty(): %s, result: %s", value,
+            get_max_difficulty(), result))
     end
     if result then
         return 1
@@ -2917,13 +2916,13 @@ function get_setting(name)
     if not SLOT_DATA or not SLOT_DATA['Preset'] or not SLOT_DATA['Preset']['Settings'] or not SLOT_DATA['Preset']['Settings'][name] then
         return nil
     end
-    return SLOT_DATA['Preset']['Settings'][name]    
+    return SLOT_DATA['Preset']['Settings'][name]
 end
 
 function get_boss_difficulty(boss_name)
-    local setting_boss = get_setting('bossesDifficulty')    
+    local setting_boss = get_setting('bossesDifficulty')
     if not setting_boss then
-        return nil    
+        return nil
     end
     return setting_boss[boss_name]
 end
@@ -2931,15 +2930,22 @@ end
 function get_difficulties_hard_room(room_name)
     local hard_rooms = get_setting('hardRooms')
     if not hard_rooms then
-        return nil    
+        return nil
     end
     return hard_rooms[room_name]
 end
 
 function get_difficulties_hell_run(hell_run_name)
     local hell_runs = get_setting('hellRuns')
+    if AUTOTRACKER_ENABLE_DEBUG_LOGGING_LOGIC then
+        print(string.format("called get_difficulties_hell_run: hell_runs: %s", dump_table(hell_runs)))
+    end
     if not hell_runs then
-        return nil    
+        return nil
+    end
+    if AUTOTRACKER_ENABLE_DEBUG_LOGGING_LOGIC then
+        print(string.format("called get_difficulties_hell_run: hell_run_name: %s, result: %s", hell_run_name,
+            dump_table(hell_runs[hell_run_name])))
     end
     return hell_runs[hell_run_name]
 end
@@ -2953,7 +2959,7 @@ function has_patch(patch_num)
     if AUTOTRACKER_ENABLE_DEBUG_LOGGING_LOGIC then
         print(string.format("called has_patch: patch_num: %s, patches: %s", patch_num, patches))
     end
-    for i=1, #patches do
+    for i = 1, #patches do
         if patches[i] == patch_num then
             return 1
         end
@@ -2966,7 +2972,7 @@ function is_area_rando()
         return 0
     end
     if SLOT_DATA['area_randomization'] > 0 then
-        return 1        
+        return 1
     end
     return 0
 end
@@ -2974,19 +2980,19 @@ end
 function is_boss_rando()
     if not SLOT_DATA or not SLOT_DATA['boss_randomization'] then
         return 0
-    end    
+    end
     if SLOT_DATA['boss_randomization'] ~= 0 and SLOT_DATA['boss_randomization'] ~= false then
-        return 1        
+        return 1
     end
     return 0
 end
 
-function is_door_rando()    
+function is_door_rando()
     if not SLOT_DATA or not SLOT_DATA['doors_colors_rando'] then
         return 0
     end
     if SLOT_DATA['doors_colors_rando'] ~= 0 and SLOT_DATA['doors_colors_rando'] ~= false then
-        return 1        
+        return 1
     end
     return 0
 end
@@ -3020,7 +3026,7 @@ function can_get_through_xray()
 end
 
 function can_access_croc_pb_door()
-    return  wand({        
+    return wand({
         enough_stuff_croc(),
         wor({
             wor({
@@ -3043,9 +3049,8 @@ function can_access_croc_pb_door()
                 knows('CrocPBsDBoost')
             })
         })
-    })    
+    })
 end
-
 
 --mapping
 DIFFICULTY = {
@@ -3058,7 +3063,7 @@ DIFFICULTY = {
     ['god'] = 200,
     ['samus'] = 400,
     ['impossibru'] = 800,
-    ['infinity'] = 99999,   
+    ['infinity'] = 99999,
 }
 DIFFICULTY_MAPPING = {
     [0] = DIFFICULTY.easy,
@@ -3073,78 +3078,78 @@ DIFFICULTY_MAPPING = {
 
 HARD_ROOM_PERSETS = {
     ['X-Ray'] = {
-        ['Aarghh'] = {{10, DIFFICULTY['hard']}, {14, DIFFICULTY['medium']}},
-        ["I don't like spikes"] = {{8, DIFFICULTY['hard']}, {10, DIFFICULTY['medium']}, {14, DIFFICULTY['easy']}},
-        ['Default'] = {{6, DIFFICULTY['hard']}, {8, DIFFICULTY['medium']}, {10, DIFFICULTY['easy']}},
-        ["I don't mind spikes"] = {{4, DIFFICULTY['hard']}, {6, DIFFICULTY['medium']}, {8, DIFFICULTY['easy']}},
-        ['D-Boost master']= {{1, DIFFICULTY['hardcore']}, {2, DIFFICULTY['harder']}, {3, DIFFICULTY['hard']}, {4, DIFFICULTY['medium']}, {6, DIFFICULTY['easy']}},
-        ['Solution'] = {{1, DIFFICULTY['samus']}, {4, DIFFICULTY['mania']}, {6, DIFFICULTY['hard']}, {8, DIFFICULTY['medium']}, {10, DIFFICULTY['easy']}},
+        ['Aarghh'] = { { 10, DIFFICULTY['hard'] }, { 14, DIFFICULTY['medium'] } },
+        ["I don't like spikes"] = { { 8, DIFFICULTY['hard'] }, { 10, DIFFICULTY['medium'] }, { 14, DIFFICULTY['easy'] } },
+        ['Default'] = { { 6, DIFFICULTY['hard'] }, { 8, DIFFICULTY['medium'] }, { 10, DIFFICULTY['easy'] } },
+        ["I don't mind spikes"] = { { 4, DIFFICULTY['hard'] }, { 6, DIFFICULTY['medium'] }, { 8, DIFFICULTY['easy'] } },
+        ['D-Boost master'] = { { 1, DIFFICULTY['hardcore'] }, { 2, DIFFICULTY['harder'] }, { 3, DIFFICULTY['hard'] }, { 4, DIFFICULTY['medium'] }, { 6, DIFFICULTY['easy'] } },
+        ['Solution'] = { { 1, DIFFICULTY['samus'] }, { 4, DIFFICULTY['mania'] }, { 6, DIFFICULTY['hard'] }, { 8, DIFFICULTY['medium'] }, { 10, DIFFICULTY['easy'] } },
     },
     ['Gauntlet'] = {
-        ['Aarghh'] = {{5, DIFFICULTY['hard']}, {10, DIFFICULTY['medium']}},
-        ["I don't like acid"] = {{1, DIFFICULTY['harder']}, {2, DIFFICULTY['hard']}, {5, DIFFICULTY['medium']}, {10, DIFFICULTY['easy']}},
-        ['Default'] = {{0, DIFFICULTY['harder']}, {1, DIFFICULTY['hard']}, {3, DIFFICULTY['medium']}, {6, DIFFICULTY['easy']}}
+        ['Aarghh'] = { { 5, DIFFICULTY['hard'] }, { 10, DIFFICULTY['medium'] } },
+        ["I don't like acid"] = { { 1, DIFFICULTY['harder'] }, { 2, DIFFICULTY['hard'] }, { 5, DIFFICULTY['medium'] }, { 10, DIFFICULTY['easy'] } },
+        ['Default'] = { { 0, DIFFICULTY['harder'] }, { 1, DIFFICULTY['hard'] }, { 3, DIFFICULTY['medium'] }, { 6, DIFFICULTY['easy'] } }
     }
 }
 
 HELL_RUN_PRESETS = {
     ['Ice'] = {
-        ['No thanks'] = {},        
-        ['Gimme energy'] = {{4, DIFFICULTY.hardcore}, {5, DIFFICULTY.harder}, {6, DIFFICULTY.hard}, {10, DIFFICULTY.medium}},
-        ['Default'] = {{3, DIFFICULTY.harder}, {4, DIFFICULTY.hard}, {5, DIFFICULTY.medium}},        
-        ['Bring the heat'] = {{2, DIFFICULTY.harder}, {3, DIFFICULTY.hard}, {4, DIFFICULTY.medium}},        
-        ['I run RBO'] = {{2, DIFFICULTY.medium}, {3, DIFFICULTY.easy}},
-        ['Solution'] = {{2, DIFFICULTY.hardcore}, {3, DIFFICULTY.harder}, {4, DIFFICULTY.hard}, {5, DIFFICULTY.medium}},
+        ['No thanks'] = {},
+        ['Gimme energy'] = { { 4, DIFFICULTY.hardcore }, { 5, DIFFICULTY.harder }, { 6, DIFFICULTY.hard }, { 10, DIFFICULTY.medium } },
+        ['Default'] = { { 3, DIFFICULTY.harder }, { 4, DIFFICULTY.hard }, { 5, DIFFICULTY.medium } },
+        ['Bring the heat'] = { { 2, DIFFICULTY.harder }, { 3, DIFFICULTY.hard }, { 4, DIFFICULTY.medium } },
+        ['I run RBO'] = { { 2, DIFFICULTY.medium }, { 3, DIFFICULTY.easy } },
+        ['Solution'] = { { 2, DIFFICULTY.hardcore }, { 3, DIFFICULTY.harder }, { 4, DIFFICULTY.hard }, { 5, DIFFICULTY.medium } },
     },
     ['MainUpperNorfair'] = {
         ['No thanks'] = {},
-        ['Gimme energy'] = {{5, DIFFICULTY.mania}, {6, DIFFICULTY.hardcore}, {8, DIFFICULTY.harder}, {10, DIFFICULTY.hard}, {14, DIFFICULTY.medium}},
-        ['Default'] = {{4, DIFFICULTY.mania}, {5, DIFFICULTY.hardcore}, {6, DIFFICULTY.hard}, {9, DIFFICULTY.medium}},
-        ['Bring the heat'] = {{3, DIFFICULTY.mania}, {4, DIFFICULTY.harder}, {5, DIFFICULTY.hard}, {7, DIFFICULTY.medium}},
-        ['I run RBO'] = {{3, DIFFICULTY.harder}, {4, DIFFICULTY.hard}, {5, DIFFICULTY.medium}, {6, DIFFICULTY.easy}},
-        ['Solution'] = {{3, DIFFICULTY.samus}, {4, DIFFICULTY.mania}, {5, DIFFICULTY.hardcore}, {6, DIFFICULTY.hard}, {9, DIFFICULTY.medium}}
+        ['Gimme energy'] = { { 5, DIFFICULTY.mania }, { 6, DIFFICULTY.hardcore }, { 8, DIFFICULTY.harder }, { 10, DIFFICULTY.hard }, { 14, DIFFICULTY.medium } },
+        ['Default'] = { { 4, DIFFICULTY.mania }, { 5, DIFFICULTY.hardcore }, { 6, DIFFICULTY.hard }, { 9, DIFFICULTY.medium } },
+        ['Bring the heat'] = { { 3, DIFFICULTY.mania }, { 4, DIFFICULTY.harder }, { 5, DIFFICULTY.hard }, { 7, DIFFICULTY.medium } },
+        ['I run RBO'] = { { 3, DIFFICULTY.harder }, { 4, DIFFICULTY.hard }, { 5, DIFFICULTY.medium }, { 6, DIFFICULTY.easy } },
+        ['Solution'] = { { 3, DIFFICULTY.samus }, { 4, DIFFICULTY.mania }, { 5, DIFFICULTY.hardcore }, { 6, DIFFICULTY.hard }, { 9, DIFFICULTY.medium } }
     },
     ['LowerNorfair'] = {
         ['Default'] = {},
-        ['Bring the heat'] = {{10, DIFFICULTY.mania}, {13, DIFFICULTY.hardcore}, {18, DIFFICULTY.harder}},
-        ['I run RBO'] = {{8, DIFFICULTY.mania}, {9, DIFFICULTY.hardcore}, {11, DIFFICULTY.harder}, {14, DIFFICULTY.hard}, {18, DIFFICULTY.medium}},
-        ['Solution'] = {{8, DIFFICULTY.impossibru}, {18, DIFFICULTY.mania}}
+        ['Bring the heat'] = { { 10, DIFFICULTY.mania }, { 13, DIFFICULTY.hardcore }, { 18, DIFFICULTY.harder } },
+        ['I run RBO'] = { { 8, DIFFICULTY.mania }, { 9, DIFFICULTY.hardcore }, { 11, DIFFICULTY.harder }, { 14, DIFFICULTY.hard }, { 18, DIFFICULTY.medium } },
+        ['Solution'] = { { 8, DIFFICULTY.impossibru }, { 18, DIFFICULTY.mania } }
     }
 }
 
 HELL_RUNS_TABLE = {
     ['Ice'] = {
-        ['Norfair Entrance -> Ice Beam']= {mult= 1.0, minE= 2, hellRun= 'Ice'},
-        ['Norfair Entrance -> Croc via Ice']= {mult= 1.5, minE= 2, hellRun= 'Ice'},
-        ['Croc -> Norfair Entrance']= {mult= 2.0, minE= 1, hellRun= 'Ice'},
-        ['Croc -> Bubble Mountain']= {mult= 2.0, minE= 1, hellRun= 'Ice'}
+        ['Norfair Entrance -> Ice Beam'] = { mult = 1.0, minE = 2, hellRun = 'Ice' },
+        ['Norfair Entrance -> Croc via Ice'] = { mult = 1.5, minE = 2, hellRun = 'Ice' },
+        ['Croc -> Norfair Entrance'] = { mult = 2.0, minE = 1, hellRun = 'Ice' },
+        ['Croc -> Bubble Mountain'] = { mult = 2.0, minE = 1, hellRun = 'Ice' }
     },
     ['MainUpperNorfair'] = {
-        ['Norfair Entrance -> Bubble']= {mult= 1.0, minE= 2, hellRun= 'MainUpperNorfair'},
-        ['Bubble -> Norfair Entrance']= {mult= 0.75, minE= 2, hellRun= 'MainUpperNorfair'},
-        ['Norfair Entrance -> Cathedral Missiles']= {mult= 0.66, minE= 2, hellRun= 'MainUpperNorfair'},
-        ['Bubble -> Cathedral Missiles']= {mult= 0.66, minE= 2, hellRun= 'MainUpperNorfair'},
-        ['Norfair Entrance -> Croc via Frog']= {mult= 2.0, minE= 1, hellRun= 'MainUpperNorfair'},
-        ['Norfair Entrance -> Croc via Frog w/Wave']= {mult= 4.0, minE= 1, hellRun= 'MainUpperNorfair'},
-        ['Bubble -> Norfair Reserve Missiles']= {mult= 3.0, minE= 1, hellRun= 'MainUpperNorfair'},
-        ['Bubble -> Norfair Reserve']= {mult= 1.0, minE= 2, hellRun= 'MainUpperNorfair'},
-        ['Bubble -> Speed Booster']= {mult= 1.0, minE= 3, hellRun= 'MainUpperNorfair'},
-        ['Bubble -> Speed Booster w/Speed']= {mult= 2.0, minE= 2, hellRun= 'MainUpperNorfair'},
-        ['Bubble -> Wave']= {mult= 0.75, minE= 2, hellRun= 'MainUpperNorfair'},
-        ['Bubble -> Kronic Boost Room']= {mult= 1.25, minE= 2, hellRun= 'MainUpperNorfair'},
-        ['Bubble -> Kronic Boost Room wo/Bomb']= {mult= 0.5, minE= 2, hellRun= 'MainUpperNorfair'},
-        ['Bubble -> Croc']= {mult= 2.0, minE= 2, hellRun= 'MainUpperNorfair'},
-        ['Bubble Top <-> Bubble Bottom']= {mult= 0.357, minE= 2, hellRun= 'MainUpperNorfair'},
-        ['Croc -> Grapple Escape Missiles']= {mult= 1.0, minE= 2, hellRun= 'MainUpperNorfair'},
-        ['Croc -> Ice Missiles']= {mult= 1.0, minE= 2, hellRun= 'MainUpperNorfair'},
-        ['Single Chamber <-> Bubble Mountain']= {mult= 1.25, minE= 2, hellRun= 'MainUpperNorfair'},
-        ['Kronic Boost Room -> Bubble Mountain Top']= {mult= 0.5, minE= 2, hellRun= 'MainUpperNorfair'},
-        ['Kronic Boost Room <-> Croc']= {mult= 1.0, minE= 2, hellRun= 'MainUpperNorfair'},
-        ['Croc -> Norfair Entrance']= {mult= 1.25, minE= 2, hellRun= 'MainUpperNorfair'}
+        ['Norfair Entrance -> Bubble'] = { mult = 1.0, minE = 2, hellRun = 'MainUpperNorfair' },
+        ['Bubble -> Norfair Entrance'] = { mult = 0.75, minE = 2, hellRun = 'MainUpperNorfair' },
+        ['Norfair Entrance -> Cathedral Missiles'] = { mult = 0.66, minE = 2, hellRun = 'MainUpperNorfair' },
+        ['Bubble -> Cathedral Missiles'] = { mult = 0.66, minE = 2, hellRun = 'MainUpperNorfair' },
+        ['Norfair Entrance -> Croc via Frog'] = { mult = 2.0, minE = 1, hellRun = 'MainUpperNorfair' },
+        ['Norfair Entrance -> Croc via Frog w/Wave'] = { mult = 4.0, minE = 1, hellRun = 'MainUpperNorfair' },
+        ['Bubble -> Norfair Reserve Missiles'] = { mult = 3.0, minE = 1, hellRun = 'MainUpperNorfair' },
+        ['Bubble -> Norfair Reserve'] = { mult = 1.0, minE = 2, hellRun = 'MainUpperNorfair' },
+        ['Bubble -> Speed Booster'] = { mult = 1.0, minE = 3, hellRun = 'MainUpperNorfair' },
+        ['Bubble -> Speed Booster w/Speed'] = { mult = 2.0, minE = 2, hellRun = 'MainUpperNorfair' },
+        ['Bubble -> Wave'] = { mult = 0.75, minE = 2, hellRun = 'MainUpperNorfair' },
+        ['Bubble -> Kronic Boost Room'] = { mult = 1.25, minE = 2, hellRun = 'MainUpperNorfair' },
+        ['Bubble -> Kronic Boost Room wo/Bomb'] = { mult = 0.5, minE = 2, hellRun = 'MainUpperNorfair' },
+        ['Bubble -> Croc'] = { mult = 2.0, minE = 2, hellRun = 'MainUpperNorfair' },
+        ['Bubble Top <-> Bubble Bottom'] = { mult = 0.357, minE = 2, hellRun = 'MainUpperNorfair' },
+        ['Croc -> Grapple Escape Missiles'] = { mult = 1.0, minE = 2, hellRun = 'MainUpperNorfair' },
+        ['Croc -> Ice Missiles'] = { mult = 1.0, minE = 2, hellRun = 'MainUpperNorfair' },
+        ['Single Chamber <-> Bubble Mountain'] = { mult = 1.25, minE = 2, hellRun = 'MainUpperNorfair' },
+        ['Kronic Boost Room -> Bubble Mountain Top'] = { mult = 0.5, minE = 2, hellRun = 'MainUpperNorfair' },
+        ['Kronic Boost Room <-> Croc'] = { mult = 1.0, minE = 2, hellRun = 'MainUpperNorfair' },
+        ['Croc -> Norfair Entrance'] = { mult = 1.25, minE = 2, hellRun = 'MainUpperNorfair' }
     },
     ['LowerNorfair'] = {
-        ['Main'] = {mult = 1.0, minE = 8, hellRun= 'LowerNorfair'},
-        ['Entrance -> GT via Chozo'] = {mult = 0.8, minE = 8, hellRun='LowerNorfair'}
+        ['Main'] = { mult = 1.0, minE = 8, hellRun = 'LowerNorfair' },
+        ['Entrance -> GT via Chozo'] = { mult = 0.8, minE = 8, hellRun = 'LowerNorfair' }
     }
 }
 
@@ -3201,7 +3206,7 @@ BOSSES_PRESET_TABLE = {
             ['Rate'] = 0.02,
             ['Energy'] = {
                 [0.5] = 150,
-                [1] = (DIFFICULTY.mania+DIFFICULTY.hardcore)/2,
+                [1] = (DIFFICULTY.mania + DIFFICULTY.hardcore) / 2,
                 [2] = DIFFICULTY.harder,
                 [2.5] = DIFFICULTY.hard,
                 [4] = DIFFICULTY.medium,
@@ -3310,7 +3315,7 @@ BOSSES_PRESET_TABLE = {
                 [10] = DIFFICULTY.easy
             }
         }
-    },    
+    },
     ['MotherBrain'] = {
         ["It can get ugly"] = {
             ['Rate'] = 0.18,

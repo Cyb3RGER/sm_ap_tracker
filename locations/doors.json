@@ -7,10 +7,12 @@
                 "hosted_item": "door_cr_ls_tr",
                 "access_rules": [
                     [
-                        "{$has_access_to|Landing Site}", "{$speed}"
+                        "{$has_access_to|Landing Site}",
+                        "{$speed}"
                     ],
                     [
-                        "{$has_access_to|Landing Site}", "{$can_fly}"
+                        "{$has_access_to|Landing Site}",
+                        "{$can_fly}"
                     ]
                 ],
                 "visibility_rules": [
@@ -145,7 +147,7 @@
     },
     {
         "name": "Crateria <-> Green Brinstar",
-        "sections": [            
+        "sections": [
             {
                 "name": "Lower Mushrooms Left",
                 "hosted_item": "trans_LowerMushroomsLeft",
@@ -327,7 +329,8 @@
                 "hosted_item": "door_cr_b",
                 "access_rules": [
                     [
-                        "{$has_access_to|Landing Site}", "{$can_pass_bomb_passages}"
+                        "{$has_access_to|Landing Site}",
+                        "{$can_pass_bomb_passages}"
                     ]
                 ],
                 "visibility_rules": [
@@ -905,7 +908,9 @@
                 "hosted_item": "RedBrinstarFirefleaLeft",
                 "access_rules": [
                     [
-                        "{$has_access_to|Red Tower Top Left}", "{$can_get_through_xray}", "{$traverse|RedTowerLeft}"
+                        "{$has_access_to|Red Tower Top Left}",
+                        "{$can_get_through_xray}",
+                        "{$traverse|RedTowerLeft}"
                     ]
                 ],
                 "visibility_rules": [
@@ -1052,7 +1057,7 @@
     //Upper Norfair
     {
         "name": "Red Brinstar <-> Upper Norfair",
-        "sections": [     
+        "sections": [
             {
                 "name": "Transition: East Tunnel Right",
                 "hosted_item": "trans_EastTunnelRight",
@@ -1083,14 +1088,14 @@
                 "map": "fullmap",
                 "x": 1240,
                 "y": 1236
-            },            
-            {
-                "map": "brinstarmap",
-                "x": 312,
-                "y": 660
-            },            
+            },
             {
                 "map": "maridiamap",
+                "x": 312,
+                "y": 660
+            },
+            {
+                "map": "brinstarmap",
                 "x": 1240,
                 "y": 660
             }
@@ -1098,7 +1103,7 @@
     },
     {
         "name": "Upper Norfair <-> Kraid's Lair",
-        "sections": [     
+        "sections": [
             {
                 "name": "Transition: East Tunnel Right",
                 "hosted_item": "trans_EastTunnelRight",
@@ -1129,7 +1134,7 @@
                 "map": "fullmap",
                 "x": 1336,
                 "y": 1236
-            },            
+            },
             {
                 "map": "brinstarmap",
                 "x": 1336,
@@ -1139,7 +1144,19 @@
     },
     {
         "name": "Upper Norfair <-> Crocomire",
-        "sections": [     
+        "sections": [
+            {
+                "name": "Door: Upper Norfair, Crocomire Speedway, bottom",
+                "hosted_item": "CrocomireSpeedwayBottom",
+                "access_rules": [
+                    [
+                        "{$has_access_to|Crocomire Speedway Bottom}"
+                    ]
+                ],
+                "visibility_rules": [
+                    "$is_door_rando"
+                ]
+            },
             {
                 "name": "Transition: Crocomire Speedway Bottom",
                 "hosted_item": "trans_CrocomireSpeedwayBottom",
@@ -1170,7 +1187,7 @@
                 "map": "fullmap",
                 "x": 1416,
                 "y": 1604
-            },                                  
+            },
             {
                 "map": "norfairmap",
                 "x": 536,
@@ -1180,7 +1197,7 @@
     },
     {
         "name": "Upper Norfair <-> Lower Norfair Entrance",
-        "sections": [     
+        "sections": [
             {
                 "name": "Door: Upper Norfair, Kronic Boost Bottom, left",
                 "hosted_item": "KronicBoostBottomLeft",
@@ -1223,7 +1240,7 @@
                 "map": "fullmap",
                 "x": 1752,
                 "y": 1620
-            },                                  
+            },
             {
                 "map": "norfairmap",
                 "x": 872,
@@ -1233,7 +1250,7 @@
     },
     {
         "name": "Upper Norfair <-> Lower Norfair Exit",
-        "sections": [     
+        "sections": [
             {
                 "name": "Transition: Single Chamber Top Right",
                 "hosted_item": "trans_SingleChamberTopRight",
@@ -1264,7 +1281,7 @@
                 "map": "fullmap",
                 "x": 1880,
                 "y": 1396
-            },                                  
+            },
             {
                 "map": "norfairmap",
                 "x": 1000,
@@ -1338,7 +1355,8 @@
                 "hosted_item": "CathedralEntranceRight",
                 "access_rules": [
                     [
-                        "{$has_access_to|Business Center}", "{$can_access_cathedral_entrance_right}"
+                        "{$has_access_to|Business Center}",
+                        "{$can_access_cathedral_entrance_right}"
                     ]
                 ],
                 "visibility_rules": [
@@ -1454,7 +1472,8 @@
                 "hosted_item": "SpeedBoosterHallRight",
                 "access_rules": [
                     [
-                        "{$has_access_to|Bubble Mountain Top}" , "{$traverse|BubbleMountainTopRight}"
+                        "{$has_access_to|Bubble Mountain Top}",
+                        "{$traverse|BubbleMountainTopRight}"
                     ]
                 ],
                 "visibility_rules": [
@@ -1512,7 +1531,8 @@
                 "hosted_item": "DoubleChamberRight",
                 "access_rules": [
                     [
-                        "{$has_access_to|Bubble Mountain Top}" , "{$can_access_double_chamber_items}"
+                        "{$has_access_to|Bubble Mountain Top}",
+                        "{$can_access_double_chamber_items}"
                     ]
                 ],
                 "visibility_rules": [
@@ -1542,7 +1562,8 @@
                 "hosted_item": "PostCrocomireUpperLeft",
                 "access_rules": [
                     [
-                        "{$has_access_to|Crocomire Room Top}", "{$can_access_croc_pb_door}"
+                        "{$has_access_to|Crocomire Room Top}",
+                        "{$can_access_croc_pb_door}"
                     ]
                 ],
                 "visibility_rules": [
@@ -1571,7 +1592,9 @@
                 "hosted_item": "PostCrocomireShaftRight",
                 "access_rules": [
                     [
-                        "{$has_access_to|Crocomire Room Top}" , "{$enough_stuff_croc}", "{$morph}"
+                        "{$has_access_to|Crocomire Room Top}",
+                        "{$enough_stuff_croc}",
+                        "{$morph}"
                     ]
                 ],
                 "visibility_rules": [
@@ -1601,7 +1624,8 @@
                 "hosted_item": "RedKihunterShaftBottom",
                 "access_rules": [
                     [
-                        "{$has_access_to|Firefleas}", "{$can_pass_red_ki_hunters}"
+                        "{$has_access_to|Firefleas}",
+                        "{$can_pass_red_ki_hunters}"
                     ]
                 ],
                 "visibility_rules": [
@@ -1630,7 +1654,9 @@
                 "hosted_item": "WastelandLeft",
                 "access_rules": [
                     [
-                        "{$has_access_to|Firefleas}" , "{$can_use_power_bombs}", "{$traverse|RedKihunterShaftBottom}"
+                        "{$has_access_to|Firefleas}",
+                        "{$can_use_power_bombs}",
+                        "{$traverse|RedKihunterShaftBottom}"
                     ]
                 ],
                 "visibility_rules": [
@@ -2033,7 +2059,7 @@
     },
     {
         "name": "Red Brinstar Top <-> West Maridia",
-        "sections": [     
+        "sections": [
             {
                 "name": "Transition: Caterpillar Room Top Right",
                 "hosted_item": "trans_CaterpillarRoomTopRight",
@@ -2079,7 +2105,7 @@
     },
     {
         "name": "Red Brinstar Glass Tunnel <-> West Maridia",
-        "sections": [     
+        "sections": [
             {
                 "name": "Transition: Glass Tunnel Top",
                 "hosted_item": "trans_GlassTunnelTop",
@@ -2110,7 +2136,7 @@
                 "map": "fullmap",
                 "x": 1192,
                 "y": 1188
-            },            
+            },
             {
                 "map": "maridiamap",
                 "x": 264,
@@ -2120,7 +2146,7 @@
     },
     {
         "name": "Red Brinstar East Tunnel <-> West Maridia",
-        "sections": [     
+        "sections": [
             {
                 "name": "Transition: East Tunnel Top Right",
                 "hosted_item": "trans_EastTunnelTopRight",
@@ -2151,7 +2177,7 @@
                 "map": "fullmap",
                 "x": 1336,
                 "y": 1204
-            },            
+            },
             {
                 "map": "maridiamap",
                 "x": 408,
@@ -2167,7 +2193,8 @@
                 "hosted_item": "FishTankRight",
                 "access_rules": [
                     [
-                        "{$has_access_to|Main Street Bottom}, {$can_do_outer_maridia}"
+                        "{$has_access_to|Main Street Bottom}",
+                        "{$can_do_outer_maridia}"
                     ]
                 ],
                 "visibility_rules": [
@@ -2180,7 +2207,6 @@
                 "map": "fullmap",
                 "x": 1368,
                 "y": 1140
-                
             },
             {
                 "map": "maridiamap",
@@ -2209,7 +2235,7 @@
             {
                 "map": "fullmap",
                 "x": 1224,
-                "y": 1170                
+                "y": 1170
             },
             {
                 "map": "maridiamap",
