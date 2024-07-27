@@ -60,6 +60,7 @@ function onClear(slot_data)
         update_saved_map_data()
         update_boss_data()
     end
+    Tracker.BulkUpdate = false
 end
 
 function onItem(index, item_id, item_name, player_number)
@@ -120,8 +121,7 @@ function onItem(index, item_id, item_name, player_number)
     end
     if PopVersion < "0.20.1" or AutoTracker:GetConnectionState("SNES") == 3 then
         update_item_data()
-    end
-    Tracker.BulkUpdate = false
+    end  
 end
 
 function onLocation(location_id, location_name)
