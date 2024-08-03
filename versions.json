@@ -1,6 +1,15 @@
 {
     "versions": [
         {
+            "package_version": "0.1.0.8",
+            "download_url": "https://github.com/Cyb3RGER/sm_ap_tracker/releases/download/0.1.0.8/sm_ap_tracker-v0_1_0_8.zip",
+            "sha256": "569dd9f174efc039b0d114e701989294ae84eef78e2102ee1a61d88b25b4f5f8",
+            "changelog": [
+                "Fixed a bug which prevented the tracker from updating in empty rooms",
+                "Changed door and transition locations to diamond shape"
+            ]
+        },
+        {
             "package_version": "0.1.0.7",
             "download_url": "https://github.com/Cyb3RGER/sm_ap_tracker/releases/download/0.1.0.7/sm_ap_tracker-v0_1_0_7.zip",
             "sha256": "d52c260b29e92f228b22cc0253c4216b15bc77ae6d6975cc0ca1bda62263632c",
