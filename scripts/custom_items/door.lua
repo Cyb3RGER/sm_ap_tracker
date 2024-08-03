@@ -53,13 +53,12 @@ function Door:init(name, codes, defaultState, enableStateChanging, isAreaTrans)
         end
     end    
     self.active = false
-    self.enableStateChanging = enableStateChanging   
+    self.enableStateChanging = enableStateChanging
     self.state = defaultState
-    
 
     self:getImages()
     self:setState(self.state)
-    self:setActive(self.active)    
+    self:setActive(self.active)
 end
 
 function Door:getImages()
