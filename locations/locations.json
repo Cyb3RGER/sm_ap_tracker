@@ -2856,6 +2856,7 @@
                 "map_locations": [
                     {
                         "map": "fullmap",
+                        "shape": "trapezoid",
                         "x": 360,
                         "y": 660
                     }
