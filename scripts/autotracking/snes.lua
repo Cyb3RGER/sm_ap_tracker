@@ -1454,16 +1454,17 @@ function update_boss_data(segment)
 end
 
 function update_current_area(segment)
+    local auto_map_switching_enabled = Tracker:FindObjectForCode("auto_tab").CurrentStage == 1
     if AUTOTRACKER_ENABLE_DEBUG_LOGGING_SNES then
         print(string.format("called update_current_area"))
     end
     local readResult = AutoTracker:ReadU8(CURRENT_AREA_ADDR)
     if AREA_MAPPING[readResult] then
         if AUTOTRACKER_ENABLE_DEBUG_LOGGING_SNES then
-            print(string.format("setting current area to %s", AREA_MAPPING[readResult]))
+            print(string.format("setting current area to %s", AREA_MAPPING[readResult]), auto_map_switching_enabled)
         end
         CURRENT_AREA = AREA_MAPPING[readResult]
-        if AUTOTRACKER_ENABLE_AUTO_MAP_SWITCHING and AREA_TAB_MAPPING[readResult] then
+        if auto_map_switching_enabled and AREA_TAB_MAPPING[readResult] then
             Tracker:UiHint("ActivateTab", AREA_TAB_MAPPING[readResult])
         end
     end
@@ -1509,6 +1510,7 @@ function update_map_data(is_current_data)
                 end
                 if readResult & v.bitMask > 0 then
                     local obj = Tracker:FindObjectForCode(k)
+                    ---@cast obj LuaItem
                     if obj then
                         if AUTOTRACKER_ENABLE_DEBUG_LOGGING_SNES then
                             print(string.format("found door %s !", k))
@@ -1530,6 +1532,7 @@ function update_map_data(is_current_data)
                     (is_area_rando() > 0 and not (k:find('In') or k:find('Out')))) then
                 local code = "trans_" .. (k:gsub("[%s]+", ""))
                 local obj = Tracker:FindObjectForCode(code)
+                ---@cast obj LuaItem
                 if AUTOTRACKER_ENABLE_DEBUG_LOGGING_SNES then
                     print(string.format("checking area trans: %s (CURRENT_AREA: %s)", k, CURRENT_AREA))
                 end

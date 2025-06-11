@@ -2668,11 +2668,13 @@
                 "map_locations": [
                     {
                         "map": "fullmap",
+                        "shape": "trapezoid",
                         "x": 1722,
                         "y": 1252
                     },
                     {
                         "map": "brinstarmap",
+                        "shape": "trapezoid",
                         "x": 1722,
                         "y": 678
                     }
@@ -2719,11 +2721,13 @@
                 "map_locations": [
                     {
                         "map": "fullmap",
+                        "shape": "trapezoid",
                         "x": 1735,
                         "y": 370
                     },
                     {
                         "map": "wreckedshipmap",
+                        "shape": "trapezoid",
                         "x": 632,
                         "y": 435
                     }
@@ -2770,11 +2774,13 @@
                 "map_locations": [
                     {
                         "map": "fullmap",
+                        "shape": "trapezoid",
                         "x": 2105,
                         "y": 965
                     },
                     {
                         "map": "maridiamap",
+                        "shape": "trapezoido",
                         "x": 1180,
                         "y": 390
                     }
@@ -2821,11 +2827,13 @@
                 "map_locations": [
                     {
                         "map": "fullmap",
+                        "shape": "trapezoid",
                         "x": 1675,
                         "y": 1840
                     },
                     {
                         "map": "norfairmap",
+                        "shape": "trapezoid",
                         "x": 792,
                         "y": 628
                     }

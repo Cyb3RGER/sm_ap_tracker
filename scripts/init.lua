@@ -2,6 +2,8 @@ DEBUG_MODE = false
 ENABLE_DEBUG_LOG = false or DEBUG_MODE
 DEBUG = false
 
+IS_ITEMS_ONLY = Tracker.ActiveVariantUID:find("itemsonly")
+
 print("-- SM AP Tracker --")
 print("Loaded tracker : ", Tracker.ActiveVariantUID)
 if ENABLE_DEBUG_LOG then
@@ -26,6 +28,7 @@ ScriptHost:LoadScript("scripts/custom_items/transition.lua")
 
 -- Items
 Tracker:AddItems("items/items.json")
+Tracker:AddItems("items/settings.json")
 Tracker:AddItems("items/entrances.json")
 -- Doors
 ScriptHost:LoadScript("scripts/init_doors.lua")
@@ -45,6 +48,7 @@ end
 
 -- Layout
 Tracker:AddLayouts("layouts/items.json")
+Tracker:AddLayouts("layouts/settings.json")
 Tracker:AddLayouts("layouts/tracker.json")
 Tracker:AddLayouts("layouts/broadcast.json")
 

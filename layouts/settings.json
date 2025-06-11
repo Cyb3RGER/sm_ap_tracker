@@ -1,0 +1,25 @@
+{
+  "settings_popup": {
+    "type": "array",
+    "orientation": "horizontal",
+    "content": [
+      {
+        "type": "array",
+        "content": [
+          {
+            "type": "group",
+            "header": "Automatic Tab Switching",
+            "header_background": "#3e4b57",
+            "content": [
+              {
+                "type": "item",
+                "item_h_alignment": "center",
+                "item": "auto_tab"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

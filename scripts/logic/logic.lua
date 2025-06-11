@@ -2956,6 +2956,9 @@ function has_patch(patch_num)
         return 0
     end
     local patches = SLOT_DATA['RomPatches']
+    if SLOT_DATA['RomPatches'] == nil then
+        return 0
+    end
     if AUTOTRACKER_ENABLE_DEBUG_LOGGING_LOGIC then
         print(string.format("called has_patch: patch_num: %s, patches: %s", patch_num, patches))
     end
