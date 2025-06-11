@@ -1,6 +1,17 @@
 {
     "versions": [
         {
+            "package_version": "0.1.1.0",
+            "download_url": "https://github.com/Cyb3RGER/sm_ap_tracker/releases/download/0.1.1.0/sm_ap_tracker-v0_1_1_0.zip",
+            "sha256": "e352aaceb2f5f48c91477b16c8ead0b9dad11115766c873db4908305fb6857b0",
+            "changelog": [
+                "Added hint tracking (highlights hinted location based on hint status)",
+                "Added a Setting to disabled automatic tab switching",
+                "Changed boss locations to trapezoid shape",
+                "Compressed images"
+            ]
+        },
+        {
             "package_version": "0.1.0.8",
             "download_url": "https://github.com/Cyb3RGER/sm_ap_tracker/releases/download/0.1.0.8/sm_ap_tracker-v0_1_0_8.zip",
             "sha256": "d4bb2cd57ba6e35a3e7ae2d5c31919fd8503ae1b1f1e015ce608c538bd2b168e",
