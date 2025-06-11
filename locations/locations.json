@@ -2780,7 +2780,7 @@
                     },
                     {
                         "map": "maridiamap",
-                        "shape": "trapezoido",
+                        "shape": "trapezoid",
                         "x": 1180,
                         "y": 390
                     }
