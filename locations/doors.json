@@ -440,10 +440,12 @@
                 "access_rules": [
                     [
                         "{$has_access_to|Green Brinstar Elevator}",
+                        "{$traverse|MainShaftRight}",
                         "{$can_mockball}"
                     ],
                     [
                         "{$has_access_to|Green Brinstar Elevator}",
+                        "{$traverse|MainShaftRight}",
                         "{$speed}"
                     ]
                 ],
@@ -772,7 +774,11 @@
                 "hosted_item": "BigPinkBottomRight",
                 "access_rules": [
                     [
-                        "{$has_access_to|Big Pink}"
+                        "{$has_access_to|Big Pink}",
+                        "{morph}"
+                    ],
+                    [
+                        "{$has_access_to|Green Hill Zone Top Right}"
                     ]
                 ],
                 "visibility_rules": [
@@ -1170,11 +1176,11 @@
         "name": "Upper Norfair <-> Kraid's Lair",
         "sections": [
             {
-                "name": "Transition: East Tunnel Right",
-                "hosted_item": "trans_EastTunnelRight",
+                "name": "Transition: Warehouse Entrance Right",
+                "hosted_item": "trans_WarehouseEntranceRight",
                 "access_rules": [
                     [
-                        "{$has_access_to|East Tunnel Right}"
+                        "{$has_access_to|Warehouse Entrance Right}"
                     ]
                 ],
                 "visibility_rules": [
@@ -1182,11 +1188,11 @@
                 ]
             },
             {
-                "name": "Transition: Warehouse Entrance Left",
-                "hosted_item": "trans_WarehouseEntranceLeft",
+                "name": "Transition: Warehouse Zeela Room Left",
+                "hosted_item": "trans_WarehouseZeelaRoomLeft",
                 "access_rules": [
                     [
-                        "{$has_access_to|Warehouse Entrance Left}"
+                        "{$has_access_to|Warehouse Zeela Room Left}"
                     ]
                 ],
                 "visibility_rules": [
@@ -2005,7 +2011,7 @@
         "sections": [
             {
                 "name": "",
-                "hosted_item": "PlasmaSparkBottom",
+                "hosted_item": "OasisTop",
                 "access_rules": [
                     [
                         "{$has_access_to|Oasis Bottom}"
@@ -2188,7 +2194,8 @@
                 "hosted_item": "trans_CaterpillarRoomTopRight",
                 "access_rules": [
                     [
-                        "{$has_access_to|Caterpillar Room Top Right, $morph}"
+                        "{$has_access_to|Caterpillar Room Top Right}",
+                        "{$morph}"
                     ]
                 ],
                 "visibility_rules": [
