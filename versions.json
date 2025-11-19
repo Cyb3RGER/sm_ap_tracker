@@ -1,6 +1,18 @@
 {
     "versions": [
         {
+            "package_version": "0.1.1.1",
+            "download_url": "https://github.com/Cyb3RGER/sm_ap_tracker/releases/download/0.1.1.1/sm_ap_tracker-v0_1_1_1.zip",
+            "sha256": "c47852532aa14ecb3da0fe0408e9966c6877df32c4c88fc95cf6ccff137a8672",
+            "changelog": [
+                "Fixed access to Green Brinstar, Early Supers, right",
+                "Fixed access to Pink Brinstar, bottom right",
+                "Fixed access to Transition: Caterpillar Room Top Right",
+                "Fixed Upper Norfair <-> Kraid's Lair transitions",
+                "Fixed East Maridia, Oasis, top using wrong door"
+            ]
+        },
+        {
             "package_version": "0.1.1.0",
             "download_url": "https://github.com/Cyb3RGER/sm_ap_tracker/releases/download/0.1.1.0/sm_ap_tracker-v0_1_1_0.zip",
             "sha256": "e352aaceb2f5f48c91477b16c8ead0b9dad11115766c873db4908305fb6857b0",
